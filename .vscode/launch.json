@@ -1,0 +1,30 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug md_to_json.py",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/scripts/md_to_json.py",
+            "args": [
+                "${workspaceFolder}/Intro/green-software-practitioner.md",
+                "${workspaceFolder}/.vscode/debug/outputs/sample_output.json"
+            ],
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
+        },
+        {
+            "name": "Debug json_to_md.py",
+            "type": "debugpy",
+            "request": "launch",
+            "program": "${workspaceFolder}/scripts/json_to_md.py",
+            "args": [
+                
+                "${workspaceFolder}/.vscode/debug/outputs/sample_output.json",
+                "${workspaceFolder}/.vscode/debug/outputs/sample_output.md"                
+            ],
+            "console": "integratedTerminal",
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
