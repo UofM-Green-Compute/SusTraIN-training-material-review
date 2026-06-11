@@ -7,8 +7,8 @@ Usage:
     python json_to_md.py input.json          # prints to stdout
 """
 
+import argparse
 import json
-import sys
 
 
 # Maps JSON keys to the section heading they belong to.
@@ -153,19 +153,26 @@ def json_to_md(data):
 
 
 def main():
-    if len(sys.argv) < 2:
-        print("Usage: python json_to_md.py input.json [output.md]")
-        sys.exit(1)
+    parser = argparse.ArgumentParser(
+        description="Convert a JSON-LD LearningResource file to readable Markdown."
+    )
+    parser.add_argument("input", help="Input .json file to convert.")
+    parser.add_argument(
+        "output",
+        nargs="?",
+        help="Optional output .md path. If omitted, prints to stdout.",
+    )
+    args = parser.parse_args()
 
-    with open(sys.argv[1], encoding="utf-8") as f:
+    with open(args.input, encoding="utf-8") as f:
         data = json.load(f)
 
     md = json_to_md(data)
 
-    if len(sys.argv) >= 3:
-        with open(sys.argv[2], "w", encoding="utf-8") as f:
+    if args.output:
+        with open(args.output, "w", encoding="utf-8") as f:
             f.write(md)
-        print(f"Written to {sys.argv[2]}")
+        print(f"Written to {args.output}")
     else:
         print(md)
 

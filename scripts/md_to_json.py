@@ -9,7 +9,7 @@ Usage:
 
 import json
 import re
-import sys
+import argparse
 
 
 # Maps section headings to the JSON keys they contain, and how to handle them.
@@ -256,20 +256,30 @@ def md_to_json(text):
 
 
 def main():
-    if len(sys.argv) < 2:
-        print("Usage: python md_to_json.py input.md [output.json]")
-        sys.exit(1)
+    parser = argparse.ArgumentParser(
+        description="Convert a Markdown LearningResource file back to JSON-LD."
+    )
+    parser.add_argument(
+        "input",
+        help="Input .md file to convert to JSON.",
+    )
+    parser.add_argument(
+        "output",
+        nargs="?",
+        help="Optional output .json path. If omitted, prints to stdout.",
+    )
+    args = parser.parse_args()
 
-    with open(sys.argv[1], encoding="utf-8") as f:
+    with open(args.input, encoding="utf-8") as f:
         text = f.read()
 
     data = md_to_json(text)
     out = json.dumps(data, indent=2, ensure_ascii=False)
 
-    if len(sys.argv) >= 3:
-        with open(sys.argv[2], "w", encoding="utf-8") as f:
+    if args.output:
+        with open(args.output, "w", encoding="utf-8") as f:
             f.write(out + "\n")
-        print(f"Written to {sys.argv[2]}")
+        print(f"Written to {args.output}")
     else:
         print(out)
 
