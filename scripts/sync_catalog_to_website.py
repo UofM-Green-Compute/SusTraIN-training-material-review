@@ -61,11 +61,10 @@ def ensure_front_matter(content: str, title: str, parent: str, nav_order: int) -
     )
 
     if content.startswith("---\n"):
-        end = content.find("\n---\n", 4)
-        if end != -1:
-            body = content[end + 5 :].lstrip("\n")
+        m = re.match(r"\A---\s*\n.*?\n---\s*\n", content, flags=re.DOTALL)
+        if m:
+            body = content[m.end() :].lstrip("\n")
             return front_matter + body
-
     return front_matter + content.lstrip("\n")
 
 
