@@ -11,9 +11,11 @@ site-level files, and pushes only when there are content changes.
 from __future__ import annotations
 
 import argparse
+import base64
 import os
 import re
 import shutil
+import stat
 import subprocess
 import sys
 import tempfile
@@ -186,10 +188,35 @@ def sync_content(source_dir: Path, target_repo_dir: Path):
 
 
 def clone_target_repo(temp_dir: Path, target_repo: str, branch: str, token: str) -> Path:
-    clone_url = f"https://x-access-token:{token}@github.com/{target_repo}.git"
     repo_dir = temp_dir / "target-repo"
+    # The username is not sensitive; only the token must be kept out of the URL
+    # and command-line arguments (which are visible in process listings).
+    clone_url = f"https://x-access-token@github.com/{target_repo}.git"
 
-    run(["git", "clone", "--branch", branch, "--single-branch", clone_url, str(repo_dir)])
+    # Write a GIT_ASKPASS helper that supplies the token as the password.
+    # The token is passed through an environment variable so it never appears
+    # in command-line arguments or the remote URL.
+    askpass_script = temp_dir / "askpass.sh"
+    askpass_script.write_text("#!/bin/sh\necho \"$GIT_TOKEN\"\n", encoding="utf-8")
+    askpass_script.chmod(askpass_script.stat().st_mode | stat.S_IEXEC | stat.S_IXGRP | stat.S_IXOTH)
+
+    env = {**os.environ, "GIT_ASKPASS": str(askpass_script), "GIT_TOKEN": token}
+    subprocess.run(
+        ["git", "clone", "--branch", branch, "--single-branch", clone_url, str(repo_dir)],
+        env=env,
+        check=True,
+    )
+
+    # Store the auth token for the subsequent push via http.extraheader in the
+    # local repo config. This stays inside the ephemeral temp directory and is
+    # never exposed in process listings.
+    b64 = base64.b64encode(f"x-access-token:{token}".encode()).decode()
+    subprocess.run(
+        ["git", "config", "http.extraheader", f"AUTHORIZATION: basic {b64}"],
+        cwd=repo_dir,
+        check=True,
+    )
+
     return repo_dir
 
 
