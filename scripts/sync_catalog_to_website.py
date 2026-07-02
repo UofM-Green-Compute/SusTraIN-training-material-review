@@ -198,7 +198,7 @@ def clone_target_repo(temp_dir: Path, target_repo: str, branch: str, token: str)
     # in command-line arguments or the remote URL.
     askpass_script = temp_dir / "askpass.sh"
     askpass_script.write_text("#!/bin/sh\necho \"$GIT_TOKEN\"\n", encoding="utf-8")
-    askpass_script.chmod(askpass_script.stat().st_mode | stat.S_IEXEC | stat.S_IXGRP | stat.S_IXOTH)
+    askpass_script.chmod(askpass_script.stat().st_mode | stat.S_IEXEC)
 
     env = {**os.environ, "GIT_ASKPASS": str(askpass_script), "GIT_TOKEN": token}
     subprocess.run(
@@ -212,7 +212,7 @@ def clone_target_repo(temp_dir: Path, target_repo: str, branch: str, token: str)
     # never exposed in process listings.
     b64 = base64.b64encode(f"x-access-token:{token}".encode()).decode()
     subprocess.run(
-        ["git", "config", "http.extraheader", f"AUTHORIZATION: basic {b64}"],
+        ["git", "config", "http.extraheader", f"Authorization: basic {b64}"],
         cwd=repo_dir,
         check=True,
     )
