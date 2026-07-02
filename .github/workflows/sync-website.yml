@@ -1,0 +1,45 @@
+name: Sync Catalogue To Website
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "AI_impact/**"
+      - "Circular_economy/**"
+      - "Energy_efficiency/**"
+      - "Intro/**"
+      - "Lifecycle_assessment/**"
+      - "Metrics_tools/**"
+      - "scripts/sync_catalog_to_website.py"
+      - ".github/workflows/sync-website.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Sync content to website repository
+        env:
+          WEBSITE_REPO_TOKEN: ${{ secrets.WEBSITE_REPO_TOKEN }}
+        run: |
+          python scripts/sync_catalog_to_website.py \
+            --source-dir . \
+            --target-repo UofM-Green-Compute/SusTraIN-training-material \
+            --target-branch main \
+            --site-title "SusTraIN catalogue of external training resources" \
+            --site-description "Curated external training resources across sustainable computing topics." \
+            --site-url "https://UofM-Green-Compute.github.io" \
+            --baseurl "/SusTraIN-training-material" \
+            --source-repo-url "https://github.com/UofM-Green-Compute/SusTraIN-training-material-review"
