@@ -18,6 +18,9 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: sync-catalogue-to-website
+  cancel-in-progress: true
 jobs:
   sync:
     runs-on: ubuntu-latest
