@@ -212,7 +212,7 @@ def clone_target_repo(temp_dir: Path, target_repo: str, branch: str, token: str)
     # never exposed in process listings.
     b64 = base64.b64encode(f"x-access-token:{token}".encode()).decode()
     subprocess.run(
-        ["git", "config", "http.extraheader", f"Authorization: basic {b64}"],
+        ["git", "config", "http.extraheader", f"Authorization: Basic {b64}"],
         cwd=repo_dir,
         check=True,
     )
