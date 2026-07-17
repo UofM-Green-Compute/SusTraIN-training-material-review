@@ -2,3 +2,8 @@
 venv/
 node_modules/
 page_rendering_code/node_modules/
+__pycache__/
+*.pyc
+*.pyo
+*.log
+*.tmp
