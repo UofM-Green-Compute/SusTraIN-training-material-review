@@ -67,6 +67,18 @@ def parse_kv_line(line):
     return None, None
 
 
+def normalize_list_values(key, values):
+    """Normalize list values, including comma-split keywords."""
+    if key != "keywords":
+        return values
+
+    normalized = []
+    for value in values:
+        parts = [part.strip() for part in str(value).split(",")]
+        normalized.extend(part for part in parts if part)
+    return normalized
+
+
 def parse_typed_list_block(lines):
     """Parse numbered list of typed objects."""
     items = []
@@ -226,7 +238,7 @@ def md_to_json(text):
                         if k2 == lk:
                             vals.append(v2)
                 if vals:
-                    data[lk] = vals
+                    data[lk] = normalize_list_values(lk, vals)
 
         # Conforms To subsection
         if "subsection" in config:
