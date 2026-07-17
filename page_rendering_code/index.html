@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SusTraIN Training Materials</title>
+    <meta
+      name="description"
+      content="Search SusTraIN Training Materials."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="../assets/vendor/dataTables.dataTables.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-shape bg-shape-a" aria-hidden="true"></div>
+    <div class="bg-shape bg-shape-b" aria-hidden="true"></div>
+
+    <header class="hero">
+      <p class="eyebrow">UoM Research IT Knowledge Base</p>
+      <h1>SusTraIN Training Materials</h1>
+      <p class="subtitle">
+        Explore every published entry in one place. Search by keyword, filter by
+        category, and open source records.
+      </p>
+    </header>
+
+    <main class="container">
+      <section class="controls" aria-label="Search controls">
+        <label class="search-wrap" for="searchInput">
+          <span class="search-label">Search</span>
+          <input
+            id="searchInput"
+            type="search"
+            placeholder="Try: lifecycle emissions, laptop repair (comma-separated terms)"
+            autocomplete="off"
+          />
+        </label>
+
+        <label class="filter-wrap" for="categorySelect">
+          <span class="search-label">Category</span>
+          <select id="categorySelect">
+            <option value="all">All</option>
+            <option value="ai_impact">AI Impact</option>
+            <option value="circular_economy">Circular Economy</option>
+            <option value="energy_efficiency">Energy Efficiency</option>
+            <option value="intro">Intro</option>
+            <option value="lifecycle_assessment">Lifecycle Assessment</option>
+            <option value="metrics_tools">Metrics and Tools</option>
+          </select>
+        </label>
+
+        <div class="filter-wrap" role="group" aria-label="View mode">
+          <span class="search-label">View</span>
+          <div class="view-toggle" id="viewToggle">
+            <button type="button" class="view-option is-active" data-view="cards" aria-pressed="true">
+              Cards
+            </button>
+            <button type="button" class="view-option" data-view="table" aria-pressed="false">
+              Table
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section class="results-head" aria-live="polite">
+        <p id="resultsMeta">Loading content...</p>
+      </section>
+
+      <section>
+        <ul id="results" class="results" aria-label="Search results"></ul>
+      </section>
+    </main>
+
+    <template id="resultTemplate">
+      <li class="card">
+        <div class="card-top">
+          <p class="pill"></p>
+        </div>
+        <h2 class="title"></h2>
+        <p class="description"></p>
+        <p class="keywords"></p>
+      </li>
+    </template>
+
+    <script src="../assets/vendor/jquery.min.js"></script>
+    <script src="../assets/vendor/dataTables.min.js"></script>
+    <script src="../assets/vendor/dataTables.dataTables.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
