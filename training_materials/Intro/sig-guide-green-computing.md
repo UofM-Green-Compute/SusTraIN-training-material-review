@@ -1,0 +1,46 @@
+# SIG: Complete guide to green computing
+
+<!-- JSON-LD Metadata — edit values freely; structure must be preserved for round-trip conversion -->
+
+## Context & Type
+
+- **`@context`** https://schema.org
+- **`@type`** LearningResource
+- **`@id`** https://www.softwareimprovementgroup.com/publications/complete-guide-to-green-computing/
+- **`url`** https://www.softwareimprovementgroup.com/publications/complete-guide-to-green-computing/
+
+### Conforms To
+
+- **`@id`** https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE
+- **`@type`** CreativeWork
+
+---
+
+## Descriptive Metadata
+
+- **`name`** The complete guide to green computing
+- **`description`** A comprehensive guide to green computing covering smarter and greener approaches to managing IT operations and reducing the environmental impact of software and data centres
+- **`abstract`** As the digital world expands, so does the environmental impact of IT. This guide introduces green computing — finding smarter, greener ways to manage IT operations — covering the environmental imperative as well as the business benefits of efficient software development, including reduced energy consumption and compliance with CSRD.
+- **`keywords`** green computing, green IT, sustainable software, CSRD, carbon emissions, data centres, energy efficiency
+- **`learningResourceType`** guide
+- **`creativeWorkStatus`** active
+
+---
+
+## Audience & Prerequisites
+
+**`audience`** (Audience)
+- **`audienceType`** IT professionals, software developers, business leaders, and sustainability professionals interested in reducing the environmental impact of IT
+
+**`teaches`**
+- Understand the environmental impact of IT and data centres
+- Identify green computing approaches and their business benefits
+- Understand CSRD and related sustainability reporting requirements for IT organisations
+
+---
+
+## Authors
+
+1. **Organization**
+   - **`name`** Software Improvement Group (SIG)
+   - **`url`** https://www.softwareimprovementgroup.com

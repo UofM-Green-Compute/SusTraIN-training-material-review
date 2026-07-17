@@ -1,0 +1,46 @@
+{
+  "@context": "https://schema.org",
+  "@type": "LearningResource",
+  "@id": "https://movement.greensoftware.foundation/spaces/23023497",
+  "url": "https://movement.greensoftware.foundation/spaces/23023497",
+  "identifier": "https://movement.greensoftware.foundation/spaces/23023497",
+  "dct:conformsTo": {
+    "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
+    "@type": "CreativeWork"
+  },
+  "name": "SCI for AI Fundamentals",
+  "description": "Prerequisite: understanding how the SCI works. This course applies the SCI standards to the case of AI.",
+  "abstract": "Teaches practitioners the SCI for AI specification, a standard for making the carbon footprint of AI systems (classical and generative) transparent, comparable, and actionable across the AI lifecycle.",
+  "educationalLevel": "Intermediate",
+  "creativeWorkStatus": "active",
+  "inLanguage": [
+    "en"
+  ],
+  "learningResourceType": [
+    "online course"
+  ],
+  "keywords": [
+    "Software Carbon Intensity",
+    "SCI",
+    "AI carbon emissions",
+    "green AI",
+    "carbon accounting",
+    "AI lifecycle"
+  ],
+  "audience": {
+    "@type": "Audience",
+    "audienceType": "AI practitioners, developers, data scientists, engineers, decision-makers"
+  },
+  "competencyRequired": [
+    "Prior familiarity with the base Software Carbon Intensity (SCI) specification recommended"
+  ],
+  "license": [
+    "Not stated on the page (GSF Standard WG projects are copyrighted under Creative Commons Attribution 4.0 and licensed under MIT License (per companion GitHub repo Green-Software-Foundation/sci-ai))"
+  ],
+  "contributor": [
+    {
+      "@type": "Organization",
+      "name": "Green Software Foundation"
+    }
+  ]
+}

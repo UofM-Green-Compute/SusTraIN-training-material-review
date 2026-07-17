@@ -1,0 +1,66 @@
+# TUM / Coursera: Eco-Tech — Exploring IT's Impact on a Sustainable Future
+
+<!-- JSON-LD Metadata — edit values freely; structure must be preserved for round-trip conversion -->
+
+## Context & Type
+
+- **`@context`** https://schema.org
+- **`@type`** LearningResource
+- **`@id`** https://www.coursera.org/learn/eco-tech-exploring-its-impact-on-a-sustainable-future
+- **`url`** https://www.coursera.org/learn/eco-tech-exploring-its-impact-on-a-sustainable-future
+
+### Conforms To
+
+- **`@id`** https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE
+- **`@type`** CreativeWork
+
+---
+
+## Descriptive Metadata
+
+- **`name`** Eco-Tech: Exploring IT's Impact on a Sustainable Future
+- **`description`** A free Coursera MOOC from TUM combining scientific precision and accessible insight into the nexus of information technology and environmental sustainability
+- **`abstract`** From the basics of climate science to the advanced applications of green computing and artificial intelligence, this course explores the wide range of challenges and opportunities that IT offers in the fight against climate change. Nine invited experts share diverse perspectives through English-language scientific presentations and German interviews, all fully subtitled. Participants explore practical examples of companies integrating sustainability and collaborate on a shared mission.
+- **`keywords`** eco-tech, green computing, AI, sustainability, climate change, information technology, TUM, MOOC
+- **`educationalLevel`** Beginner
+- **`inLanguage`** en
+- **`learningResourceType`** online course
+- **`timeRequired`** PT3H45M
+- **`creativeWorkStatus`** active
+- **`datePublished`** 2024-04-01
+
+---
+
+## Audience & Prerequisites
+
+**`audience`** (Audience)
+- **`audienceType`** General enthusiasts, IT PhD students, and anyone curious about the role of technology in sustainability. No prior knowledge required.
+
+**`competencyRequired`**
+- No prerequisites required
+
+**`teaches`**
+- Understand the fundamental relationship between IT and environmental sustainability
+- Gain insights into green computing, sustainable design, and the role of AI in environmental solutions
+- Analyse practical examples of companies integrating sustainability into their business models
+- Outline a personal roadmap for contributing to a sustainable digital future
+
+---
+
+## Authors
+
+1. **Organization**
+   - **`name`** Technical University of Munich (TUM)
+   - **`url`** https://www.tum.de
+
+2. **Organization**
+   - **`name`** Software Campus
+   - **`url`** https://softwarecampus.de
+
+---
+
+## Contributors
+
+1. **Organization**
+   - **`name`** Coursera
+   - **`url`** https://www.coursera.org

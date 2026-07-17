@@ -1,0 +1,82 @@
+# Energy Efficient Programming
+
+<!-- JSON-LD Metadata — edit values freely; structure must be preserved for round-trip conversion -->
+
+## Context & Type
+
+- **`@context`** https://schema.org
+- **`@type`** LearningResource
+- **`@id`** https://open.hpi.de/courses/cleanIT-x862022
+- **`url`** https://open.hpi.de/courses/cleanIT-x862022
+- **`identifier`** https://open.hpi.de/courses/cleanIT-x862022
+
+### Conforms To
+
+- **`@id`** https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE
+- **`@type`** CreativeWork
+
+---
+
+## Descriptive Metadata
+
+- **`name`** Energy Efficient Programming
+- **`description`** A self-paced openHPI course on writing energy-efficient code in C and assembly, covering computer architecture fundamentals, x86 coding techniques, intrinsics/macros, and hands-on energy measurement with Intel VTune Profiler.
+- **`abstract`** The course starts from the observation that efficiency in computer science is usually framed as runtime or memory usage, then reframes it around energy consumption. It progresses from computer-architecture basics (clock cycles, parallelism, pipelines, superscalar execution) and x86 programming in week one, to concrete C and assembly coding techniques, SIMD/SSE instruction extensions, and vector intrinsics for reducing instruction count and energy draw in week two, finishing with a practical exercise measuring program energy consumption via Intel's VTune Profiler.
+- **`keywords`** energy efficient programming, C, assembly, x86, SIMD, SSE, intrinsics, computer architecture, green computing, VTune Profiler
+- **`educationalLevel`** Intermediate
+- **`inLanguage`** en
+- **`learningResourceType`** online course
+- **`timeRequired`** P2W (approx. 5-10 hours per week, 2 weeks — i.e. roughly PT10H to PT20H total, self-paced)
+- **`creativeWorkStatus`** active
+
+---
+
+## Dates
+
+- **`dateCreated`** 2022-04-12
+- **`datePublished`** 2022-04-12
+
+---
+
+## Audience & Prerequisites
+
+**`audience`** (Audience)
+- **`audienceType`** Students, researchers, or developers who work or study in computer science or a related field and want to learn energy-efficient coding techniques
+
+**`competencyRequired`**
+- Fundamental programming experience in C
+- Basic knowledge of computer architecture
+
+**`teaches`**
+- Understand the basic concepts of computer functionality and architecture (clock cycles, parallelism, execution pipelines, superscalar architectures)
+- Use coding techniques in C and assembly to significantly minimize the number of instructions executed by the CPU
+- Understand intrinsics and macros and how to apply them to any algorithm to increase its energy efficiency
+- Measure the energy consumption of programs using the Intel VTune Profiler tool
+
+---
+
+## License
+
+- Not stated on the page (course content is © Hasso Plattner Institute; no explicit Creative Commons or open-source licence found on the course page — free to enroll and take, but redistribution terms are unstated)
+
+---
+
+## Authors
+
+1. **Person**
+   - **`name`** Vesselin Iossifov
+
+2. **Person**
+   - **`name`** Nils König
+
+3. **Organization**
+   - **`name`** Hasso Plattner Institute (openHPI)
+   - **`url`** https://open.hpi.de
+
+---
+
+## Contributors
+
+1. **Organization**
+   - **`name`** openHPI
+   - **`url`** https://open.hpi.de

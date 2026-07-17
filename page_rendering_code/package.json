@@ -7,7 +7,6 @@
     "dev": "node scripts/dev-server.mjs"
   },
   "dependencies": {
-    "datatables.net-dt": "^2.3.8",
-    "glob": "^13.0.6"
+    "datatables.net-dt": "^2.3.8"
   }
 }
