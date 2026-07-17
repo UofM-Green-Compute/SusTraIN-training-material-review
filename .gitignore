@@ -1,2 +1,4 @@
 .vscode/
 venv/
+node_modules/
+page_rendering_code/node_modules/
