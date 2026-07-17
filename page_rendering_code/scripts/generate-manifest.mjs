@@ -4,17 +4,27 @@ import { fileURLToPath } from "node:url";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
-const appRoot = path.resolve(__dirname, "..");
 const workspaceRoot = path.resolve(__dirname, "..", "..");
+const TRAINING_ROOT = "training_materials";
+const IGNORED_SOURCE_DIRS = new Set(["archive", "_drafts"]);
 
-export const SOURCE_DIRS = [
-  { dir: "training_materials/AI_impact", group: "AI_impact" },
-  { dir: "training_materials/Circular_economy", group: "Circular_economy" },
-  { dir: "training_materials/Energy_efficiency", group: "Energy_efficiency" },
-  { dir: "training_materials/Intro", group: "Intro" },
-  { dir: "training_materials/Lifecycle_assessment", group: "Lifecycle_assessment" },
-  { dir: "training_materials/Metrics_tools", group: "Metrics_tools" },
-];
+export async function getSourceDirs() {
+  const absoluteTrainingRoot = path.join(workspaceRoot, TRAINING_ROOT);
+  const entries = await readdir(absoluteTrainingRoot, { withFileTypes: true });
+
+  return entries
+    .filter(
+      (entry) =>
+        entry.isDirectory() &&
+        !entry.name.startsWith(".") &&
+        !IGNORED_SOURCE_DIRS.has(entry.name.toLowerCase()),
+    )
+    .map((entry) => ({
+      dir: `${TRAINING_ROOT}/${entry.name}`,
+      group: entry.name,
+    }))
+    .sort((a, b) => a.dir.localeCompare(b.dir));
+}
 
 async function listJsonFiles(dirName) {
   const absoluteDir = path.join(workspaceRoot, dirName);
@@ -27,9 +37,10 @@ async function listJsonFiles(dirName) {
 }
 
 export async function buildManifest() {
+  const sourceDirs = await getSourceDirs();
   const files = [];
 
-  for (const source of SOURCE_DIRS) {
+  for (const source of sourceDirs) {
     const jsonPaths = await listJsonFiles(source.dir);
     files.push(...jsonPaths.map((jsonPath) => ({ path: jsonPath, group: source.group })));
   }
@@ -39,11 +50,11 @@ export async function buildManifest() {
 
 export async function writeManifest() {
   const manifest = await buildManifest();
-  const outPath = path.join(appRoot, "content-manifest.json");
+  const outPath = path.join(workspaceRoot, TRAINING_ROOT, "content-manifest.json");
   const payload = `${JSON.stringify(manifest, null, 2)}\n`;
 
   await writeFile(outPath, payload, "utf8");
-  console.log(`Wrote ${manifest.files.length} entries to content-manifest.json`);
+  console.log(`Wrote ${manifest.files.length} entries to ${TRAINING_ROOT}/content-manifest.json`);
   return manifest;
 }
 

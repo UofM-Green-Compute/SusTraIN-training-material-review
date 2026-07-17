@@ -3,7 +3,7 @@ import { readFile } from "node:fs/promises";
 import { watch } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
-import { writeManifest, SOURCE_DIRS } from "./generate-manifest.mjs";
+import { writeManifest, getSourceDirs } from "./generate-manifest.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -100,8 +100,10 @@ async function queueManifestRebuild(reason) {
   }
 }
 
-function startWatchers() {
-  for (const source of SOURCE_DIRS) {
+async function startWatchers() {
+  const sourceDirs = await getSourceDirs();
+
+  for (const source of sourceDirs) {
     const watchPath = path.join(workspaceRoot, source.dir);
     watch(watchPath, { persistent: true }, (eventType, filename) => {
       if (!filename || !String(filename).toLowerCase().endsWith(".json")) {
@@ -121,7 +123,7 @@ async function main() {
     console.log(`Dev server running at http://localhost:${PORT}`);
   });
 
-  startWatchers();
+  await startWatchers();
 }
 
 main().catch((error) => {

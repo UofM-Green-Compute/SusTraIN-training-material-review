@@ -1,4 +1,4 @@
-const CONTENT_MANIFEST_PATH = "content-manifest.json";
+const CONTENT_MANIFEST_PATH = "../training_materials/content-manifest.json";
 const GITHUB_API = "https://api.github.com";
 const CONTENT_ROOT = "training_materials";
 const CONTENT_GROUPS = [
