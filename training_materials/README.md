@@ -23,12 +23,12 @@ Repository of description files, for green compute training.
 - Your changes will be submitted as a Pull-Request (PR) and reviewed by one of the SuTraIN repository owners and either published if OK, or a response will be sent with feedback and/or edit suggestions. 
 
 
-## Available fields for each training materials item (yaml) file 
+## YAML file format for each training materials item
 
 
 (See also, the [original JSON for metadata schema](https://github.com/BioSchemas/specifications/blob/master/TrainingMaterial/examples/1.0-RELEASE/trainingMaterial.json) for the full set of field requirements in JSON format)
 
-
+For each available field, a description is provided of what it should contain. 
 Required fields are marked with "REQUIRED" in the description.
 
 ```yml
@@ -58,7 +58,7 @@ E.g.
     "url": "https://elixir-europe.org/platforms/training"
 ```
 
-## Example yaml file
+## An Example yaml file
 ```yml
 ---
 "@context": "https://schema.org"
