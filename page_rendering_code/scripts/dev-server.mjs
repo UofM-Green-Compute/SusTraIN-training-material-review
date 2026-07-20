@@ -16,6 +16,8 @@ const MIME_TYPES = {
   ".js": "text/javascript; charset=utf-8",
   ".css": "text/css; charset=utf-8",
   ".json": "application/json; charset=utf-8",
+  ".yml": "text/yaml; charset=utf-8",
+  ".yaml": "text/yaml; charset=utf-8",
   ".svg": "image/svg+xml",
   ".png": "image/png",
   ".jpg": "image/jpeg",
@@ -106,7 +108,7 @@ async function startWatchers() {
   for (const source of sourceDirs) {
     const watchPath = path.join(workspaceRoot, source.dir);
     watch(watchPath, { persistent: true }, (eventType, filename) => {
-      if (!filename || !String(filename).toLowerCase().endsWith(".json")) {
+      if (!filename || !/\.(ya?ml)$/i.test(String(filename))) {
         return;
       }
 

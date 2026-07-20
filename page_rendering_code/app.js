@@ -1,4 +1,7 @@
-const CONTENT_MANIFEST_PATH = "../training_materials/content-manifest.yml";
+const CONTENT_MANIFEST_PATHS = [
+  "../training_materials/content-manifest.yml",
+  "../training_materials/content-manifest.yaml",
+];
 const GITHUB_API = "https://api.github.com";
 const CONTENT_ROOT = "training_materials";
 const CONTENT_GROUPS = [
@@ -195,6 +198,191 @@ function createResourceTypePillContainer(value) {
   return container;
 }
 
+function parseYamlScalar(value) {
+  const trimmed = String(value).trim();
+
+  if (trimmed === "") {
+    return "";
+  }
+
+  if (trimmed === "[]") {
+    return [];
+  }
+
+  if (
+    trimmed === "null" ||
+    trimmed === "true" ||
+    trimmed === "false" ||
+    trimmed.startsWith('"') ||
+    trimmed.startsWith("[") ||
+    /^-?\d+(?:\.\d+)?$/.test(trimmed)
+  ) {
+    return JSON.parse(trimmed);
+  }
+
+  return trimmed;
+}
+
+function yamlLineTokens(text) {
+  return text
+    .split(/\r?\n/)
+    .map((line) => ({
+      indent: line.match(/^\s*/)[0].length,
+      text: line.trim(),
+    }))
+    .filter((line) => line.text && line.text !== "---");
+}
+
+function findYamlSeparatorIndex(text) {
+  let inDoubleQuotes = false;
+  let isEscaped = false;
+
+  for (let index = 0; index < text.length; index += 1) {
+    const char = text[index];
+
+    if (char === '"' && !isEscaped) {
+      inDoubleQuotes = !inDoubleQuotes;
+    } else if (char === ":" && !inDoubleQuotes) {
+      return index;
+    }
+
+    isEscaped = char === "\\" && !isEscaped;
+    if (char !== "\\") {
+      isEscaped = false;
+    }
+  }
+
+  return -1;
+}
+
+function parseYamlKey(text) {
+  const trimmed = text.trim();
+  if (trimmed.startsWith('"')) {
+    return JSON.parse(trimmed);
+  }
+
+  return trimmed;
+}
+
+function parseYamlBlock(lines, startIndex, indent) {
+  const current = lines[startIndex];
+
+  if (!current || current.indent < indent) {
+    return [null, startIndex];
+  }
+
+  if (current.indent === indent && current.text.startsWith("-")) {
+    return parseYamlList(lines, startIndex, indent);
+  }
+
+  return parseYamlObject(lines, startIndex, indent);
+}
+
+function parseYamlObject(lines, startIndex, indent, seed = {}) {
+  const result = seed;
+  let index = startIndex;
+
+  while (index < lines.length) {
+    const current = lines[index];
+    if (current.indent < indent) {
+      break;
+    }
+
+    if (current.indent !== indent || current.text.startsWith("-")) {
+      break;
+    }
+
+    const separatorIndex = findYamlSeparatorIndex(current.text);
+    if (separatorIndex === -1) {
+      index += 1;
+      continue;
+    }
+
+    const key = parseYamlKey(current.text.slice(0, separatorIndex));
+    const rawValue = current.text.slice(separatorIndex + 1).trim();
+
+    if (rawValue) {
+      result[key] = parseYamlScalar(rawValue);
+      index += 1;
+      continue;
+    }
+
+    const [nestedValue, nextIndex] = parseYamlBlock(lines, index + 1, indent + 2);
+    result[key] = nestedValue;
+    index = nextIndex;
+  }
+
+  return [result, index];
+}
+
+function parseYamlList(lines, startIndex, indent) {
+  const result = [];
+  let index = startIndex;
+
+  while (index < lines.length) {
+    const current = lines[index];
+    if (current.indent < indent || current.indent !== indent || !current.text.startsWith("-")) {
+      break;
+    }
+
+    const remainder = current.text.slice(1).trim();
+
+    if (!remainder) {
+      const [nestedValue, nextIndex] = parseYamlBlock(lines, index + 1, indent + 2);
+      result.push(nestedValue);
+      index = nextIndex;
+      continue;
+    }
+
+    const separatorIndex = findYamlSeparatorIndex(remainder);
+    if (separatorIndex !== -1) {
+      const key = parseYamlKey(remainder.slice(0, separatorIndex));
+      const rawValue = remainder.slice(separatorIndex + 1).trim();
+      const item = {};
+
+      if (rawValue) {
+        item[key] = parseYamlScalar(rawValue);
+        const [mergedItem, nextIndex] = parseYamlObject(
+          lines,
+          index + 1,
+          indent + 2,
+          item,
+        );
+        result.push(mergedItem);
+        index = nextIndex;
+        continue;
+      }
+
+      const [nestedValue, nextIndex] = parseYamlBlock(lines, index + 1, indent + 4);
+      item[key] = nestedValue;
+      const [mergedItem, finalIndex] = parseYamlObject(
+        lines,
+        nextIndex,
+        indent + 2,
+        item,
+      );
+      result.push(mergedItem);
+      index = finalIndex;
+      continue;
+    }
+
+    result.push(parseYamlScalar(remainder));
+    index += 1;
+  }
+
+  return [result, index];
+}
+
+function parseYamlDocument(text) {
+  const lines = yamlLineTokens(text);
+  if (!lines.length) {
+    return null;
+  }
+
+  const [value] = parseYamlBlock(lines, 0, lines[0].indent);
+  return value;
+}
+
 async function loadOneFile(item) {
   const response = await fetch(item.path, { cache: "no-cache" });
 
@@ -207,7 +395,9 @@ async function loadOneFile(item) {
     return [];
   }
 
-  const parsed = JSON.parse(text);
+  const parsed = item.path.toLowerCase().endsWith(".json")
+    ? JSON.parse(text)
+    : parseYamlDocument(text);
   return asArray(parsed)
     .filter((record) => record && record.publish !== false)
     .map((record) => normalizeItem(record, item.path, item.group));
@@ -225,56 +415,37 @@ function normalizeManifest(manifest) {
     .map((entry) => ({ path: entry.path, group: normalizeGroupName(entry.group) }));
 }
 
-function parseManifestYaml(text) {
-  const files = [];
-  const lines = text.split(/\r?\n/);
-  let current = null;
-
-  for (const line of lines) {
-    if (!line.trim() || line.trim() === "---") {
-      continue;
-    }
-
-    if (line.trim() === "files:") {
-      continue;
-    }
-
-    const itemMatch = line.match(/^\s+-\s+path:\s+(.+)$/);
-    if (itemMatch) {
-      current = { path: JSON.parse(itemMatch[1]), group: "" };
-      files.push(current);
-      continue;
-    }
-
-    const groupMatch = line.match(/^\s+group:\s+(.+)$/);
-    if (groupMatch && current) {
-      current.group = JSON.parse(groupMatch[1]);
-    }
-  }
-
-  return { files };
-}
-
 async function loadManifest() {
-  const response = await fetch(CONTENT_MANIFEST_PATH, { cache: "no-cache" });
+  let lastError = null;
 
-  if (!response.ok) {
-    throw new Error(`Failed to load ${CONTENT_MANIFEST_PATH}`);
+  for (const manifestPath of CONTENT_MANIFEST_PATHS) {
+    const response = await fetch(manifestPath, { cache: "no-cache" });
+
+    if (!response.ok) {
+      lastError = new Error(`Failed to load ${manifestPath}`);
+      continue;
+    }
+
+    const text = (await response.text()).trim();
+    if (!text) {
+      lastError = new Error(`${manifestPath} is empty.`);
+      continue;
+    }
+
+    const parsed = text.startsWith("{")
+      ? JSON.parse(text)
+      : parseYamlDocument(text);
+    const files = normalizeManifest(parsed);
+
+    if (!files.length) {
+      lastError = new Error(`${manifestPath} has no valid file entries.`);
+      continue;
+    }
+
+    return files;
   }
 
-  const text = (await response.text()).trim();
-  if (!text) {
-    throw new Error(`${CONTENT_MANIFEST_PATH} is empty.`);
-  }
-
-  const parsed = text.startsWith("{") ? JSON.parse(text) : parseManifestYaml(text);
-  const files = normalizeManifest(parsed);
-
-  if (!files.length) {
-    throw new Error(`${CONTENT_MANIFEST_PATH} has no valid file entries.`);
-  }
-
-  return files;
+  throw lastError || new Error("Failed to load a content manifest.");
 }
 
 function guessGitHubRepoFromLocation() {
@@ -324,7 +495,7 @@ async function discoverContentFilesFromGitHub() {
 
   return tree
     .filter((entry) => entry && entry.type === "blob" && typeof entry.path === "string")
-    .filter((entry) => entry.path.toLowerCase().endsWith(".json"))
+    .filter((entry) => /\.(ya?ml)$/i.test(entry.path))
     .map((entry) => ({
       path: entry.path,
       group: toGroupForPath(entry.path),

@@ -26,12 +26,12 @@ export async function getSourceDirs() {
     .sort((a, b) => a.dir.localeCompare(b.dir));
 }
 
-async function listJsonFiles(dirName) {
+async function listYamlFiles(dirName) {
   const absoluteDir = path.join(workspaceRoot, dirName);
   const entries = await readdir(absoluteDir, { withFileTypes: true });
 
   return entries
-    .filter((entry) => entry.isFile() && entry.name.toLowerCase().endsWith(".json"))
+    .filter((entry) => entry.isFile() && /\.(ya?ml)$/i.test(entry.name))
     .map((entry) => `../${dirName}/${entry.name}`)
     .sort((a, b) => a.localeCompare(b));
 }
@@ -56,8 +56,8 @@ export async function buildManifest() {
   const files = [];
 
   for (const source of sourceDirs) {
-    const jsonPaths = await listJsonFiles(source.dir);
-    files.push(...jsonPaths.map((jsonPath) => ({ path: jsonPath, group: source.group })));
+    const yamlPaths = await listYamlFiles(source.dir);
+    files.push(...yamlPaths.map((yamlPath) => ({ path: yamlPath, group: source.group })));
   }
 
   return { files };

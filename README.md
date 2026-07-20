@@ -18,10 +18,19 @@ JSON: See the dedicated ReadMe in the repository folder, for a detailed descript
 
 
 The website reads files listed in `training_materials/content-manifest.yml` and lets users search and filter content.
+The loader also accepts `training_materials/content-manifest.yaml` automatically.
+
+Manifest format:
+
+```yaml
+files:
+	- path: "../training_materials/Intro/example.json"
+		group: "Intro"
+```
 
 ## Automatic file discovery
 
-When deployed on GitHub Pages, the app automatically discovers all `.json` files under:
+When deployed on GitHub Pages, the app automatically discovers all `.yaml` and `.yml` files under:
 
 - `training_materials/ai_impact`
 - `training_materials/circular_economy`
@@ -32,7 +41,7 @@ When deployed on GitHub Pages, the app automatically discovers all `.json` files
 
 This is done by a workflow at `.github/workflows/update-manifest.yml`.
 
-This means newly added JSON files are picked up automatically after you push changes.
+This means newly added YAML files are picked up automatically after you push changes.
 The workflow regenerates `training_materials/content-manifest.yml` and commits it automatically if needed.
 
 ## Local development fallback
@@ -45,7 +54,7 @@ To refresh `training_materials/content-manifest.yml` manually, run:
 node page_rendering_code/scripts/generate-manifest.mjs
 ```
 
-Or use the local dev server with automatic manifest updates whenever JSON files are added/removed/edited:
+Or use the local dev server with automatic manifest updates whenever YAML files are added/removed/edited:
 
 ```bash
 cd page_rendering_code
@@ -54,7 +63,8 @@ npm run dev
 
 This serves the site at `http://localhost:8000` and watches:
 
-- `training_materials/*/*.json`
+- `training_materials/*/*.yaml`
+- `training_materials/*/*.yml`
 
 
 ## Run locally

@@ -3,7 +3,8 @@ name: Update Content Manifest
 on:
   push:
     paths:
-      - "training_materials/*/*.json"
+      - "training_materials/*/*.yml"
+      - "training_materials/*/*.yaml"
       - "page_rendering_code/scripts/generate-manifest.mjs"
       - ".github/workflows/update-manifest.yml"
   workflow_dispatch:
