@@ -1,4 +1,4 @@
-const CONTENT_MANIFEST_PATH = "../training_materials/content-manifest.json";
+const CONTENT_MANIFEST_PATH = "../training_materials/content-manifest.yml";
 const GITHUB_API = "https://api.github.com";
 const CONTENT_ROOT = "training_materials";
 const CONTENT_GROUPS = [
@@ -225,6 +225,36 @@ function normalizeManifest(manifest) {
     .map((entry) => ({ path: entry.path, group: normalizeGroupName(entry.group) }));
 }
 
+function parseManifestYaml(text) {
+  const files = [];
+  const lines = text.split(/\r?\n/);
+  let current = null;
+
+  for (const line of lines) {
+    if (!line.trim() || line.trim() === "---") {
+      continue;
+    }
+
+    if (line.trim() === "files:") {
+      continue;
+    }
+
+    const itemMatch = line.match(/^\s+-\s+path:\s+(.+)$/);
+    if (itemMatch) {
+      current = { path: JSON.parse(itemMatch[1]), group: "" };
+      files.push(current);
+      continue;
+    }
+
+    const groupMatch = line.match(/^\s+group:\s+(.+)$/);
+    if (groupMatch && current) {
+      current.group = JSON.parse(groupMatch[1]);
+    }
+  }
+
+  return { files };
+}
+
 async function loadManifest() {
   const response = await fetch(CONTENT_MANIFEST_PATH, { cache: "no-cache" });
 
@@ -237,7 +267,7 @@ async function loadManifest() {
     throw new Error(`${CONTENT_MANIFEST_PATH} is empty.`);
   }
 
-  const parsed = JSON.parse(text);
+  const parsed = text.startsWith("{") ? JSON.parse(text) : parseManifestYaml(text);
   const files = normalizeManifest(parsed);
 
   if (!files.length) {

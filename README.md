@@ -13,11 +13,11 @@ JSON: See the dedicated ReadMe in the repository folder, for a detailed descript
 - Client-side search logic in `page_rendering_code/app.js`
 - UI styling in `page_rendering_code/styles.css`
 - Vendored browser dependencies in `page_rendering_code/assets/vendor/` (for GitHub Pages)
-- A manifest file at `training_materials/content-manifest.json`
+- A manifest file at `training_materials/content-manifest.yml`
 - A manifest generator script at `page_rendering_code/scripts/generate-manifest.mjs`
 
 
-The website reads files listed in `training_materials/content-manifest.json` and lets users search and filter content.
+The website reads files listed in `training_materials/content-manifest.yml` and lets users search and filter content.
 
 ## Automatic file discovery
 
@@ -33,13 +33,13 @@ When deployed on GitHub Pages, the app automatically discovers all `.json` files
 This is done by a workflow at `.github/workflows/update-manifest.yml`.
 
 This means newly added JSON files are picked up automatically after you push changes.
-The workflow regenerates `training_materials/content-manifest.json` and commits it automatically if needed.
+The workflow regenerates `training_materials/content-manifest.yml` and commits it automatically if needed.
 
 ## Local development fallback
 
-When running locally (not on `*.github.io`), the app falls back to `training_materials/content-manifest.json`.
+When running locally (not on `*.github.io`), the app falls back to `training_materials/content-manifest.yml`.
 
-To refresh `training_materials/content-manifest.json` manually, run:
+To refresh `training_materials/content-manifest.yml` manually, run:
 
 ```bash
 node page_rendering_code/scripts/generate-manifest.mjs
