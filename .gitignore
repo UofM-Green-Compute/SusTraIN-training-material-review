@@ -1,0 +1,10 @@
+.vscode/
+venv/
+node_modules/
+page_rendering_code/node_modules/
+training_materials/content-manifest.yml
+__pycache__/
+*.pyc
+*.pyo
+*.log
+*.tmp
