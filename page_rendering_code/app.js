@@ -4,6 +4,8 @@ const CONTENT_MANIFEST_PATHS = [
 ];
 const GITHUB_API = "https://api.github.com";
 const CONTENT_ROOT = "training_materials";
+const APP_BASE_URL = new URL("./", window.location.href);
+const REPO_BASE_URL = new URL("../", APP_BASE_URL);
 const CONTENT_GROUPS = [
   "ai_impact",
   "circular_economy",
@@ -101,6 +103,29 @@ function asArray(jsonValue) {
 
 function normalizeGroupName(value) {
   return String(value || "").trim().toLowerCase();
+}
+
+function isLikelyRepoRelativePath(path) {
+  const normalized = String(path || "").replace(/^\.\/+/, "");
+  return normalized.startsWith(`${CONTENT_ROOT}/`);
+}
+
+function resolvePath(path) {
+  const normalizedPath = String(path || "").trim();
+
+  if (!normalizedPath) {
+    return normalizedPath;
+  }
+
+  if (/^[a-z]+:\/\//i.test(normalizedPath)) {
+    return normalizedPath;
+  }
+
+  if (isLikelyRepoRelativePath(normalizedPath)) {
+    return new URL(normalizedPath, REPO_BASE_URL).toString();
+  }
+
+  return new URL(normalizedPath, APP_BASE_URL).toString();
 }
 
 function normalizeItem(raw, sourcePath, sourceGroup) {
@@ -384,10 +409,11 @@ function parseYamlDocument(text) {
 }
 
 async function loadOneFile(item) {
-  const response = await fetch(item.path, { cache: "no-cache" });
+  const resolvedPath = resolvePath(item.path);
+  const response = await fetch(resolvedPath, { cache: "no-cache" });
 
   if (!response.ok) {
-    throw new Error(`Failed to load ${item.path}`);
+    throw new Error(`Failed to load ${resolvedPath}`);
   }
 
   const text = (await response.text()).trim();
@@ -400,7 +426,7 @@ async function loadOneFile(item) {
     : parseYamlDocument(text);
   return asArray(parsed)
     .filter((record) => record && record.publish !== false)
-    .map((record) => normalizeItem(record, item.path, item.group));
+    .map((record) => normalizeItem(record, resolvedPath, item.group));
 }
 
 function normalizeManifest(manifest) {
@@ -412,23 +438,24 @@ function normalizeManifest(manifest) {
 
   return rawFiles
     .filter((entry) => entry && typeof entry.path === "string" && typeof entry.group === "string")
-    .map((entry) => ({ path: entry.path, group: normalizeGroupName(entry.group) }));
+    .map((entry) => ({ path: resolvePath(entry.path), group: normalizeGroupName(entry.group) }));
 }
 
 async function loadManifest() {
   let lastError = null;
 
   for (const manifestPath of CONTENT_MANIFEST_PATHS) {
-    const response = await fetch(manifestPath, { cache: "no-cache" });
+    const resolvedManifestPath = resolvePath(manifestPath);
+    const response = await fetch(resolvedManifestPath, { cache: "no-cache" });
 
     if (!response.ok) {
-      lastError = new Error(`Failed to load ${manifestPath}`);
+      lastError = new Error(`Failed to load ${resolvedManifestPath}`);
       continue;
     }
 
     const text = (await response.text()).trim();
     if (!text) {
-      lastError = new Error(`${manifestPath} is empty.`);
+      lastError = new Error(`${resolvedManifestPath} is empty.`);
       continue;
     }
 
@@ -438,7 +465,7 @@ async function loadManifest() {
     const files = normalizeManifest(parsed);
 
     if (!files.length) {
-      lastError = new Error(`${manifestPath} has no valid file entries.`);
+      lastError = new Error(`${resolvedManifestPath} has no valid file entries.`);
       continue;
     }
 
@@ -465,7 +492,14 @@ function guessGitHubRepoFromLocation() {
 }
 
 function toGroupForPath(path) {
-  const segments = String(path).split("/").filter(Boolean);
+  let normalizedPath = String(path || "");
+  try {
+    normalizedPath = new URL(normalizedPath, window.location.href).pathname;
+  } catch {
+    // Keep original value if it's not URL-parsable.
+  }
+
+  const segments = normalizedPath.split("/").filter(Boolean);
   if (!segments.length) {
     return null;
   }
@@ -497,7 +531,7 @@ async function discoverContentFilesFromGitHub() {
     .filter((entry) => entry && entry.type === "blob" && typeof entry.path === "string")
     .filter((entry) => /\.(ya?ml)$/i.test(entry.path))
     .map((entry) => ({
-      path: entry.path,
+      path: resolvePath(entry.path),
       group: toGroupForPath(entry.path),
     }))
     .filter((entry) => entry.group !== null)
