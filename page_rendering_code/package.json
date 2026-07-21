@@ -1,0 +1,9 @@
+{
+  "name": "green-computing-info",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "manifest": "node scripts/generate-manifest.mjs",
+    "dev": "node scripts/dev-server.mjs"
+  }
+}

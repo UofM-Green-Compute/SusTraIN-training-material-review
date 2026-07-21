@@ -5,11 +5,14 @@ md_to_json.py — Convert a Markdown LearningResource file back to JSON-LD.
 Usage:
     python md_to_json.py input.md output.json
     python md_to_json.py input.md          # prints to stdout
+    python md_to_json.py input_folder
+    python md_to_json.py input_folder output_folder
 """
 
 import json
 import re
 import sys
+from pathlib import Path
 
 
 # Maps section headings to the JSON keys they contain, and how to handle them.
@@ -19,10 +22,10 @@ SECTION_CONFIG = {
         "subsection": "dct:conformsTo",
     },
     "descriptive metadata": {
-        "flat_keys": ["name", "description", "abstract", "keywords",
+        "flat_keys": ["name", "description", "abstract",
                       "educationalLevel", "timeRequired", "creativeWorkStatus",
                       "accessibilitySummary", "version"],
-        "list_keys": ["inLanguage", "learningResourceType"],
+        "list_keys": ["inLanguage", "learningResourceType", "keywords"],
     },
     "dates": {
         "flat_keys": ["dateCreated", "dateModified", "datePublished"],
@@ -62,6 +65,18 @@ def parse_kv_line(line):
     if m:
         return m.group(1), m.group(2).strip()
     return None, None
+
+
+def normalize_list_values(key, values):
+    """Normalize list values, including comma-split keywords."""
+    if key != "keywords":
+        return values
+
+    normalized = []
+    for value in values:
+        parts = [part.strip() for part in str(value).split(",")]
+        normalized.extend(part for part in parts if part)
+    return normalized
 
 
 def parse_typed_list_block(lines):
@@ -202,7 +217,10 @@ def md_to_json(text):
                     if re.match(rf"^-\s+\*\*`{re.escape(lk)}`\*\*", line):
                         capture = True
                         # value may be inline on same line after the key
-                        m = re.match(rf"^-\s+\*\*`{re.escape(lk)}`\*\*\s+(.+)$", line)
+                        m = re.match(
+                            rf"^-\s+\*\*`{re.escape(lk)}`\*\*\s+(.+)$",
+                            line,
+                        )
                         if m:
                             vals.append(m.group(1).strip())
                             capture = False
@@ -213,14 +231,14 @@ def md_to_json(text):
                             vals.append(pm.group(1).strip())
                         else:
                             capture = False
-                # Also handle plain bullet without header (e.g. inLanguage just listed)
+                # Also handle plain bullet without a header line.
                 if not vals:
                     for line in lines:
                         k2, v2 = parse_kv_line(line)
                         if k2 == lk:
                             vals.append(v2)
                 if vals:
-                    data[lk] = vals
+                    data[lk] = normalize_list_values(lk, vals)
 
         # Conforms To subsection
         if "subsection" in config:
@@ -255,23 +273,71 @@ def md_to_json(text):
     return data
 
 
-def main():
-    if len(sys.argv) < 2:
-        print("Usage: python md_to_json.py input.md [output.json]")
-        sys.exit(1)
-
-    with open(sys.argv[1], encoding="utf-8") as f:
+def convert_file(input_path, output_path):
+    with open(input_path, encoding="utf-8") as f:
         text = f.read()
 
     data = md_to_json(text)
     out = json.dumps(data, indent=2, ensure_ascii=False)
 
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    with open(output_path, "w", encoding="utf-8") as f:
+        f.write(out + "\n")
+
+
+def convert_directory(input_dir, output_dir=None):
+    md_files = sorted(
+        path for path in input_dir.rglob("*.md") if path.is_file()
+    )
+
+    if not md_files:
+        print(f"No Markdown files found in {input_dir}")
+        return
+
+    converted = 0
+    for md_file in md_files:
+        relative = md_file.relative_to(input_dir)
+        if output_dir is None:
+            out_file = md_file.with_suffix(".json")
+        else:
+            out_file = output_dir / relative.with_suffix(".json")
+
+        convert_file(md_file, out_file)
+        converted += 1
+        print(f"Written to {out_file}")
+
+    print(f"Converted {converted} Markdown file(s).")
+
+
+def main():
+    if len(sys.argv) < 2:
+        print("Usage: python md_to_json.py input.md [output.json]")
+        print("   or: python md_to_json.py input_folder [output_folder]")
+        sys.exit(1)
+
+    input_path = Path(sys.argv[1])
+
+    if input_path.is_dir():
+        output_dir = Path(sys.argv[2]) if len(sys.argv) >= 3 else None
+        convert_directory(input_path, output_dir)
+        return
+
+    if not input_path.exists() or not input_path.is_file():
+        print(f"Input path does not exist or is not a file: {input_path}")
+        sys.exit(1)
+
     if len(sys.argv) >= 3:
-        with open(sys.argv[2], "w", encoding="utf-8") as f:
-            f.write(out + "\n")
-        print(f"Written to {sys.argv[2]}")
-    else:
-        print(out)
+        output_path = Path(sys.argv[2])
+        convert_file(input_path, output_path)
+        print(f"Written to {output_path}")
+        return
+
+    with open(input_path, encoding="utf-8") as f:
+        text = f.read()
+
+    data = md_to_json(text)
+    out = json.dumps(data, indent=2, ensure_ascii=False)
+    print(out)
 
 
 if __name__ == "__main__":

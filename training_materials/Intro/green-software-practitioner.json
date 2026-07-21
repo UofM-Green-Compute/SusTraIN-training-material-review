@@ -1,0 +1,61 @@
+{
+  "@context": "https://schema.org",
+  "@type": "LearningResource",
+  "@id": "https://learn.greensoftware.foundation/",
+  "url": "https://learn.greensoftware.foundation/",
+  "dct:conformsTo": {
+    "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
+    "@type": "CreativeWork"
+  },
+  "name": "Green Software Practitioner",
+  "description": "A free, open-source training course on how to build, maintain, and run greener software applications",
+  "abstract": "This training teaches how to build, maintain, and run greener applications regardless of domain, industry, organisation size or type, programming language, or framework. It covers the core drivers of carbon emissions in software, three actions to reduce emissions, measuring software emissions using the GHG protocol and the Software Carbon Intensity (SCI) specification, and types of corporate climate targets.",
+  "educationalLevel": "Intermediate",
+  "creativeWorkStatus": "active",
+  "inLanguage": [
+    "en-US"
+  ],
+  "learningResourceType": [
+    "online course"
+  ],
+  "keywords": [
+    "green software",
+    "carbon efficiency",
+    "energy efficiency",
+    "carbon awareness",
+    "hardware efficiency",
+    "SCI",
+    "GHG protocol",
+    "sustainable software engineering"
+  ],
+  "audience": {
+    "@type": "Audience",
+    "audienceType": "Software practitioners involved in building, deploying, or managing software applications — developers, DevOps, testers, architects, SREs, product managers, UX designers. At least one year of industry experience recommended."
+  },
+  "competencyRequired": [
+    "At least one year of industry experience building, deploying, or managing software applications"
+  ],
+  "teaches": [
+    "Identify the core drivers of carbon emissions for software applications",
+    "Understand three actions to reduce the carbon emissions of software",
+    "Measure software emissions using the GHG protocol or the Software Carbon Intensity (SCI) specification",
+    "Understand corporate climate targets and align green software proposals with organisational commitments"
+  ],
+  "license": [
+    "https://creativecommons.org/licenses/by/4.0/"
+  ],
+  "author": [
+    {
+      "@type": "Organization",
+      "name": "Green Software Foundation — Principles & Patterns team, Community Working Group",
+      "url": "https://greensoftware.foundation/"
+    }
+  ],
+  "mentions": [
+    {
+      "@type": "CreativeWork",
+      "name": "Green Software Foundation training source",
+      "url": "https://github.com/Green-Software-Foundation/training"
+    }
+  ]
+}

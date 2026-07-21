@@ -1,0 +1,43 @@
+{
+  "@context": "https://schema.org",
+  "@type": "LearningResource",
+  "@id": "https://www.fun-mooc.fr/en/courses/environmental-impacts-of-digital-technologies/",
+  "url": "https://www.fun-mooc.fr/en/courses/environmental-impacts-of-digital-technologies/",
+  "identifier": "https://www.fun-mooc.fr/en/courses/environmental-impacts-of-digital-technologies/",
+  "dct:conformsTo": {
+    "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
+    "@type": "CreativeWork"
+  },
+  "name": "Environmental Impacts of Digital Technologies",
+  "description": "Impact'Num is a MOOC to question the environmental impacts of digital technologies, and learn how to measure, decipher, and act.",
+  "abstract": "A 4-part MOOC combining awareness activities, educational videos, formative activities on indicators/data/trend analysis, and activities on possible individual and collective actions (as consumer, designer, teacher, citizen), co-produced by Association Class'Code and Inria.",
+  "educationalLevel": "Beginner",
+  "timeRequired": "PT5H",
+  "creativeWorkStatus": "active",
+  "inLanguage": [
+    "en, fr"
+  ],
+  "learningResourceType": [
+    "online course"
+  ],
+  "keywords": [
+    "digital environmental impact",
+    "sustainability",
+    "digital sobriety",
+    "indicators",
+    "ICT footprint"
+  ],
+  "audience": {
+    "@type": "Audience",
+    "audienceType": "Citizens, students, teachers wanting to understand and act on digital environmental impact"
+  },
+  "license": [
+    "Not stated on the page (Free to access on FUN MOOC platform)"
+  ],
+  "contributor": [
+    {
+      "@type": "Organization",
+      "name": "FUN MOOC / Inria / Association Class'Code"
+    }
+  ]
+}
