@@ -1,0 +1,38 @@
+---
+"@context": "https://schema.org"
+"@type": "LearningResource"
+"@id": "https://github.com/Deyht/frugal_ai"
+url: "https://github.com/Deyht/frugal_ai"
+identifier: "https://github.com/Deyht/frugal_ai"
+"dct:conformsTo":
+  "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE"
+  "@type": "CreativeWork"
+name: "Frugal AI PSL-Week course materials"
+description: "Frugal AI PSL-Week course materials: slides and hands-on practical work on optimizing matrix multiplication and artificial neural networks."
+abstract: "University course materials (PSL-Week) consisting of lecture slides, a practical-work subject on matrix multiplication optimization (Python, C, GPU, vectorized/parallel implementations), and a practical work on ANN optimization delivered via Colab notebooks, with correction files provided."
+educationalLevel: "Advanced"
+creativeWorkStatus: "active"
+inLanguage:
+  - "en"
+learningResourceType:
+  - "lesson"
+keywords:
+  - "frugal AI"
+  - "matrix multiplication"
+  - "GPU"
+  - "ANN optimization"
+  - "HPC"
+  - "energy efficiency"
+  - "C"
+  - "Python"
+dateCreated: "2025-11-21"
+dateModified: "2025-11-28"
+audience:
+  "@type": "Audience"
+  audienceType: "University students (PSL-Week participants) with programming/HPC background"
+license:
+  - "Not stated on the page (No license file detected via GitHub API; open on GitHub as public course materials)"
+contributor:
+  -
+    "@type": "Organization"
+    name: "PSL University"

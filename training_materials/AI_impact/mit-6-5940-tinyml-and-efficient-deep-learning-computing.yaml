@@ -1,0 +1,40 @@
+---
+"@context": "https://schema.org"
+"@type": "LearningResource"
+"@id": "https://efficientml.ai/"
+url: "https://efficientml.ai/"
+identifier: "https://efficientml.ai/"
+"dct:conformsTo":
+  "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE"
+  "@type": "CreativeWork"
+name: "MIT 6.5940 TinyML and Efficient Deep Learning Computing"
+description: "This course focuses on efficient machine learning and systems, introducing techniques that enable powerful deep learning applications on resource-constrained devices."
+abstract: "Topics include model compression, pruning, quantization, neural architecture search, distributed training, data/model parallelism, gradient compression, and on-device fine-tuning, plus application-specific acceleration for large language models and diffusion models. Students get hands-on experience implementing model compression techniques and deploying LLMs (Llama2-7B) on a laptop."
+educationalLevel: "Advanced"
+creativeWorkStatus: "active"
+inLanguage:
+  - "en"
+learningResourceType:
+  - "online course"
+keywords:
+  - "TinyML"
+  - "model compression"
+  - "pruning"
+  - "quantization"
+  - "neural architecture search"
+  - "distributed training"
+  - "LLM inference"
+  - "efficient deep learning"
+dateCreated: "2024-09-05"
+audience:
+  "@type": "Audience"
+  audienceType: "Graduate-level students with computer architecture and intro ML background"
+competencyRequired:
+  - "MIT 6.191 Computation Structures and 6.390 Intro to Machine Learning (or equivalent prior experience)"
+license:
+  - "Not stated on the page (Lecture videos publicly posted on YouTube; slides on course site; not offered Fall 2025 (instructor sabbatical))"
+contributor:
+  -
+    "@type": "Organization"
+    name: "MIT (Prof. Song Han, HAN Lab)"
+    url: "https://hanlab.mit.edu/courses/2024-fall-65940"

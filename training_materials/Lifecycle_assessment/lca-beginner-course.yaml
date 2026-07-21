@@ -1,0 +1,36 @@
+---
+"@context": "https://schema.org"
+"@type": "LearningResource"
+"@id": "https://academy.ecochain.com/course/lca-beginner-course"
+url: "https://academy.ecochain.com/course/lca-beginner-course"
+identifier: "https://academy.ecochain.com/course/lca-beginner-course"
+"dct:conformsTo":
+  "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE"
+  "@type": "CreativeWork"
+name: "LCA Beginner Course"
+description: "Getting Started with Product Footprinting — learn the fundamentals of Life Cycle Assessment (LCA), what it can be used for, and what tools and resources are needed."
+abstract: "A free, self-paced, 7-module course (5 videos, 18 e-books, 5 quizzes) introducing LCA methodology basics for beginners, ending with a certificate of completion."
+educationalLevel: "Beginner"
+timeRequired: "PT3H"
+creativeWorkStatus: "active"
+inLanguage:
+  - "en"
+learningResourceType:
+  - "online course"
+keywords:
+  - "Life Cycle Assessment"
+  - "LCA"
+  - "product footprinting"
+  - "sustainability"
+  - "beginner"
+audience:
+  "@type": "Audience"
+  audienceType: "Anyone wanting to learn LCA basics and understand how it could yield value for their company"
+competencyRequired:
+  - "No prior knowledge required"
+license:
+  - "Not stated on the page (Free; 24/7 accessible, self-paced)"
+contributor:
+  -
+    "@type": "Organization"
+    name: "Ecochain Academy"

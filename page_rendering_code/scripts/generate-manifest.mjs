@@ -6,7 +6,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const workspaceRoot = path.resolve(__dirname, "..", "..");
 const TRAINING_ROOT = "training_materials";
-const IGNORED_SOURCE_DIRS = new Set(["archive", "_drafts"]);
+const IGNORED_SOURCE_DIRS = new Set(["_archive", "_drafts"]);
 
 export async function getSourceDirs() {
   const absoluteTrainingRoot = path.join(workspaceRoot, TRAINING_ROOT);
@@ -26,14 +26,29 @@ export async function getSourceDirs() {
     .sort((a, b) => a.dir.localeCompare(b.dir));
 }
 
-async function listJsonFiles(dirName) {
+async function listYamlFiles(dirName) {
   const absoluteDir = path.join(workspaceRoot, dirName);
   const entries = await readdir(absoluteDir, { withFileTypes: true });
 
   return entries
-    .filter((entry) => entry.isFile() && entry.name.toLowerCase().endsWith(".json"))
+    .filter((entry) => entry.isFile() && /\.(ya?ml)$/i.test(entry.name))
     .map((entry) => `../${dirName}/${entry.name}`)
     .sort((a, b) => a.localeCompare(b));
+}
+
+function yamlScalar(value) {
+  return JSON.stringify(String(value));
+}
+
+function toYaml(manifest) {
+  const lines = ["files:"];
+
+  for (const file of manifest.files) {
+    lines.push(`  - path: ${yamlScalar(file.path)}`);
+    lines.push(`    group: ${yamlScalar(file.group)}`);
+  }
+
+  return `${lines.join("\n")}\n`;
 }
 
 export async function buildManifest() {
@@ -41,8 +56,8 @@ export async function buildManifest() {
   const files = [];
 
   for (const source of sourceDirs) {
-    const jsonPaths = await listJsonFiles(source.dir);
-    files.push(...jsonPaths.map((jsonPath) => ({ path: jsonPath, group: source.group })));
+    const yamlPaths = await listYamlFiles(source.dir);
+    files.push(...yamlPaths.map((yamlPath) => ({ path: yamlPath, group: source.group })));
   }
 
   return { files };
@@ -50,11 +65,11 @@ export async function buildManifest() {
 
 export async function writeManifest() {
   const manifest = await buildManifest();
-  const outPath = path.join(workspaceRoot, TRAINING_ROOT, "content-manifest.json");
-  const payload = `${JSON.stringify(manifest, null, 2)}\n`;
+  const outPath = path.join(workspaceRoot, TRAINING_ROOT, "content-manifest.yml");
+  const payload = toYaml(manifest);
 
   await writeFile(outPath, payload, "utf8");
-  console.log(`Wrote ${manifest.files.length} entries to ${TRAINING_ROOT}/content-manifest.json`);
+  console.log(`Wrote ${manifest.files.length} entries to ${TRAINING_ROOT}/content-manifest.yml`);
   return manifest;
 }
 

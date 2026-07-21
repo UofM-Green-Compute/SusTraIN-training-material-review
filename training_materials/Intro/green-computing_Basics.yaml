@@ -1,0 +1,76 @@
+---
+"@context": "https://schema.org"
+"@type": "LearningResource"
+"@id": "https://learn.greensoftware.foundation/"
+url: "https://learn.greensoftware.foundation/,https://github.com/Green-Software-Foundation/learn/wiki/Green-Guides,https://movement.greensoftware.foundation/spaces/19525645?utm_source=manual"
+identifier: "n/a"
+"dct:conformsTo":
+  "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE"
+  "@type": "CreativeWork"
+name: "Green Software Practitioner"
+description: "Learn the concepts needed to build, maintain and run greener applications"
+educationalLevel: "Beginner"
+timeRequired: "PT3H"
+creativeWorkStatus: "active"
+accessibilitySummary: "Course is text-based with infographics and includes quizzes. French language version available."
+version: "v1.1.0"
+inLanguage:
+  - "en-US"
+learningResourceType:
+  - "online tutorial (text only)"
+keywords:
+  - "sustainable computing"
+  - "green computing"
+  - "carbon footprint"
+  - "environmental impact"
+  - "computational research"
+dateModified: "2024-11-12 (11 Dec)"
+audience:
+  "@type": "Audience"
+  audienceType: "Anyone involved in the process of building, deploying, or managing software, anyone who wants to make their software applications more sustainable and build a career in green software"
+competencyRequired:
+  - "No prior knowledge of computing infrastructure required, ideally have at least one year of industry experience building, deploying, or managing software applications."
+teaches:
+  - "The core drivers of carbon emissions for software applications."
+  - "The 3 actions one can take to reduce the carbon emissions of your software."
+  - "How to measure software emissions using the Greenhouse Gas (GHG) protocol or the Software Carbon Intensity (SCI) specification."
+  - "The different types of corporate climate targets so you can align your green software proposals to help meet your organization's public commitments."
+license:
+  - "https://creativecommons.org/licenses/by/4.0/"
+author:
+  -
+    "@type": "Person"
+    name: "Sarah Hsu"
+    url: "https://champions.greensoftware.foundation/champions/sarah-hsu/"
+  -
+    "@type": "Person"
+    name: "Leila Lhardy"
+    url: "https://www.linkedin.com/in/leilalhardy/"
+  -
+    "@type": "Person"
+    name: "Jose Alejandro Sanchez"
+    url: "https://www.linkedin.com/in/ijasanchez/"
+  -
+    "@type": "Person"
+    name: "Russell Trow"
+    url: "https://www.linkedin.com/in/russelltrow/"
+contributor:
+  -
+    "@type": "Organization"
+    name: "The Greensoftware Foundation"
+    url: "https://greensoftware.foundation/"
+  -
+    "@type": "Organization"
+    name: "The Linux Foundation"
+    url: "https://www.linuxfoundation.org/"
+about:
+  -
+    "@type": "DefinedTerm"
+    name: "Green Software Practitioner (Basics of Green Computing)"
+    url: "https://www.ebi.ac.uk/training/online/courses/sustainable-computing-in-science/"
+mentions:
+  -
+    "@type": "CreativeWork"
+    name: "Sustainable computing in science"
+    identifier: "DOI:10.6019/TOL.sustainable-computing-intro-t.2026.00001.1"
+    url: "https://www.ebi.ac.uk/training/online/courses/sustainable-computing-in-science/"

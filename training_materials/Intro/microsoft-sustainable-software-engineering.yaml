@@ -1,0 +1,39 @@
+---
+"@context": "https://schema.org"
+"@type": "LearningResource"
+"@id": "https://learn.microsoft.com/en-us/training/modules/sustainable-software-engineering-overview/"
+url: "https://learn.microsoft.com/en-us/training/modules/sustainable-software-engineering-overview/"
+"dct:conformsTo":
+  "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE"
+  "@type": "CreativeWork"
+name: "The Principles of Sustainable Software Engineering"
+description: "A Microsoft Learn module covering the core competencies needed to define, build, and run sustainable software applications"
+abstract: "Sustainable Software Engineering is an emerging discipline at the intersection of climate science, software, hardware, electricity markets, and data centre design. This module covers the six principles of Sustainable Software Engineering and the two philosophies that underpin the discipline."
+educationalLevel: "Beginner"
+creativeWorkStatus: "active"
+inLanguage:
+  - "en-US"
+learningResourceType:
+  - "online module"
+keywords:
+  - "sustainable software engineering"
+  - "green software"
+  - "carbon efficiency"
+  - "energy efficiency"
+  - "carbon awareness"
+  - "hardware efficiency"
+  - "climate commitments"
+  - "Azure"
+audience:
+  "@type": "Audience"
+  audienceType: "Developers, administrators, solution architects, DevOps engineers, data scientists, data engineers, AI engineers, technology managers, and students"
+competencyRequired:
+  - "Familiarity with general computing concepts"
+teaches:
+  - "Identify the six principles of Sustainable Software Engineering"
+  - "Understand the two philosophies of Sustainable Software Engineering"
+author:
+  -
+    "@type": "Organization"
+    name: "Microsoft"
+    url: "https://learn.microsoft.com"

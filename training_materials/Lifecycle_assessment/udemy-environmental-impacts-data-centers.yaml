@@ -1,0 +1,40 @@
+---
+"@context": "https://schema.org"
+"@type": "LearningResource"
+"@id": "https://www.udemy.com/course/environmental-impacts-of-data-centers/"
+url: "https://www.udemy.com/course/environmental-impacts-of-data-centers/"
+"dct:conformsTo":
+  "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE"
+  "@type": "CreativeWork"
+name: "Environmental Impacts of Data Centers"
+description: "A free Udemy course exploring the environmental impacts of data centres and strategies for decarbonisation in the digital infrastructure sector"
+abstract: "This course covers the full range of environmental impacts of data centres beyond energy and water consumption, including land use, global supply chain issues of rare earth minerals, AI policy, and environmental justice concerns for communities. It uses a life cycle assessment (LCA) perspective to help sustainability professionals, IT leaders, developers, and policymakers understand and reduce the carbon footprint of digital infrastructure."
+educationalLevel: "Beginner"
+creativeWorkStatus: "active"
+inLanguage:
+  - "en-US"
+learningResourceType:
+  - "online course"
+keywords:
+  - "data centres"
+  - "environmental impact"
+  - "decarbonisation"
+  - "life cycle assessment"
+  - "rare earth minerals"
+  - "AI"
+  - "energy consumption"
+  - "green IT"
+audience:
+  "@type": "Audience"
+  audienceType: "Sustainability professionals, IT leaders, developers and engineers, policymakers, and business leaders interested in the environmental impact of digital infrastructure"
+competencyRequired:
+  - "No prior knowledge required"
+teaches:
+  - "Understand the environmental impacts of data centres including energy, water, land use, and supply chain"
+  - "Apply a life cycle assessment (LCA) perspective to digital infrastructure"
+  - "Identify strategies for data centre decarbonisation"
+  - "Understand the role of AI policy and environmental justice in data centre development"
+author:
+  -
+    "@type": "Person"
+    name: "Nathaniel Burola"
