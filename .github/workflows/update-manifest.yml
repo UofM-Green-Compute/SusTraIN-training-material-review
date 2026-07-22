@@ -6,6 +6,7 @@ on:
       - "training_materials/*/*.yml"
       - "training_materials/*/*.yaml"
       - "page_rendering_code/scripts/generate-manifest.mjs"
+      - "page_rendering_code/scripts/generate-frontmatter.mjs"
       - ".github/workflows/update-manifest.yml"
   workflow_dispatch:
 
@@ -42,4 +43,39 @@ jobs:
           fi
 
           git commit -m "chore: auto-update content manifest"
+          git push origin HEAD:${{ github.ref_name }}
+
+  regenerate-frontmatter:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+
+      - name: Install dependencies
+        run: npm install
+        working-directory: page_rendering_code
+
+      - name: Regenerate content frontmatter
+        run: node page_rendering_code/scripts/generate-frontmatter.mjs
+
+      - name: Commit and push frontmatter if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add training_materials/content-frontmatter.json
+
+          if git diff --cached --quiet; then
+            echo "No frontmatter changes to commit."
+            exit 0
+          fi
+
+          git commit -m "chore: auto-update content frontmatter"
           git push origin HEAD:${{ github.ref_name }}
