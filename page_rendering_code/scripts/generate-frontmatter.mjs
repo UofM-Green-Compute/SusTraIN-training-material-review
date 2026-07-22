@@ -37,14 +37,7 @@ async function listYamlFiles(dirName) {
 }
 
 function toJson(frontmatter) {
-  const lines = ["files:"];
-
-  for (const file of frontmatter.files) {
-    lines.push(`  - path: ${yamlScalar(file.path)}`);
-    lines.push(`    group: ${yamlScalar(file.group)}`);
-  }
-
-  return `${lines.join("\n")}\n`;
+  return JSON.stringify(frontmatter, null, 2) + "\n";
 }
 
 export async function buildFrontmatter() {
@@ -62,11 +55,11 @@ export async function buildFrontmatter() {
 export async function writeFrontmatter() {
   const frontmatter = await buildFrontmatter();
   const outPath = path.join(workspaceRoot, TRAINING_ROOT, "content-frontmatter.json");
-  const payload = toYaml(frontmatter);
+  const payload = toJson(frontmatter);
 
   await writeFile(outPath, payload, "utf8");
-  console.log(`Wrote ${manifest.files.length} entries to ${TRAINING_ROOT}/content-frontmatter.json`);
-  return manifest;
+  console.log(`Wrote ${frontmatter.files.length} entries to ${TRAINING_ROOT}/content-frontmatter.json`);
+  return frontmatter;
 }
 
 async function main() {
