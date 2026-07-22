@@ -1,6 +1,8 @@
-import { readdir, writeFile } from "node:fs/promises";
+import { readdir, writeFile, readFile } from "node:fs/promises";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import * as yaml from "js-yaml";
+
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -40,13 +42,31 @@ function toJson(frontmatter) {
   return JSON.stringify(frontmatter, null, 2) + "\n";
 }
 
+async function getJson(yamlPath) {
+  try {
+    // yamlPath is relative like ../training_materials/AI_impact/file.yaml
+    // Need to resolve from workspaceRoot, stripping the ../ part
+    const cleanPath = yamlPath.replace(/^\.\.\//, "");
+    const absolutePath = path.join(workspaceRoot, cleanPath);
+    const yamlContent = await readFile(absolutePath, "utf8");
+    const yamlData = yaml.load(yamlContent);
+    return yamlData;
+  } catch (error) {
+    console.error(`Error reading/parsing ${yamlPath}:`, error.message);
+    return null;
+  }
+}
+
 export async function buildFrontmatter() {
   const sourceDirs = await getSourceDirs();
   const files = [];
 
   for (const source of sourceDirs) {
     const yamlPaths = await listYamlFiles(source.dir);
-    files.push(...yamlPaths.map((yamlPath) => ({ path: yamlPath, group: source.group })));
+    for (const yamlPath of yamlPaths) {
+      const item = await getJson(yamlPath);
+      files.push({ path: yamlPath, group: source.group, item });
+    }
   }
 
   return { files };

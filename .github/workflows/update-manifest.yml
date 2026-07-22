@@ -6,6 +6,7 @@ on:
       - "training_materials/*/*.yml"
       - "training_materials/*/*.yaml"
       - "page_rendering_code/scripts/generate-manifest.mjs"
+      - "page_rendering_code/scripts/generate-frontmatter.mjs"
       - ".github/workflows/update-manifest.yml"
   workflow_dispatch:
 

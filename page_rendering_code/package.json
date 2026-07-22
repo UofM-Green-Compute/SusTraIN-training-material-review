@@ -5,5 +5,8 @@
   "scripts": {
     "manifest": "node scripts/generate-manifest.mjs",
     "dev": "node scripts/dev-server.mjs"
+  },
+  "dependencies": {
+    "js-yaml": "^5.2.1"
   }
 }
