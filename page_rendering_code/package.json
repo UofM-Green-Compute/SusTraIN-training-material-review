@@ -4,9 +4,10 @@
   "type": "module",
   "scripts": {
     "manifest": "node scripts/generate-manifest.mjs",
+    "frontmatter": "node scripts/generate-frontmatter.mjs",
     "dev": "node scripts/dev-server.mjs"
   },
   "dependencies": {
-    "js-yaml": "^5.2.1"
+    "js-yaml": "^4.3.0"
   }
 }

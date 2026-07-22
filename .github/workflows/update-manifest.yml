@@ -59,6 +59,10 @@ jobs:
         with:
           node-version: "20"
 
+      - name: Install dependencies
+        run: npm install
+        working-directory: page_rendering_code
+
       - name: Regenerate content frontmatter
         run: node page_rendering_code/scripts/generate-frontmatter.mjs
 
@@ -69,7 +73,7 @@ jobs:
           git add training_materials/content-frontmatter.json
 
           if git diff --cached --quiet; then
-            echo "No manifest changes to commit."
+            echo "No frontmatter changes to commit."
             exit 0
           fi
 
