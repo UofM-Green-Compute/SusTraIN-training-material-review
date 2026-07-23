@@ -1,5 +1,6 @@
 # SusTraIN-training-material-review
 Repository for markdown files on green compute training. 
+See the link to the GitHub pages in the `About` section, to view the SusTraIN training materials.
 
 
 ## Adding new Repository items, and required format
@@ -9,12 +10,14 @@ JSON: See the dedicated ReadMe in the repository folder, for a detailed descript
 ## What this repo now includes
 
 - SusTraIN Training Materials folder: `training_materials/`
-- A static website entry point at `page_rendering_code/index.html`
+- Static website entry point at `page_rendering_code/index.html` and `index.html`
 - Client-side search logic in `page_rendering_code/app.js`
 - UI styling in `page_rendering_code/styles.css`
 - Vendored browser dependencies in `page_rendering_code/assets/vendor/` (for GitHub Pages)
 - A manifest file at `training_materials/content-manifest.yml`
 - A manifest generator script at `page_rendering_code/scripts/generate-manifest.mjs`
+- A frontmatter file at `training_materials/content-frontmatter.yml`
+- A frontmatter generator script at `page_rendering_code/scripts/generate-frontmatter.mjs`
 
 
 The website reads files listed in `training_materials/content-manifest.yml` and lets users search and filter content.
@@ -28,30 +31,46 @@ files:
 		group: "Intro"
 ```
 
+Frontmatter format:
+
+```json
+{
+	"files": [
+		{
+			"path": "../training_materials/Intro/example.json",
+			"group": "Intro",
+			"item": {
+				"name": "Frugal AI PSL-Week course materials",
+				"url": "https://github.com/Deyht/frugal_ai",
+        		"description": "Frugal AI PSL-Week course materials: slides and hands-on practical work on ...",
+			}
+
+		}
+	]
+```
+
 ## Automatic file discovery
 
-When deployed on GitHub Pages, the app automatically discovers all `.yaml` and `.yml` files under:
+When deployed on GitHub Pages, the app automatically discovers all `.yaml` and `.yml` files under the `training_materials` directory.
 
-- `training_materials/ai_impact`
-- `training_materials/circular_economy`
-- `training_materials/energy_efficiency`
-- `training_materials/intro`
-- `training_materials/lifecycle_assessment`
-- `training_materials/metrics_tools`
+This is done by a workflow at:
 
-This is done by a workflow at `.github/workflows/update-manifest.yml`.
+	- .github/workflows/update-manifest.yml
+	- .github/workflows/update-manifest.yml
 
 This means newly added YAML files are picked up automatically after you push changes.
-The workflow regenerates `training_materials/content-manifest.yml` and commits it automatically if needed.
+The workflow regenerates `training_materials/content-manifest.yml` and `training_materials/content-frontmatter.yml` and commits them automatically if needed.
 
 ## Local development fallback
 
-When running locally (not on `*.github.io`), the app falls back to `training_materials/content-manifest.yml`.
+When running locally (not on `*.github.io`), the app falls back to `training_materials/content-manifest.yml` and
+`training_materials/content-frontmatter.yml`.
 
-To refresh `training_materials/content-manifest.yml` manually, run:
+To refresh those 2 files manually, run:
 
 ```bash
 node page_rendering_code/scripts/generate-manifest.mjs
+node page_rendering_code/scripts/generate-frontmatter.mjs
 ```
 
 Or use the local dev server with automatic manifest updates whenever YAML files are added/removed/edited:
