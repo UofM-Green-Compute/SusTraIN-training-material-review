@@ -1,1417 +1,1331 @@
-{
-  "files": [
-    {
-      "path": "../training_materials/AI_impact/frugal-ai-psl-week-course-materials.yaml",
-      "group": "AI_impact",
-      "item": {
-        "@context": "https://schema.org",
-        "@type": "LearningResource",
-        "@id": "https://github.com/Deyht/frugal_ai",
-        "url": "https://github.com/Deyht/frugal_ai",
-        "identifier": "https://github.com/Deyht/frugal_ai",
-        "dct:conformsTo": {
-          "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
-          "@type": "CreativeWork"
-        },
-        "name": "Frugal AI PSL-Week course materials",
-        "description": "Frugal AI PSL-Week course materials: slides and hands-on practical work on optimizing matrix multiplication and artificial neural networks.",
-        "abstract": "University course materials (PSL-Week) consisting of lecture slides, a practical-work subject on matrix multiplication optimization (Python, C, GPU, vectorized/parallel implementations), and a practical work on ANN optimization delivered via Colab notebooks, with correction files provided.",
-        "educationalLevel": "Advanced",
-        "creativeWorkStatus": "active",
-        "inLanguage": [
-          "en"
-        ],
-        "learningResourceType": [
-          "lesson"
-        ],
-        "keywords": [
-          "frugal AI",
-          "matrix multiplication",
-          "GPU",
-          "ANN optimization",
-          "HPC",
-          "energy efficiency",
-          "C",
-          "Python"
-        ],
-        "dateCreated": "2025-11-21",
-        "dateModified": "2025-11-28",
-        "audience": {
-          "@type": "Audience",
-          "audienceType": "University students (PSL-Week participants) with programming/HPC background"
-        },
-        "license": [
-          "Not stated on the page (No license file detected via GitHub API; open on GitHub as public course materials)"
-        ],
-        "contributor": [
-          {
-            "@type": "Organization",
-            "name": "PSL University"
-          }
-        ]
-      }
+[
+  {
+    "@context": "https://schema.org",
+    "@type": "LearningResource",
+    "@id": "https://github.com/Deyht/frugal_ai",
+    "url": "https://github.com/Deyht/frugal_ai",
+    "identifier": "https://github.com/Deyht/frugal_ai",
+    "dct:conformsTo": {
+      "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
+      "@type": "CreativeWork"
     },
-    {
-      "path": "../training_materials/AI_impact/frugal-artificial-intelligence-ai-training-course.yaml",
-      "group": "AI_impact",
-      "item": {
-        "@context": "https://schema.org",
-        "@type": "LearningResource",
-        "@id": "https://www.greenit.fr/frugal-artificial-intelligence-ai-training-course/",
-        "url": "https://www.greenit.fr/frugal-artificial-intelligence-ai-training-course/",
-        "identifier": "https://www.greenit.fr/frugal-artificial-intelligence-ai-training-course/",
-        "dct:conformsTo": {
-          "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
-          "@type": "CreativeWork"
-        },
-        "name": "Frugal Artificial Intelligence (AI) training course",
-        "description": "A one-day training course on frugal artificial intelligence, teaching participants to understand and reduce the environmental and social impacts of AI.",
-        "abstract": "Covers the fundamentals of responsible digital practices, key AI impact areas via the three pillars of Green IT (data centers, hardware, software), and current best-practice solutions for lowering AI's footprint, ending with a concrete organizational action plan.",
-        "educationalLevel": "Beginner",
-        "timeRequired": "P1D",
-        "creativeWorkStatus": "active",
-        "inLanguage": [
-          "en"
-        ],
-        "learningResourceType": [
-          "workshop"
-        ],
-        "keywords": [
-          "frugal AI",
-          "Green IT",
-          "responsible AI",
-          "environmental impact",
-          "data centers",
-          "hardware",
-          "software",
-          "sustainability"
-        ],
-        "audience": {
-          "@type": "Audience",
-          "audienceType": "IT, AI, and ESG professionals; digital responsibility leads; executives dealing with AI-related questions"
-        },
-        "teaches": [
-          "Understand the basics of the history of artificial intelligence",
-          "Understand the environmental and social impacts of current AI",
-          "Identify impacts by priority according to Green IT principles",
-          "Understand how to assess the frugality of an AI system",
-          "Master solutions to reduce the impact of AI",
-          "Implement a first frugal AI strategy and monitoring tools"
-        ],
-        "license": [
-          "Not stated on the page (Paid, instructor-led; also offered in French)"
-        ],
-        "contributor": [
-          {
-            "@type": "Organization",
-            "name": "GreenIT.fr"
-          }
-        ]
-      }
+    "name": "Frugal AI PSL-Week course materials",
+    "description": "Frugal AI PSL-Week course materials: slides and hands-on practical work on optimizing matrix multiplication and artificial neural networks.",
+    "abstract": "University course materials (PSL-Week) consisting of lecture slides, a practical-work subject on matrix multiplication optimization (Python, C, GPU, vectorized/parallel implementations), and a practical work on ANN optimization delivered via Colab notebooks, with correction files provided.",
+    "educationalLevel": "Advanced",
+    "creativeWorkStatus": "active",
+    "inLanguage": [
+      "en"
+    ],
+    "learningResourceType": [
+      "lesson"
+    ],
+    "keywords": [
+      "frugal AI",
+      "matrix multiplication",
+      "GPU",
+      "ANN optimization",
+      "HPC",
+      "energy efficiency",
+      "C",
+      "Python"
+    ],
+    "dateCreated": "2025-11-21",
+    "dateModified": "2025-11-28",
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "University students (PSL-Week participants) with programming/HPC background"
     },
-    {
-      "path": "../training_materials/AI_impact/mit-6-5940-tinyml-and-efficient-deep-learning-computing.yaml",
-      "group": "AI_impact",
-      "item": {
-        "@context": "https://schema.org",
-        "@type": "LearningResource",
-        "@id": "https://efficientml.ai/",
-        "url": "https://efficientml.ai/",
-        "identifier": "https://efficientml.ai/",
-        "dct:conformsTo": {
-          "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
-          "@type": "CreativeWork"
-        },
-        "name": "MIT 6.5940 TinyML and Efficient Deep Learning Computing",
-        "description": "This course focuses on efficient machine learning and systems, introducing techniques that enable powerful deep learning applications on resource-constrained devices.",
-        "abstract": "Topics include model compression, pruning, quantization, neural architecture search, distributed training, data/model parallelism, gradient compression, and on-device fine-tuning, plus application-specific acceleration for large language models and diffusion models. Students get hands-on experience implementing model compression techniques and deploying LLMs (Llama2-7B) on a laptop.",
-        "educationalLevel": "Advanced",
-        "creativeWorkStatus": "active",
-        "inLanguage": [
-          "en"
-        ],
-        "learningResourceType": [
-          "online course"
-        ],
-        "keywords": [
-          "TinyML",
-          "model compression",
-          "pruning",
-          "quantization",
-          "neural architecture search",
-          "distributed training",
-          "LLM inference",
-          "efficient deep learning"
-        ],
-        "dateCreated": "2024-09-05",
-        "audience": {
-          "@type": "Audience",
-          "audienceType": "Graduate-level students with computer architecture and intro ML background"
-        },
-        "competencyRequired": [
-          "MIT 6.191 Computation Structures and 6.390 Intro to Machine Learning (or equivalent prior experience)"
-        ],
-        "license": [
-          "Not stated on the page (Lecture videos publicly posted on YouTube; slides on course site; not offered Fall 2025 (instructor sabbatical))"
-        ],
-        "contributor": [
-          {
-            "@type": "Organization",
-            "name": "MIT (Prof. Song Han, HAN Lab)",
-            "url": "https://hanlab.mit.edu/courses/2024-fall-65940"
-          }
-        ]
+    "license": [
+      "Not stated on the page (No license file detected via GitHub API; open on GitHub as public course materials)"
+    ],
+    "contributor": [
+      {
+        "@type": "Organization",
+        "name": "PSL University"
       }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "LearningResource",
+    "@id": "https://www.greenit.fr/frugal-artificial-intelligence-ai-training-course/",
+    "url": "https://www.greenit.fr/frugal-artificial-intelligence-ai-training-course/",
+    "identifier": "https://www.greenit.fr/frugal-artificial-intelligence-ai-training-course/",
+    "dct:conformsTo": {
+      "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
+      "@type": "CreativeWork"
     },
-    {
-      "path": "../training_materials/AI_impact/sci-for-ai-fundamentals.yaml",
-      "group": "AI_impact",
-      "item": {
-        "@context": "https://schema.org",
-        "@type": "LearningResource",
-        "@id": "https://movement.greensoftware.foundation/spaces/23023497",
-        "url": "https://movement.greensoftware.foundation/spaces/23023497",
-        "identifier": "https://movement.greensoftware.foundation/spaces/23023497",
-        "dct:conformsTo": {
-          "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
-          "@type": "CreativeWork"
-        },
-        "name": "SCI for AI Fundamentals",
-        "description": "Prerequisite: understanding how the SCI works. This course applies the SCI standards to the case of AI.",
-        "abstract": "Teaches practitioners the SCI for AI specification, a standard for making the carbon footprint of AI systems (classical and generative) transparent, comparable, and actionable across the AI lifecycle.",
-        "educationalLevel": "Intermediate",
-        "creativeWorkStatus": "active",
-        "inLanguage": [
-          "en"
-        ],
-        "learningResourceType": [
-          "online course"
-        ],
-        "keywords": [
-          "Software Carbon Intensity",
-          "SCI",
-          "AI carbon emissions",
-          "green AI",
-          "carbon accounting",
-          "AI lifecycle"
-        ],
-        "audience": {
-          "@type": "Audience",
-          "audienceType": "AI practitioners, developers, data scientists, engineers, decision-makers"
-        },
-        "competencyRequired": [
-          "Prior familiarity with the base Software Carbon Intensity (SCI) specification recommended"
-        ],
-        "license": [
-          "Not stated on the page (GSF Standard WG projects are copyrighted under Creative Commons Attribution 4.0 and licensed under MIT License (per companion GitHub repo Green-Software-Foundation/sci-ai))"
-        ],
-        "contributor": [
-          {
-            "@type": "Organization",
-            "name": "Green Software Foundation"
-          }
-        ]
+    "name": "Frugal Artificial Intelligence (AI) training course",
+    "description": "A one-day training course on frugal artificial intelligence, teaching participants to understand and reduce the environmental and social impacts of AI.",
+    "abstract": "Covers the fundamentals of responsible digital practices, key AI impact areas via the three pillars of Green IT (data centers, hardware, software), and current best-practice solutions for lowering AI's footprint, ending with a concrete organizational action plan.",
+    "educationalLevel": "Beginner",
+    "timeRequired": "P1D",
+    "creativeWorkStatus": "active",
+    "inLanguage": [
+      "en"
+    ],
+    "learningResourceType": [
+      "workshop"
+    ],
+    "keywords": [
+      "frugal AI",
+      "Green IT",
+      "responsible AI",
+      "environmental impact",
+      "data centers",
+      "hardware",
+      "software",
+      "sustainability"
+    ],
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "IT, AI, and ESG professionals; digital responsibility leads; executives dealing with AI-related questions"
+    },
+    "teaches": [
+      "Understand the basics of the history of artificial intelligence",
+      "Understand the environmental and social impacts of current AI",
+      "Identify impacts by priority according to Green IT principles",
+      "Understand how to assess the frugality of an AI system",
+      "Master solutions to reduce the impact of AI",
+      "Implement a first frugal AI strategy and monitoring tools"
+    ],
+    "license": [
+      "Not stated on the page (Paid, instructor-led; also offered in French)"
+    ],
+    "contributor": [
+      {
+        "@type": "Organization",
+        "name": "GreenIT.fr"
       }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "LearningResource",
+    "@id": "https://efficientml.ai/",
+    "url": "https://efficientml.ai/",
+    "identifier": "https://efficientml.ai/",
+    "dct:conformsTo": {
+      "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
+      "@type": "CreativeWork"
     },
-    {
-      "path": "../training_materials/Circular_economy/e-waste-and-the-circular-economy.yaml",
-      "group": "Circular_economy",
-      "item": {
-        "@context": "https://schema.org",
-        "@type": "LearningResource",
-        "@id": "https://eit-campus.eu/course/girls-go-stem/e-waste-and-the-circular-economy",
-        "url": "https://eit-campus.eu/course/girls-go-stem/e-waste-and-the-circular-economy",
-        "identifier": "https://eit-campus.eu/course/girls-go-stem/e-waste-and-the-circular-economy",
-        "dct:conformsTo": {
-          "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
-          "@type": "CreativeWork"
-        },
-        "name": "E-waste and the Circular Economy",
-        "description": "Explore the global impact of e-waste on ecosystems and human health, and how smarter recycling and circular economy strategies can reduce harm.",
-        "abstract": "Analyses the full life cycle of an electronic device and covers effective strategies for collecting, sorting and recycling e-waste, circular economy principles for reducing waste and promoting sustainable design, and digital tools (including generative AI) for mapping material flows and assessing environmental impact.",
-        "educationalLevel": "Intermediate",
-        "timeRequired": "PT4H",
-        "creativeWorkStatus": "active",
-        "inLanguage": [
-          "en"
-        ],
-        "learningResourceType": [
-          "online course"
-        ],
-        "keywords": [
-          "e-waste",
-          "circular economy",
-          "recycling",
-          "life cycle",
-          "electronic devices",
-          "sustainable design"
-        ],
-        "audience": {
-          "@type": "Audience",
-          "audienceType": "General learners interested in circular economy and sustainability (Girls Go STEM initiative)"
-        },
-        "license": [
-          "Not stated on the page (Free; available since 2021; asynchronous)"
-        ],
-        "contributor": [
-          {
-            "@type": "Organization",
-            "name": "EIT Campus (Girls Go STEM, coordinated by EIT Urban Mobility, offered with Brainshuttle / Ellen MacArthur Foundation)"
-          }
-        ]
+    "name": "MIT 6.5940 TinyML and Efficient Deep Learning Computing",
+    "description": "This course focuses on efficient machine learning and systems, introducing techniques that enable powerful deep learning applications on resource-constrained devices.",
+    "abstract": "Topics include model compression, pruning, quantization, neural architecture search, distributed training, data/model parallelism, gradient compression, and on-device fine-tuning, plus application-specific acceleration for large language models and diffusion models. Students get hands-on experience implementing model compression techniques and deploying LLMs (Llama2-7B) on a laptop.",
+    "educationalLevel": "Advanced",
+    "creativeWorkStatus": "active",
+    "inLanguage": [
+      "en"
+    ],
+    "learningResourceType": [
+      "online course"
+    ],
+    "keywords": [
+      "TinyML",
+      "model compression",
+      "pruning",
+      "quantization",
+      "neural architecture search",
+      "distributed training",
+      "LLM inference",
+      "efficient deep learning"
+    ],
+    "dateCreated": "2024-09-05",
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "Graduate-level students with computer architecture and intro ML background"
+    },
+    "competencyRequired": [
+      "MIT 6.191 Computation Structures and 6.390 Intro to Machine Learning (or equivalent prior experience)"
+    ],
+    "license": [
+      "Not stated on the page (Lecture videos publicly posted on YouTube; slides on course site; not offered Fall 2025 (instructor sabbatical))"
+    ],
+    "contributor": [
+      {
+        "@type": "Organization",
+        "name": "MIT (Prof. Song Han, HAN Lab)",
+        "url": "https://hanlab.mit.edu/courses/2024-fall-65940"
       }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "LearningResource",
+    "@id": "https://movement.greensoftware.foundation/spaces/23023497",
+    "url": "https://movement.greensoftware.foundation/spaces/23023497",
+    "identifier": "https://movement.greensoftware.foundation/spaces/23023497",
+    "dct:conformsTo": {
+      "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
+      "@type": "CreativeWork"
     },
-    {
-      "path": "../training_materials/Circular_economy/environmental-impacts-of-digital-technologies.yaml",
-      "group": "Circular_economy",
-      "item": {
-        "@context": "https://schema.org",
-        "@type": "LearningResource",
-        "@id": "https://www.fun-mooc.fr/en/courses/environmental-impacts-of-digital-technologies/",
-        "url": "https://www.fun-mooc.fr/en/courses/environmental-impacts-of-digital-technologies/",
-        "identifier": "https://www.fun-mooc.fr/en/courses/environmental-impacts-of-digital-technologies/",
-        "dct:conformsTo": {
-          "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
-          "@type": "CreativeWork"
-        },
-        "name": "Environmental Impacts of Digital Technologies",
-        "description": "Impact'Num is a MOOC to question the environmental impacts of digital technologies, and learn how to measure, decipher, and act.",
-        "abstract": "A 4-part MOOC combining awareness activities, educational videos, formative activities on indicators/data/trend analysis, and activities on possible individual and collective actions (as consumer, designer, teacher, citizen), co-produced by Association Class'Code and Inria.",
-        "educationalLevel": "Beginner",
-        "timeRequired": "PT5H",
-        "creativeWorkStatus": "active",
-        "inLanguage": [
-          "en, fr"
-        ],
-        "learningResourceType": [
-          "online course"
-        ],
-        "keywords": [
-          "digital environmental impact",
-          "sustainability",
-          "digital sobriety",
-          "indicators",
-          "ICT footprint"
-        ],
-        "audience": {
-          "@type": "Audience",
-          "audienceType": "Citizens, students, teachers wanting to understand and act on digital environmental impact"
-        },
-        "license": [
-          "Not stated on the page (Free to access on FUN MOOC platform)"
-        ],
-        "contributor": [
-          {
-            "@type": "Organization",
-            "name": "FUN MOOC / Inria / Association Class'Code"
-          }
-        ]
+    "name": "SCI for AI Fundamentals",
+    "description": "Prerequisite: understanding how the SCI works. This course applies the SCI standards to the case of AI.",
+    "abstract": "Teaches practitioners the SCI for AI specification, a standard for making the carbon footprint of AI systems (classical and generative) transparent, comparable, and actionable across the AI lifecycle.",
+    "educationalLevel": "Intermediate",
+    "creativeWorkStatus": "active",
+    "inLanguage": [
+      "en"
+    ],
+    "learningResourceType": [
+      "online course"
+    ],
+    "keywords": [
+      "Software Carbon Intensity",
+      "SCI",
+      "AI carbon emissions",
+      "green AI",
+      "carbon accounting",
+      "AI lifecycle"
+    ],
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "AI practitioners, developers, data scientists, engineers, decision-makers"
+    },
+    "competencyRequired": [
+      "Prior familiarity with the base Software Carbon Intensity (SCI) specification recommended"
+    ],
+    "license": [
+      "Not stated on the page (GSF Standard WG projects are copyrighted under Creative Commons Attribution 4.0 and licensed under MIT License (per companion GitHub repo Green-Software-Foundation/sci-ai))"
+    ],
+    "contributor": [
+      {
+        "@type": "Organization",
+        "name": "Green Software Foundation"
       }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "LearningResource",
+    "@id": "https://eit-campus.eu/course/girls-go-stem/e-waste-and-the-circular-economy",
+    "url": "https://eit-campus.eu/course/girls-go-stem/e-waste-and-the-circular-economy",
+    "identifier": "https://eit-campus.eu/course/girls-go-stem/e-waste-and-the-circular-economy",
+    "dct:conformsTo": {
+      "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
+      "@type": "CreativeWork"
     },
-    {
-      "path": "../training_materials/Energy_efficiency/energy-efficient-programming-open-hpi.yaml",
-      "group": "Energy_efficiency",
-      "item": {
-        "@context": "https://schema.org",
-        "@type": "LearningResource",
-        "@id": "https://open.hpi.de/courses/cleanIT-x862022",
-        "url": "https://open.hpi.de/courses/cleanIT-x862022",
-        "identifier": "https://open.hpi.de/courses/cleanIT-x862022",
-        "dct:conformsTo": {
-          "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
-          "@type": "CreativeWork"
-        },
-        "name": "Energy Efficient Programming",
-        "description": "A self-paced openHPI course on writing energy-efficient code in C and assembly, covering computer architecture fundamentals, x86 coding techniques, intrinsics/macros, and hands-on energy measurement with Intel VTune Profiler.",
-        "abstract": "The course starts from the observation that efficiency in computer science is usually framed as runtime or memory usage, then reframes it around energy consumption. It progresses from computer-architecture basics (clock cycles, parallelism, pipelines, superscalar execution) and x86 programming in week one, to concrete C and assembly coding techniques, SIMD/SSE instruction extensions, and vector intrinsics for reducing instruction count and energy draw in week two, finishing with a practical exercise measuring program energy consumption via Intel's VTune Profiler.",
-        "educationalLevel": "Intermediate",
-        "timeRequired": "P2W (approx. 5-10 hours per week, 2 weeks — i.e. roughly PT10H to PT20H total, self-paced)",
-        "creativeWorkStatus": "active",
-        "inLanguage": [
-          "en"
-        ],
-        "learningResourceType": [
-          "online course"
-        ],
-        "keywords": [
-          "energy efficient programming",
-          "C",
-          "assembly",
-          "x86",
-          "SIMD",
-          "SSE",
-          "intrinsics",
-          "computer architecture",
-          "green computing",
-          "VTune Profiler"
-        ],
-        "dateCreated": "2022-04-12",
-        "datePublished": "2022-04-12",
-        "audience": {
-          "@type": "Audience",
-          "audienceType": "Students, researchers, or developers who work or study in computer science or a related field and want to learn energy-efficient coding techniques"
-        },
-        "competencyRequired": [
-          "Fundamental programming experience in C",
-          "Basic knowledge of computer architecture"
-        ],
-        "teaches": [
-          "Understand the basic concepts of computer functionality and architecture (clock cycles, parallelism, execution pipelines, superscalar architectures)",
-          "Use coding techniques in C and assembly to significantly minimize the number of instructions executed by the CPU",
-          "Understand intrinsics and macros and how to apply them to any algorithm to increase its energy efficiency",
-          "Measure the energy consumption of programs using the Intel VTune Profiler tool"
-        ],
-        "license": [
-          "Not stated on the page (course content is © Hasso Plattner Institute; no explicit Creative Commons or open-source licence found on the course page — free to enroll and take, but redistribution terms are unstated)"
-        ],
-        "author": [
-          {
-            "@type": "Person",
-            "name": "Vesselin Iossifov"
-          },
-          {
-            "@type": "Person",
-            "name": "Nils König"
-          },
-          {
-            "@type": "Organization",
-            "name": "Hasso Plattner Institute (openHPI)",
-            "url": "https://open.hpi.de"
-          }
-        ],
-        "contributor": [
-          {
-            "@type": "Organization",
-            "name": "openHPI",
-            "url": "https://open.hpi.de"
-          }
-        ]
+    "name": "E-waste and the Circular Economy",
+    "description": "Explore the global impact of e-waste on ecosystems and human health, and how smarter recycling and circular economy strategies can reduce harm.",
+    "abstract": "Analyses the full life cycle of an electronic device and covers effective strategies for collecting, sorting and recycling e-waste, circular economy principles for reducing waste and promoting sustainable design, and digital tools (including generative AI) for mapping material flows and assessing environmental impact.",
+    "educationalLevel": "Intermediate",
+    "timeRequired": "PT4H",
+    "creativeWorkStatus": "active",
+    "inLanguage": [
+      "en"
+    ],
+    "learningResourceType": [
+      "online course"
+    ],
+    "keywords": [
+      "e-waste",
+      "circular economy",
+      "recycling",
+      "life cycle",
+      "electronic devices",
+      "sustainable design"
+    ],
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "General learners interested in circular economy and sustainability (Girls Go STEM initiative)"
+    },
+    "license": [
+      "Not stated on the page (Free; available since 2021; asynchronous)"
+    ],
+    "contributor": [
+      {
+        "@type": "Organization",
+        "name": "EIT Campus (Girls Go STEM, coordinated by EIT Urban Mobility, offered with Brainshuttle / Ellen MacArthur Foundation)"
       }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "LearningResource",
+    "@id": "https://www.fun-mooc.fr/en/courses/environmental-impacts-of-digital-technologies/",
+    "url": "https://www.fun-mooc.fr/en/courses/environmental-impacts-of-digital-technologies/",
+    "identifier": "https://www.fun-mooc.fr/en/courses/environmental-impacts-of-digital-technologies/",
+    "dct:conformsTo": {
+      "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
+      "@type": "CreativeWork"
     },
-    {
-      "path": "../training_materials/Energy_efficiency/sustainable-software-engineering-cs4575-tu-delft.yaml",
-      "group": "Energy_efficiency",
-      "item": {
-        "@context": "https://schema.org",
-        "@type": "LearningResource",
-        "@id": "https://github.com/luiscruz/course_sustainableSE",
-        "url": "https://luiscruz.github.io/course_sustainableSE/2026/",
-        "identifier": "https://github.com/luiscruz/course_sustainableSE",
-        "dct:conformsTo": {
-          "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
-          "@type": "CreativeWork"
-        },
-        "name": "Sustainable Software Engineering (CS4575)",
-        "description": "A TU Delft MSc course on sustainable software engineering, covering environmental, social, and individual sustainability across the software lifecycle, with a strong Green Software Engineering component on measuring and improving energy efficiency. All lecture slides, schedule, and course materials are published openly on GitHub under an MIT licence.",
-        "abstract": "Sustainable Software Engineering is an overarching discipline that addresses the long-term consequences of designing, building, and releasing a software project. The course covers a set of competencies needed to leverage sustainable software systems, with a strong component on Green Software Engineering covering techniques to measure and improve energy efficiency at any stage of the software lifecycle, alongside core principles of empirical software engineering and social/individual sustainability.",
-        "educationalLevel": "Intermediate",
-        "timeRequired": "Not stated in ISO 8601 form; runs one academic quarter (Q3), 5.0 ECTS, three sessions per week",
-        "creativeWorkStatus": "active",
-        "inLanguage": [
-          "en"
-        ],
-        "learningResourceType": [
-          "university course (materials openly published; formal enrolment via TU Delft MSc programmes, but slides/schedule/GitHub repo are freely accessible)"
-        ],
-        "keywords": [
-          "sustainable software engineering",
-          "green software engineering",
-          "energy efficiency measurement",
-          "empirical software engineering",
-          "social sustainability",
-          "individual sustainability",
-          "TU Delft",
-          "CS4575"
-        ],
-        "dateCreated": "2020-12-02",
-        "dateModified": "2026-04-09",
-        "audience": {
-          "@type": "Audience",
-          "audienceType": "Students of the MSc Computer Science and the MSc Data Science and Artificial Intelligence Technology programmes at TU Delft; openly usable by any self-learner via the published GitHub materials"
-        },
-        "competencyRequired": [
-          "Intermediate understanding of object-oriented programming languages",
-          "Basic understanding of data analysis techniques"
-        ],
-        "teaches": [
-          "Explain the fundamental sustainability principles and their relevance to software engineering",
-          "Assess the energy consumption of software systems using measurement and testing techniques",
-          "Create actionable strategies to address sustainability issues within software organisations",
-          "Evaluate solutions for sustainable software systems based on their effectiveness and stakeholder impact"
-        ],
-        "license": [
-          "**`license`** MIT License (repository code/materials) — https://github.com/luiscruz/course_sustainableSE/blob/main/LICENSE"
-        ],
-        "author": [
-          {
-            "@type": "Person",
-            "name": "Luís Cruz"
-          },
-          {
-            "@type": "Person",
-            "name": "Carolin Brandt"
-          },
-          {
-            "@type": "Person",
-            "name": "Enrique Barba Roque"
-          },
-          {
-            "@type": "Organization",
-            "name": "Delft University of Technology (TU Delft)",
-            "url": "https://luiscruz.github.io/course_sustainableSE/2026/"
-          }
-        ],
-        "contributor": [
-          {
-            "@type": "Organization",
-            "name": "GitHub (source hosting)",
-            "url": "https://github.com/luiscruz/course_sustainableSE"
-          }
-        ]
+    "name": "Environmental Impacts of Digital Technologies",
+    "description": "Impact'Num is a MOOC to question the environmental impacts of digital technologies, and learn how to measure, decipher, and act.",
+    "abstract": "A 4-part MOOC combining awareness activities, educational videos, formative activities on indicators/data/trend analysis, and activities on possible individual and collective actions (as consumer, designer, teacher, citizen), co-produced by Association Class'Code and Inria.",
+    "educationalLevel": "Beginner",
+    "timeRequired": "PT5H",
+    "creativeWorkStatus": "active",
+    "inLanguage": [
+      "en, fr"
+    ],
+    "learningResourceType": [
+      "online course"
+    ],
+    "keywords": [
+      "digital environmental impact",
+      "sustainability",
+      "digital sobriety",
+      "indicators",
+      "ICT footprint"
+    ],
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "Citizens, students, teachers wanting to understand and act on digital environmental impact"
+    },
+    "license": [
+      "Not stated on the page (Free to access on FUN MOOC platform)"
+    ],
+    "contributor": [
+      {
+        "@type": "Organization",
+        "name": "FUN MOOC / Inria / Association Class'Code"
       }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "LearningResource",
+    "@id": "https://open.hpi.de/courses/cleanIT-x862022",
+    "url": "https://open.hpi.de/courses/cleanIT-x862022",
+    "identifier": "https://open.hpi.de/courses/cleanIT-x862022",
+    "dct:conformsTo": {
+      "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
+      "@type": "CreativeWork"
     },
-    {
-      "path": "../training_materials/Energy_efficiency/sustainable-software-engineering-open-hpi.yaml",
-      "group": "Energy_efficiency",
-      "item": {
-        "@context": "https://schema.org",
-        "@type": "LearningResource",
-        "@id": "https://open.hpi.de/courses/sustainablesoftware2022",
-        "url": "https://open.hpi.de/courses/sustainablesoftware2022",
-        "identifier": "https://open.hpi.de/courses/sustainablesoftware2022",
-        "dct:conformsTo": {
-          "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
-          "@type": "CreativeWork"
-        },
-        "name": "Sustainable Software Engineering",
-        "description": "A free, self-paced two-week openHPI course on resource-efficient software engineering, covering climate-friendly decisions across the software development lifecycle with a practical, Python-based second half on writing resource-efficient code.",
-        "abstract": "The course opens by examining the ecological footprint of digitization — how IT both helps reduce CO2 and contributes to it — and surveys the roles common in the IT industry (developer, IT architect, team lead) to identify where each role can act on resource efficiency. The second week covers the barriers that hinder more ecological action in software development and concrete solutions a developer can apply, using Python for the hands-on material because it is widely known, not because it is a particularly efficient language.",
-        "educationalLevel": "Beginner",
-        "timeRequired": "P2W (approx. 3-6 hours per week, 2 weeks — i.e. roughly PT6H to PT12H total, self-paced)",
-        "creativeWorkStatus": "active",
-        "inLanguage": [
-          "en"
-        ],
-        "learningResourceType": [
-          "online course"
-        ],
-        "keywords": [
-          "sustainable software engineering",
-          "green software",
-          "resource efficiency",
-          "Python",
-          "ecological footprint",
-          "climate-friendly software development",
-          "digitization and CO2"
-        ],
-        "dateCreated": "2022-03-30",
-        "datePublished": "2022-03-30",
-        "audience": {
-          "@type": "Audience",
-          "audienceType": "Software Developers, Software Architects, Product Owners, and anyone interested in sustainable software engineering"
-        },
-        "competencyRequired": [
-          "General IT knowledge",
-          "Solid mathematical knowledge",
-          "Basic knowledge of programming in Python"
-        ],
-        "teaches": [
-          "Understand the ecological footprint of digitization, including how IT both helps reduce and contributes to CO2 emissions",
-          "Identify opportunities for resource-efficient action across common IT industry roles (developer, IT architect, team lead)",
-          "Recognize the barriers that hinder more ecological action in software development and how to overcome them",
-          "Apply concrete, hands-on techniques (in Python) to develop software in a more climate-friendly way"
-        ],
-        "license": [
-          "Not stated on the page (course content is © Hasso Plattner Institute; no explicit Creative Commons or open-source licence found on the course page — free to enroll and take, but redistribution terms are unstated)"
-        ],
-        "author": [
-          {
-            "@type": "Person",
-            "name": "Mathias Renner"
-          },
-          {
-            "@type": "Person",
-            "name": "Ferdinand Mütsch"
-          },
-          {
-            "@type": "Person",
-            "name": "Johannes Rudolph"
-          },
-          {
-            "@type": "Person",
-            "name": "Robin Lamberti"
-          },
-          {
-            "@type": "Organization",
-            "name": "Hasso Plattner Institute (openHPI)",
-            "url": "https://open.hpi.de"
-          }
-        ],
-        "contributor": [
-          {
-            "@type": "Organization",
-            "name": "openHPI",
-            "url": "https://open.hpi.de"
-          }
-        ]
+    "name": "Energy Efficient Programming",
+    "description": "A self-paced openHPI course on writing energy-efficient code in C and assembly, covering computer architecture fundamentals, x86 coding techniques, intrinsics/macros, and hands-on energy measurement with Intel VTune Profiler.",
+    "abstract": "The course starts from the observation that efficiency in computer science is usually framed as runtime or memory usage, then reframes it around energy consumption. It progresses from computer-architecture basics (clock cycles, parallelism, pipelines, superscalar execution) and x86 programming in week one, to concrete C and assembly coding techniques, SIMD/SSE instruction extensions, and vector intrinsics for reducing instruction count and energy draw in week two, finishing with a practical exercise measuring program energy consumption via Intel's VTune Profiler.",
+    "educationalLevel": "Intermediate",
+    "timeRequired": "P2W (approx. 5-10 hours per week, 2 weeks — i.e. roughly PT10H to PT20H total, self-paced)",
+    "creativeWorkStatus": "active",
+    "inLanguage": [
+      "en"
+    ],
+    "learningResourceType": [
+      "online course"
+    ],
+    "keywords": [
+      "energy efficient programming",
+      "C",
+      "assembly",
+      "x86",
+      "SIMD",
+      "SSE",
+      "intrinsics",
+      "computer architecture",
+      "green computing",
+      "VTune Profiler"
+    ],
+    "dateCreated": "2022-04-12",
+    "datePublished": "2022-04-12",
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "Students, researchers, or developers who work or study in computer science or a related field and want to learn energy-efficient coding techniques"
+    },
+    "competencyRequired": [
+      "Fundamental programming experience in C",
+      "Basic knowledge of computer architecture"
+    ],
+    "teaches": [
+      "Understand the basic concepts of computer functionality and architecture (clock cycles, parallelism, execution pipelines, superscalar architectures)",
+      "Use coding techniques in C and assembly to significantly minimize the number of instructions executed by the CPU",
+      "Understand intrinsics and macros and how to apply them to any algorithm to increase its energy efficiency",
+      "Measure the energy consumption of programs using the Intel VTune Profiler tool"
+    ],
+    "license": [
+      "Not stated on the page (course content is © Hasso Plattner Institute; no explicit Creative Commons or open-source licence found on the course page — free to enroll and take, but redistribution terms are unstated)"
+    ],
+    "author": [
+      {
+        "@type": "Person",
+        "name": "Vesselin Iossifov"
+      },
+      {
+        "@type": "Person",
+        "name": "Nils König"
+      },
+      {
+        "@type": "Organization",
+        "name": "Hasso Plattner Institute (openHPI)",
+        "url": "https://open.hpi.de"
       }
-    },
-    {
-      "path": "../training_materials/Intro/carpentries-incubator-green-hpc.yaml",
-      "group": "Intro",
-      "item": {
-        "@context": "https://schema.org",
-        "@type": "LearningResource",
-        "@id": "https://carpentries-incubator.github.io/green-software-hpc/",
-        "url": "https://carpentries-incubator.github.io/green-software-hpc/",
-        "dct:conformsTo": {
-          "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
-          "@type": "CreativeWork"
-        },
-        "name": "Green software use on HPC",
-        "description": "An introduction to environmental sustainability principles in the context of high performance computing systems",
-        "abstract": "This lesson introduces environmental sustainability principles in the context of HPC systems. It covers understanding the scale of emissions from different sources, quantifying emissions from HPC use, and practical examples using real data from the ARCHER2 facility. Topics include carbon efficiency, energy efficiency, carbon awareness, hardware efficiency, measurement, and reducing emissions.",
-        "educationalLevel": "Beginner",
-        "creativeWorkStatus": "beta",
-        "inLanguage": [
-          "en-GB"
-        ],
-        "learningResourceType": [
-          "lesson"
-        ],
-        "keywords": [
-          "HPC",
-          "green software",
-          "carbon efficiency",
-          "energy efficiency",
-          "carbon awareness",
-          "sustainable computing",
-          "ARCHER2"
-        ],
-        "audience": {
-          "@type": "Audience",
-          "audienceType": "Anyone involved in using or delivering HPC resources — users, software developers, HPC service operators, and those involved in procuring HPC systems. No knowledge of environmental sustainability principles assumed."
-        },
-        "competencyRequired": [
-          "Familiarity with the key concepts in climate change and green software engineering (covered in the setup section)"
-        ],
-        "teaches": [
-          "Understand carbon efficiency and how it relates to energy efficiency, including cases where they can conflict",
-          "Know how HPC systems can potentially reduce emissions",
-          "Understand carbon intensity of electricity generation and implications for carbon-aware HPC use",
-          "Appreciate embodied emissions associated with HPC hardware",
-          "Be aware of frameworks for measuring and reporting carbon emissions in the context of HPC",
-          "Gain practical advice on measuring and improving the carbon efficiency of HPC use"
-        ],
-        "author": [
-          {
-            "@type": "Organization",
-            "name": "Carpentries Incubator",
-            "url": "https://carpentries-incubator.github.io"
-          }
-        ],
-        "contributor": [
-          {
-            "@type": "Organization",
-            "name": "Green Software Foundation",
-            "url": "https://greensoftware.foundation/"
-          }
-        ],
-        "mentions": [
-          {
-            "@type": "LearningResource",
-            "name": "Green Software Practitioner",
-            "url": "https://learn.greensoftware.foundation/"
-          },
-          {
-            "@type": "SoftwareApplication",
-            "name": "ARCHER2 UK National Supercomputing Service",
-            "url": "https://www.archer2.ac.uk"
-          }
-        ]
+    ],
+    "contributor": [
+      {
+        "@type": "Organization",
+        "name": "openHPI",
+        "url": "https://open.hpi.de"
       }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "LearningResource",
+    "@id": "https://github.com/luiscruz/course_sustainableSE",
+    "url": "https://luiscruz.github.io/course_sustainableSE/2026/",
+    "identifier": "https://github.com/luiscruz/course_sustainableSE",
+    "dct:conformsTo": {
+      "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
+      "@type": "CreativeWork"
     },
-    {
-      "path": "../training_materials/Intro/green-computing_Basics.yaml",
-      "group": "Intro",
-      "item": {
-        "@context": "https://schema.org",
+    "name": "Sustainable Software Engineering (CS4575)",
+    "description": "A TU Delft MSc course on sustainable software engineering, covering environmental, social, and individual sustainability across the software lifecycle, with a strong Green Software Engineering component on measuring and improving energy efficiency. All lecture slides, schedule, and course materials are published openly on GitHub under an MIT licence.",
+    "abstract": "Sustainable Software Engineering is an overarching discipline that addresses the long-term consequences of designing, building, and releasing a software project. The course covers a set of competencies needed to leverage sustainable software systems, with a strong component on Green Software Engineering covering techniques to measure and improve energy efficiency at any stage of the software lifecycle, alongside core principles of empirical software engineering and social/individual sustainability.",
+    "educationalLevel": "Intermediate",
+    "timeRequired": "Not stated in ISO 8601 form; runs one academic quarter (Q3), 5.0 ECTS, three sessions per week",
+    "creativeWorkStatus": "active",
+    "inLanguage": [
+      "en"
+    ],
+    "learningResourceType": [
+      "university course (materials openly published; formal enrolment via TU Delft MSc programmes, but slides/schedule/GitHub repo are freely accessible)"
+    ],
+    "keywords": [
+      "sustainable software engineering",
+      "green software engineering",
+      "energy efficiency measurement",
+      "empirical software engineering",
+      "social sustainability",
+      "individual sustainability",
+      "TU Delft",
+      "CS4575"
+    ],
+    "dateCreated": "2020-12-02",
+    "dateModified": "2026-04-09",
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "Students of the MSc Computer Science and the MSc Data Science and Artificial Intelligence Technology programmes at TU Delft; openly usable by any self-learner via the published GitHub materials"
+    },
+    "competencyRequired": [
+      "Intermediate understanding of object-oriented programming languages",
+      "Basic understanding of data analysis techniques"
+    ],
+    "teaches": [
+      "Explain the fundamental sustainability principles and their relevance to software engineering",
+      "Assess the energy consumption of software systems using measurement and testing techniques",
+      "Create actionable strategies to address sustainability issues within software organisations",
+      "Evaluate solutions for sustainable software systems based on their effectiveness and stakeholder impact"
+    ],
+    "license": [
+      "**`license`** MIT License (repository code/materials) — https://github.com/luiscruz/course_sustainableSE/blob/main/LICENSE"
+    ],
+    "author": [
+      {
+        "@type": "Person",
+        "name": "Luís Cruz"
+      },
+      {
+        "@type": "Person",
+        "name": "Carolin Brandt"
+      },
+      {
+        "@type": "Person",
+        "name": "Enrique Barba Roque"
+      },
+      {
+        "@type": "Organization",
+        "name": "Delft University of Technology (TU Delft)",
+        "url": "https://luiscruz.github.io/course_sustainableSE/2026/"
+      }
+    ],
+    "contributor": [
+      {
+        "@type": "Organization",
+        "name": "GitHub (source hosting)",
+        "url": "https://github.com/luiscruz/course_sustainableSE"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "LearningResource",
+    "@id": "https://open.hpi.de/courses/sustainablesoftware2022",
+    "url": "https://open.hpi.de/courses/sustainablesoftware2022",
+    "identifier": "https://open.hpi.de/courses/sustainablesoftware2022",
+    "dct:conformsTo": {
+      "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
+      "@type": "CreativeWork"
+    },
+    "name": "Sustainable Software Engineering",
+    "description": "A free, self-paced two-week openHPI course on resource-efficient software engineering, covering climate-friendly decisions across the software development lifecycle with a practical, Python-based second half on writing resource-efficient code.",
+    "abstract": "The course opens by examining the ecological footprint of digitization — how IT both helps reduce CO2 and contributes to it — and surveys the roles common in the IT industry (developer, IT architect, team lead) to identify where each role can act on resource efficiency. The second week covers the barriers that hinder more ecological action in software development and concrete solutions a developer can apply, using Python for the hands-on material because it is widely known, not because it is a particularly efficient language.",
+    "educationalLevel": "Beginner",
+    "timeRequired": "P2W (approx. 3-6 hours per week, 2 weeks — i.e. roughly PT6H to PT12H total, self-paced)",
+    "creativeWorkStatus": "active",
+    "inLanguage": [
+      "en"
+    ],
+    "learningResourceType": [
+      "online course"
+    ],
+    "keywords": [
+      "sustainable software engineering",
+      "green software",
+      "resource efficiency",
+      "Python",
+      "ecological footprint",
+      "climate-friendly software development",
+      "digitization and CO2"
+    ],
+    "dateCreated": "2022-03-30",
+    "datePublished": "2022-03-30",
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "Software Developers, Software Architects, Product Owners, and anyone interested in sustainable software engineering"
+    },
+    "competencyRequired": [
+      "General IT knowledge",
+      "Solid mathematical knowledge",
+      "Basic knowledge of programming in Python"
+    ],
+    "teaches": [
+      "Understand the ecological footprint of digitization, including how IT both helps reduce and contributes to CO2 emissions",
+      "Identify opportunities for resource-efficient action across common IT industry roles (developer, IT architect, team lead)",
+      "Recognize the barriers that hinder more ecological action in software development and how to overcome them",
+      "Apply concrete, hands-on techniques (in Python) to develop software in a more climate-friendly way"
+    ],
+    "license": [
+      "Not stated on the page (course content is © Hasso Plattner Institute; no explicit Creative Commons or open-source licence found on the course page — free to enroll and take, but redistribution terms are unstated)"
+    ],
+    "author": [
+      {
+        "@type": "Person",
+        "name": "Mathias Renner"
+      },
+      {
+        "@type": "Person",
+        "name": "Ferdinand Mütsch"
+      },
+      {
+        "@type": "Person",
+        "name": "Johannes Rudolph"
+      },
+      {
+        "@type": "Person",
+        "name": "Robin Lamberti"
+      },
+      {
+        "@type": "Organization",
+        "name": "Hasso Plattner Institute (openHPI)",
+        "url": "https://open.hpi.de"
+      }
+    ],
+    "contributor": [
+      {
+        "@type": "Organization",
+        "name": "openHPI",
+        "url": "https://open.hpi.de"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "LearningResource",
+    "@id": "https://carpentries-incubator.github.io/green-software-hpc/",
+    "url": "https://carpentries-incubator.github.io/green-software-hpc/",
+    "dct:conformsTo": {
+      "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
+      "@type": "CreativeWork"
+    },
+    "name": "Green software use on HPC",
+    "description": "An introduction to environmental sustainability principles in the context of high performance computing systems",
+    "abstract": "This lesson introduces environmental sustainability principles in the context of HPC systems. It covers understanding the scale of emissions from different sources, quantifying emissions from HPC use, and practical examples using real data from the ARCHER2 facility. Topics include carbon efficiency, energy efficiency, carbon awareness, hardware efficiency, measurement, and reducing emissions.",
+    "educationalLevel": "Beginner",
+    "creativeWorkStatus": "beta",
+    "inLanguage": [
+      "en-GB"
+    ],
+    "learningResourceType": [
+      "lesson"
+    ],
+    "keywords": [
+      "HPC",
+      "green software",
+      "carbon efficiency",
+      "energy efficiency",
+      "carbon awareness",
+      "sustainable computing",
+      "ARCHER2"
+    ],
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "Anyone involved in using or delivering HPC resources — users, software developers, HPC service operators, and those involved in procuring HPC systems. No knowledge of environmental sustainability principles assumed."
+    },
+    "competencyRequired": [
+      "Familiarity with the key concepts in climate change and green software engineering (covered in the setup section)"
+    ],
+    "teaches": [
+      "Understand carbon efficiency and how it relates to energy efficiency, including cases where they can conflict",
+      "Know how HPC systems can potentially reduce emissions",
+      "Understand carbon intensity of electricity generation and implications for carbon-aware HPC use",
+      "Appreciate embodied emissions associated with HPC hardware",
+      "Be aware of frameworks for measuring and reporting carbon emissions in the context of HPC",
+      "Gain practical advice on measuring and improving the carbon efficiency of HPC use"
+    ],
+    "author": [
+      {
+        "@type": "Organization",
+        "name": "Carpentries Incubator",
+        "url": "https://carpentries-incubator.github.io"
+      }
+    ],
+    "contributor": [
+      {
+        "@type": "Organization",
+        "name": "Green Software Foundation",
+        "url": "https://greensoftware.foundation/"
+      }
+    ],
+    "mentions": [
+      {
         "@type": "LearningResource",
-        "@id": "https://learn.greensoftware.foundation/",
-        "url": "https://learn.greensoftware.foundation/,https://github.com/Green-Software-Foundation/learn/wiki/Green-Guides,https://movement.greensoftware.foundation/spaces/19525645?utm_source=manual",
-        "identifier": "n/a",
-        "dct:conformsTo": {
-          "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
-          "@type": "CreativeWork"
-        },
         "name": "Green Software Practitioner",
-        "description": "Learn the concepts needed to build, maintain and run greener applications",
-        "educationalLevel": "Beginner",
-        "timeRequired": "PT3H",
-        "creativeWorkStatus": "active",
-        "accessibilitySummary": "Course is text-based with infographics and includes quizzes. French language version available.",
-        "version": "v1.1.0",
-        "inLanguage": [
-          "en-US"
-        ],
-        "learningResourceType": [
-          "online tutorial (text only)"
-        ],
-        "keywords": [
-          "sustainable computing",
-          "green computing",
-          "carbon footprint",
-          "environmental impact",
-          "computational research"
-        ],
-        "dateModified": "2024-11-12 (11 Dec)",
-        "audience": {
-          "@type": "Audience",
-          "audienceType": "Anyone involved in the process of building, deploying, or managing software, anyone who wants to make their software applications more sustainable and build a career in green software"
-        },
-        "competencyRequired": [
-          "No prior knowledge of computing infrastructure required, ideally have at least one year of industry experience building, deploying, or managing software applications."
-        ],
-        "teaches": [
-          "The core drivers of carbon emissions for software applications.",
-          "The 3 actions one can take to reduce the carbon emissions of your software.",
-          "How to measure software emissions using the Greenhouse Gas (GHG) protocol or the Software Carbon Intensity (SCI) specification.",
-          "The different types of corporate climate targets so you can align your green software proposals to help meet your organization's public commitments."
-        ],
-        "license": [
-          "https://creativecommons.org/licenses/by/4.0/"
-        ],
-        "author": [
-          {
-            "@type": "Person",
-            "name": "Sarah Hsu",
-            "url": "https://champions.greensoftware.foundation/champions/sarah-hsu/"
-          },
-          {
-            "@type": "Person",
-            "name": "Leila Lhardy",
-            "url": "https://www.linkedin.com/in/leilalhardy/"
-          },
-          {
-            "@type": "Person",
-            "name": "Jose Alejandro Sanchez",
-            "url": "https://www.linkedin.com/in/ijasanchez/"
-          },
-          {
-            "@type": "Person",
-            "name": "Russell Trow",
-            "url": "https://www.linkedin.com/in/russelltrow/"
-          }
-        ],
-        "contributor": [
-          {
-            "@type": "Organization",
-            "name": "The Greensoftware Foundation",
-            "url": "https://greensoftware.foundation/"
-          },
-          {
-            "@type": "Organization",
-            "name": "The Linux Foundation",
-            "url": "https://www.linuxfoundation.org/"
-          }
-        ],
-        "about": [
-          {
-            "@type": "DefinedTerm",
-            "name": "Green Software Practitioner (Basics of Green Computing)",
-            "url": "https://www.ebi.ac.uk/training/online/courses/sustainable-computing-in-science/"
-          }
-        ],
-        "mentions": [
-          {
-            "@type": "CreativeWork",
-            "name": "Sustainable computing in science",
-            "identifier": "DOI:10.6019/TOL.sustainable-computing-intro-t.2026.00001.1",
-            "url": "https://www.ebi.ac.uk/training/online/courses/sustainable-computing-in-science/"
-          }
-        ]
+        "url": "https://learn.greensoftware.foundation/"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "ARCHER2 UK National Supercomputing Service",
+        "url": "https://www.archer2.ac.uk"
       }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "LearningResource",
+    "@id": "https://learn.greensoftware.foundation/",
+    "url": "https://learn.greensoftware.foundation/,https://github.com/Green-Software-Foundation/learn/wiki/Green-Guides,https://movement.greensoftware.foundation/spaces/19525645?utm_source=manual",
+    "identifier": "n/a",
+    "dct:conformsTo": {
+      "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
+      "@type": "CreativeWork"
     },
-    {
-      "path": "../training_materials/Intro/green-hpc-ucl-workshop.yaml",
-      "group": "Intro",
-      "item": {
-        "@context": "https://schema.org",
-        "@type": "LearningResource",
-        "@id": "https://epcced.github.io/2025-07-02_GreenHPC_UCL/",
-        "url": "https://epcced.github.io/2025-07-02_GreenHPC_UCL/",
-        "dct:conformsTo": {
-          "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
-          "@type": "CreativeWork"
-        },
-        "name": "Green HPC system use",
-        "description": "A workshop introducing environmental sustainability principles for HPC, delivered at UCL on 2 July 2025",
-        "abstract": "This workshop introduces environmental sustainability principles in the context of HPC systems. Using the UK National Supercomputing Service ARCHER2 as a worked example, it covers carbon efficiency, energy efficiency, carbon awareness, hardware efficiency, measurement, and reducing emissions. Delivered as a full-day in-person session at UCL London.",
-        "educationalLevel": "Beginner",
-        "timeRequired": "PT5H30M",
-        "creativeWorkStatus": "active",
-        "inLanguage": [
-          "en-GB"
-        ],
-        "learningResourceType": [
-          "workshop"
-        ],
-        "keywords": [
-          "HPC",
-          "green computing",
-          "carbon efficiency",
-          "ARCHER2",
-          "sustainable HPC",
-          "EPCC",
-          "UCL"
-        ],
-        "datePublished": "2025-07-02",
-        "audience": {
-          "@type": "Audience",
-          "audienceType": "Anyone involved in using or delivering HPC resources — users, software developers for HPC, HPC service operators, and those involved in procuring HPC systems. No prior knowledge of environmental sustainability assumed."
-        },
-        "competencyRequired": [
-          "Familiarity with key concepts in climate change and green software engineering (covered in the pre-workshop setup material)"
-        ],
-        "teaches": [
-          "Understand carbon efficiency and its relationship to energy efficiency",
-          "Know how HPC systems can potentially reduce emissions",
-          "Understand carbon intensity of electricity generation and carbon-aware HPC use",
-          "Appreciate embodied emissions associated with HPC hardware",
-          "Be aware of frameworks for measuring and reporting carbon emissions in HPC contexts",
-          "Gain practical advice on measuring and improving carbon efficiency of HPC use"
-        ],
-        "author": [
-          {
-            "@type": "Person",
-            "name": "Andy Turner",
-            "affiliation": "EPCC, University of Edinburgh"
-          }
-        ],
-        "contributor": [
-          {
-            "@type": "Organization",
-            "name": "EPCC",
-            "url": "https://www.epcc.ed.ac.uk/"
-          },
-          {
-            "@type": "Organization",
-            "name": "Green Software Foundation",
-            "url": "https://greensoftware.foundation/"
-          }
-        ],
-        "about": [
-          {
-            "@type": "DefinedTerm",
-            "name": "Sustainable HPC",
-            "url": "https://epcced.github.io/2025-07-02_GreenHPC_UCL/"
-          }
-        ],
-        "recordedAt": [
-          {
-            "@type": "Event",
-            "name": "Green HPC workshop at UCL",
-            "url": "https://www.archer2.ac.uk/training/courses/250702-green-computing/",
-            "location": "G15 Chandler House, UCL, London, UK",
-            "startDate": "2025-07-02"
-          }
-        ]
+    "name": "Green Software Practitioner",
+    "description": "Learn the concepts needed to build, maintain and run greener applications",
+    "educationalLevel": "Beginner",
+    "timeRequired": "PT3H",
+    "creativeWorkStatus": "active",
+    "accessibilitySummary": "Course is text-based with infographics and includes quizzes. French language version available.",
+    "version": "v1.1.0",
+    "inLanguage": [
+      "en-US"
+    ],
+    "learningResourceType": [
+      "online tutorial (text only)"
+    ],
+    "keywords": [
+      "sustainable computing",
+      "green computing",
+      "carbon footprint",
+      "environmental impact",
+      "computational research"
+    ],
+    "dateModified": "2024-11-12 (11 Dec)",
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "Anyone involved in the process of building, deploying, or managing software, anyone who wants to make their software applications more sustainable and build a career in green software"
+    },
+    "competencyRequired": [
+      "No prior knowledge of computing infrastructure required, ideally have at least one year of industry experience building, deploying, or managing software applications."
+    ],
+    "teaches": [
+      "The core drivers of carbon emissions for software applications.",
+      "The 3 actions one can take to reduce the carbon emissions of your software.",
+      "How to measure software emissions using the Greenhouse Gas (GHG) protocol or the Software Carbon Intensity (SCI) specification.",
+      "The different types of corporate climate targets so you can align your green software proposals to help meet your organization's public commitments."
+    ],
+    "license": [
+      "https://creativecommons.org/licenses/by/4.0/"
+    ],
+    "author": [
+      {
+        "@type": "Person",
+        "name": "Sarah Hsu",
+        "url": "https://champions.greensoftware.foundation/champions/sarah-hsu/"
+      },
+      {
+        "@type": "Person",
+        "name": "Leila Lhardy",
+        "url": "https://www.linkedin.com/in/leilalhardy/"
+      },
+      {
+        "@type": "Person",
+        "name": "Jose Alejandro Sanchez",
+        "url": "https://www.linkedin.com/in/ijasanchez/"
+      },
+      {
+        "@type": "Person",
+        "name": "Russell Trow",
+        "url": "https://www.linkedin.com/in/russelltrow/"
       }
-    },
-    {
-      "path": "../training_materials/Intro/green-software-practitioner.yaml",
-      "group": "Intro",
-      "item": {
-        "@context": "https://schema.org",
-        "@type": "LearningResource",
-        "@id": "https://learn.greensoftware.foundation/",
-        "url": "https://learn.greensoftware.foundation/",
-        "dct:conformsTo": {
-          "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
-          "@type": "CreativeWork"
-        },
-        "name": "Green Software Practitioner",
-        "description": "A free, open-source training course on how to build, maintain, and run greener software applications",
-        "abstract": "This training teaches how to build, maintain, and run greener applications regardless of domain, industry, organisation size or type, programming language, or framework. It covers the core drivers of carbon emissions in software, three actions to reduce emissions, measuring software emissions using the GHG protocol and the Software Carbon Intensity (SCI) specification, and types of corporate climate targets.",
-        "educationalLevel": "Intermediate",
-        "creativeWorkStatus": "active",
-        "inLanguage": [
-          "en-US"
-        ],
-        "learningResourceType": [
-          "online course"
-        ],
-        "keywords": [
-          "green software",
-          "carbon efficiency",
-          "energy efficiency",
-          "carbon awareness",
-          "hardware efficiency",
-          "SCI",
-          "GHG protocol",
-          "sustainable software engineering"
-        ],
-        "audience": {
-          "@type": "Audience",
-          "audienceType": "Software practitioners involved in building, deploying, or managing software applications — developers, DevOps, testers, architects, SREs, product managers, UX designers. At least one year of industry experience recommended."
-        },
-        "competencyRequired": [
-          "At least one year of industry experience building, deploying, or managing software applications"
-        ],
-        "teaches": [
-          "Identify the core drivers of carbon emissions for software applications",
-          "Understand three actions to reduce the carbon emissions of software",
-          "Measure software emissions using the GHG protocol or the Software Carbon Intensity (SCI) specification",
-          "Understand corporate climate targets and align green software proposals with organisational commitments"
-        ],
-        "license": [
-          "https://creativecommons.org/licenses/by/4.0/"
-        ],
-        "author": [
-          {
-            "@type": "Organization",
-            "name": "Green Software Foundation — Principles & Patterns team, Community Working Group",
-            "url": "https://greensoftware.foundation/"
-          }
-        ],
-        "mentions": [
-          {
-            "@type": "CreativeWork",
-            "name": "Green Software Foundation training source",
-            "url": "https://github.com/Green-Software-Foundation/training"
-          }
-        ]
+    ],
+    "contributor": [
+      {
+        "@type": "Organization",
+        "name": "The Greensoftware Foundation",
+        "url": "https://greensoftware.foundation/"
+      },
+      {
+        "@type": "Organization",
+        "name": "The Linux Foundation",
+        "url": "https://www.linuxfoundation.org/"
       }
-    },
-    {
-      "path": "../training_materials/Intro/microsoft-sustainable-software-engineering.yaml",
-      "group": "Intro",
-      "item": {
-        "@context": "https://schema.org",
-        "@type": "LearningResource",
-        "@id": "https://learn.microsoft.com/en-us/training/modules/sustainable-software-engineering-overview/",
-        "url": "https://learn.microsoft.com/en-us/training/modules/sustainable-software-engineering-overview/",
-        "dct:conformsTo": {
-          "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
-          "@type": "CreativeWork"
-        },
-        "name": "The Principles of Sustainable Software Engineering",
-        "description": "A Microsoft Learn module covering the core competencies needed to define, build, and run sustainable software applications",
-        "abstract": "Sustainable Software Engineering is an emerging discipline at the intersection of climate science, software, hardware, electricity markets, and data centre design. This module covers the six principles of Sustainable Software Engineering and the two philosophies that underpin the discipline.",
-        "educationalLevel": "Beginner",
-        "creativeWorkStatus": "active",
-        "inLanguage": [
-          "en-US"
-        ],
-        "learningResourceType": [
-          "online module"
-        ],
-        "keywords": [
-          "sustainable software engineering",
-          "green software",
-          "carbon efficiency",
-          "energy efficiency",
-          "carbon awareness",
-          "hardware efficiency",
-          "climate commitments",
-          "Azure"
-        ],
-        "audience": {
-          "@type": "Audience",
-          "audienceType": "Developers, administrators, solution architects, DevOps engineers, data scientists, data engineers, AI engineers, technology managers, and students"
-        },
-        "competencyRequired": [
-          "Familiarity with general computing concepts"
-        ],
-        "teaches": [
-          "Identify the six principles of Sustainable Software Engineering",
-          "Understand the two philosophies of Sustainable Software Engineering"
-        ],
-        "author": [
-          {
-            "@type": "Organization",
-            "name": "Microsoft",
-            "url": "https://learn.microsoft.com"
-          }
-        ]
+    ],
+    "about": [
+      {
+        "@type": "DefinedTerm",
+        "name": "Green Software Practitioner (Basics of Green Computing)",
+        "url": "https://www.ebi.ac.uk/training/online/courses/sustainable-computing-in-science/"
       }
-    },
-    {
-      "path": "../training_materials/Intro/polimi-green-information-systems.yaml",
-      "group": "Intro",
-      "item": {
-        "@context": "https://schema.org",
-        "@type": "LearningResource",
-        "@id": "https://www.pok.polimi.it/course/view.php?id=218",
-        "url": "https://www.pok.polimi.it/course/view.php?id=218",
-        "dct:conformsTo": {
-          "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
-          "@type": "CreativeWork"
-        },
-        "name": "Introduction to Green Information Systems and Technologies",
-        "description": "A MOOC from Politecnico di Milano covering green IT, eco-friendly information systems, and sustainability in engineering and computer science",
-        "educationalLevel": "Beginner",
-        "timeRequired": "P3W",
-        "creativeWorkStatus": "active",
-        "inLanguage": [
-          "en"
-        ],
-        "learningResourceType": [
-          "online course"
-        ],
-        "keywords": [
-          "green IT",
-          "information systems",
-          "sustainability",
-          "engineering",
-          "computer science",
-          "MOOC"
-        ],
-        "audience": {
-          "@type": "Audience",
-          "audienceType": "Bachelor of Science students and professionals in engineering and computer science interested in green IT and sustainability"
-        },
-        "license": [
-          "https://creativecommons.org/licenses/by-nc/4.0/"
-        ],
-        "author": [
-          {
-            "@type": "Organization",
-            "name": "Politecnico di Milano — POK",
-            "url": "https://www.pok.polimi.it"
-          }
-        ]
-      }
-    },
-    {
-      "path": "../training_materials/Intro/sig-guide-green-computing.yaml",
-      "group": "Intro",
-      "item": {
-        "@context": "https://schema.org",
-        "@type": "LearningResource",
-        "@id": "https://www.softwareimprovementgroup.com/publications/complete-guide-to-green-computing/",
-        "url": "https://www.softwareimprovementgroup.com/publications/complete-guide-to-green-computing/",
-        "dct:conformsTo": {
-          "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
-          "@type": "CreativeWork"
-        },
-        "name": "The complete guide to green computing",
-        "description": "A comprehensive guide to green computing covering smarter and greener approaches to managing IT operations and reducing the environmental impact of software and data centres",
-        "abstract": "As the digital world expands, so does the environmental impact of IT. This guide introduces green computing — finding smarter, greener ways to manage IT operations — covering the environmental imperative as well as the business benefits of efficient software development, including reduced energy consumption and compliance with CSRD.",
-        "creativeWorkStatus": "active",
-        "learningResourceType": [
-          "guide"
-        ],
-        "keywords": [
-          "green computing",
-          "green IT",
-          "sustainable software",
-          "CSRD",
-          "carbon emissions",
-          "data centres",
-          "energy efficiency"
-        ],
-        "audience": {
-          "@type": "Audience",
-          "audienceType": "IT professionals, software developers, business leaders, and sustainability professionals interested in reducing the environmental impact of IT"
-        },
-        "teaches": [
-          "Understand the environmental impact of IT and data centres",
-          "Identify green computing approaches and their business benefits",
-          "Understand CSRD and related sustainability reporting requirements for IT organisations"
-        ],
-        "author": [
-          {
-            "@type": "Organization",
-            "name": "Software Improvement Group (SIG)",
-            "url": "https://www.softwareimprovementgroup.com"
-          }
-        ]
-      }
-    },
-    {
-      "path": "../training_materials/Intro/sustainable-computing.yaml",
-      "group": "Intro",
-      "item": {
-        "@context": "https://schema.org",
-        "@type": "LearningResource",
-        "@id": "https://www.ebi.ac.uk/training/online/courses/sustainable-computing-in-science/",
-        "url": "https://www.ebi.ac.uk/training/online/courses/sustainable-computing-in-science/",
-        "identifier": "DOI:10.6019/TOL.sustainable-computing-intro-t.2026.00001.1",
-        "dct:conformsTo": {
-          "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
-          "@type": "CreativeWork"
-        },
+    ],
+    "mentions": [
+      {
+        "@type": "CreativeWork",
         "name": "Sustainable computing in science",
-        "description": "An introduction to the environmental impacts of computational research",
-        "abstract": "An introduction to the different ways in which computing infrastructure and activities impact the environment, how to quantify these impacts, tools available to measure them, and how researchers can reduce the footprint of their work",
-        "educationalLevel": "Beginner",
-        "timeRequired": "PT3H",
-        "creativeWorkStatus": "active",
-        "accessibilitySummary": "Course includes activities, quizzes, and videos",
-        "version": "1.0",
-        "inLanguage": [
-          "en-US"
-        ],
-        "learningResourceType": [
-          "online tutorial"
-        ],
-        "keywords": [
-          "sustainable computing",
-          "green computing",
-          "carbon footprint",
-          "environmental impact",
-          "computational research",
-          "bioinformatics"
-        ],
-        "dateModified": "2026-01-01",
-        "audience": {
-          "@type": "Audience",
-          "audienceType": "Students and researchers in academic and industry settings involved in computational work; anyone interested in the environmental impact of computing"
-        },
-        "competencyRequired": [
-          "No prior knowledge of computing infrastructure required"
-        ],
-        "teaches": [
-          "Recall the different types of impacts research can have",
-          "Discuss the environmental impacts associated with computing",
-          "Describe the principles behind estimating the carbon footprint of an analysis",
-          "Identify suitable, available tools for estimating the footprint of an analysis",
-          "Describe the limits of calculators and unintended negative impacts of optimisation such as rebound effects",
-          "Discuss initiatives in the field of green computing and the challenges it faces"
-        ],
-        "license": [
-          "https://creativecommons.org/licenses/by/4.0/"
-        ],
-        "author": [
-          {
-            "@type": "Person",
-            "name": "Loic Lannelongue",
-            "url": "https://www.ebi.ac.uk/people/person/lannelongue-loic"
-          },
-          {
-            "@type": "Person",
-            "name": "Flaminia Zane",
-            "url": "https://www.ebi.ac.uk/people/person/flaminia-zane"
-          }
-        ],
-        "contributor": [
-          {
-            "@type": "Organization",
-            "name": "Cambridge Sustainable Computing Lab",
-            "url": "https://cam-sustainablecomputing.org"
-          },
-          {
-            "@type": "Organization",
-            "name": "Wellcome Trust Foundation",
-            "url": "https://wellcome.org/"
-          },
-          {
-            "@type": "Organization",
-            "name": "University of Cambridge",
-            "url": "https://www.cam.ac.uk/"
-          },
-          {
-            "@type": "Organization",
-            "name": "EMBL-EBI Training",
-            "url": "https://www.ebi.ac.uk/training/"
-          }
-        ],
-        "about": [
-          {
-            "@type": "DefinedTerm",
-            "name": "Sustainable computing",
-            "url": "https://www.ebi.ac.uk/training/online/courses/sustainable-computing-in-science/"
-          }
-        ],
-        "mentions": [
-          {
-            "@type": "CreativeWork",
-            "name": "Sustainable computing in science",
-            "identifier": "DOI:10.6019/TOL.sustainable-computing-intro-t.2026.00001.1",
-            "url": "https://www.ebi.ac.uk/training/online/courses/sustainable-computing-in-science/"
-          }
-        ]
+        "identifier": "DOI:10.6019/TOL.sustainable-computing-intro-t.2026.00001.1",
+        "url": "https://www.ebi.ac.uk/training/online/courses/sustainable-computing-in-science/"
       }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "LearningResource",
+    "@id": "https://epcced.github.io/2025-07-02_GreenHPC_UCL/",
+    "url": "https://epcced.github.io/2025-07-02_GreenHPC_UCL/",
+    "dct:conformsTo": {
+      "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
+      "@type": "CreativeWork"
     },
-    {
-      "path": "../training_materials/Intro/tum-eco-tech-coursera.yaml",
-      "group": "Intro",
-      "item": {
-        "@context": "https://schema.org",
-        "@type": "LearningResource",
-        "@id": "https://www.coursera.org/learn/eco-tech-exploring-its-impact-on-a-sustainable-future",
-        "url": "https://www.coursera.org/learn/eco-tech-exploring-its-impact-on-a-sustainable-future",
-        "dct:conformsTo": {
-          "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
-          "@type": "CreativeWork"
-        },
-        "name": "Eco-Tech: Exploring IT's Impact on a Sustainable Future",
-        "description": "A free Coursera MOOC from TUM combining scientific precision and accessible insight into the nexus of information technology and environmental sustainability",
-        "abstract": "From the basics of climate science to the advanced applications of green computing and artificial intelligence, this course explores the wide range of challenges and opportunities that IT offers in the fight against climate change. Nine invited experts share diverse perspectives through English-language scientific presentations and German interviews, all fully subtitled. Participants explore practical examples of companies integrating sustainability and collaborate on a shared mission.",
-        "educationalLevel": "Beginner",
-        "timeRequired": "PT3H45M",
-        "creativeWorkStatus": "active",
-        "inLanguage": [
-          "en"
-        ],
-        "learningResourceType": [
-          "online course"
-        ],
-        "keywords": [
-          "eco-tech",
-          "green computing",
-          "AI",
-          "sustainability",
-          "climate change",
-          "information technology",
-          "TUM",
-          "MOOC"
-        ],
-        "audience": {
-          "@type": "Audience",
-          "audienceType": "General enthusiasts, IT PhD students, and anyone curious about the role of technology in sustainability. No prior knowledge required."
-        },
-        "competencyRequired": [
-          "No prerequisites required"
-        ],
-        "teaches": [
-          "Understand the fundamental relationship between IT and environmental sustainability",
-          "Gain insights into green computing, sustainable design, and the role of AI in environmental solutions",
-          "Analyse practical examples of companies integrating sustainability into their business models",
-          "Outline a personal roadmap for contributing to a sustainable digital future"
-        ],
-        "author": [
-          {
-            "@type": "Organization",
-            "name": "Technical University of Munich (TUM)",
-            "url": "https://www.tum.de"
-          },
-          {
-            "@type": "Organization",
-            "name": "Software Campus",
-            "url": "https://softwarecampus.de"
-          }
-        ],
-        "contributor": [
-          {
-            "@type": "Organization",
-            "name": "Coursera",
-            "url": "https://www.coursera.org"
-          }
-        ]
+    "name": "Green HPC system use",
+    "description": "A workshop introducing environmental sustainability principles for HPC, delivered at UCL on 2 July 2025",
+    "abstract": "This workshop introduces environmental sustainability principles in the context of HPC systems. Using the UK National Supercomputing Service ARCHER2 as a worked example, it covers carbon efficiency, energy efficiency, carbon awareness, hardware efficiency, measurement, and reducing emissions. Delivered as a full-day in-person session at UCL London.",
+    "educationalLevel": "Beginner",
+    "timeRequired": "PT5H30M",
+    "creativeWorkStatus": "active",
+    "inLanguage": [
+      "en-GB"
+    ],
+    "learningResourceType": [
+      "workshop"
+    ],
+    "keywords": [
+      "HPC",
+      "green computing",
+      "carbon efficiency",
+      "ARCHER2",
+      "sustainable HPC",
+      "EPCC",
+      "UCL"
+    ],
+    "datePublished": "2025-07-02",
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "Anyone involved in using or delivering HPC resources — users, software developers for HPC, HPC service operators, and those involved in procuring HPC systems. No prior knowledge of environmental sustainability assumed."
+    },
+    "competencyRequired": [
+      "Familiarity with key concepts in climate change and green software engineering (covered in the pre-workshop setup material)"
+    ],
+    "teaches": [
+      "Understand carbon efficiency and its relationship to energy efficiency",
+      "Know how HPC systems can potentially reduce emissions",
+      "Understand carbon intensity of electricity generation and carbon-aware HPC use",
+      "Appreciate embodied emissions associated with HPC hardware",
+      "Be aware of frameworks for measuring and reporting carbon emissions in HPC contexts",
+      "Gain practical advice on measuring and improving carbon efficiency of HPC use"
+    ],
+    "author": [
+      {
+        "@type": "Person",
+        "name": "Andy Turner",
+        "affiliation": "EPCC, University of Edinburgh"
       }
-    },
-    {
-      "path": "../training_materials/Lifecycle_assessment/lca-beginner-course.yaml",
-      "group": "Lifecycle_assessment",
-      "item": {
-        "@context": "https://schema.org",
-        "@type": "LearningResource",
-        "@id": "https://academy.ecochain.com/course/lca-beginner-course",
-        "url": "https://academy.ecochain.com/course/lca-beginner-course",
-        "identifier": "https://academy.ecochain.com/course/lca-beginner-course",
-        "dct:conformsTo": {
-          "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
-          "@type": "CreativeWork"
-        },
-        "name": "LCA Beginner Course",
-        "description": "Getting Started with Product Footprinting — learn the fundamentals of Life Cycle Assessment (LCA), what it can be used for, and what tools and resources are needed.",
-        "abstract": "A free, self-paced, 7-module course (5 videos, 18 e-books, 5 quizzes) introducing LCA methodology basics for beginners, ending with a certificate of completion.",
-        "educationalLevel": "Beginner",
-        "timeRequired": "PT3H",
-        "creativeWorkStatus": "active",
-        "inLanguage": [
-          "en"
-        ],
-        "learningResourceType": [
-          "online course"
-        ],
-        "keywords": [
-          "Life Cycle Assessment",
-          "LCA",
-          "product footprinting",
-          "sustainability",
-          "beginner"
-        ],
-        "audience": {
-          "@type": "Audience",
-          "audienceType": "Anyone wanting to learn LCA basics and understand how it could yield value for their company"
-        },
-        "competencyRequired": [
-          "No prior knowledge required"
-        ],
-        "license": [
-          "Not stated on the page (Free; 24/7 accessible, self-paced)"
-        ],
-        "contributor": [
-          {
-            "@type": "Organization",
-            "name": "Ecochain Academy"
-          }
-        ]
+    ],
+    "contributor": [
+      {
+        "@type": "Organization",
+        "name": "EPCC",
+        "url": "https://www.epcc.ed.ac.uk/"
+      },
+      {
+        "@type": "Organization",
+        "name": "Green Software Foundation",
+        "url": "https://greensoftware.foundation/"
       }
-    },
-    {
-      "path": "../training_materials/Lifecycle_assessment/udemy-environmental-impacts-data-centers.yaml",
-      "group": "Lifecycle_assessment",
-      "item": {
-        "@context": "https://schema.org",
-        "@type": "LearningResource",
-        "@id": "https://www.udemy.com/course/environmental-impacts-of-data-centers/",
-        "url": "https://www.udemy.com/course/environmental-impacts-of-data-centers/",
-        "dct:conformsTo": {
-          "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
-          "@type": "CreativeWork"
-        },
-        "name": "Environmental Impacts of Data Centers",
-        "description": "A free Udemy course exploring the environmental impacts of data centres and strategies for decarbonisation in the digital infrastructure sector",
-        "abstract": "This course covers the full range of environmental impacts of data centres beyond energy and water consumption, including land use, global supply chain issues of rare earth minerals, AI policy, and environmental justice concerns for communities. It uses a life cycle assessment (LCA) perspective to help sustainability professionals, IT leaders, developers, and policymakers understand and reduce the carbon footprint of digital infrastructure.",
-        "educationalLevel": "Beginner",
-        "creativeWorkStatus": "active",
-        "inLanguage": [
-          "en-US"
-        ],
-        "learningResourceType": [
-          "online course"
-        ],
-        "keywords": [
-          "data centres",
-          "environmental impact",
-          "decarbonisation",
-          "life cycle assessment",
-          "rare earth minerals",
-          "AI",
-          "energy consumption",
-          "green IT"
-        ],
-        "audience": {
-          "@type": "Audience",
-          "audienceType": "Sustainability professionals, IT leaders, developers and engineers, policymakers, and business leaders interested in the environmental impact of digital infrastructure"
-        },
-        "competencyRequired": [
-          "No prior knowledge required"
-        ],
-        "teaches": [
-          "Understand the environmental impacts of data centres including energy, water, land use, and supply chain",
-          "Apply a life cycle assessment (LCA) perspective to digital infrastructure",
-          "Identify strategies for data centre decarbonisation",
-          "Understand the role of AI policy and environmental justice in data centre development"
-        ],
-        "author": [
-          {
-            "@type": "Person",
-            "name": "Nathaniel Burola"
-          }
-        ]
+    ],
+    "about": [
+      {
+        "@type": "DefinedTerm",
+        "name": "Sustainable HPC",
+        "url": "https://epcced.github.io/2025-07-02_GreenHPC_UCL/"
       }
+    ],
+    "recordedAt": [
+      {
+        "@type": "Event",
+        "name": "Green HPC workshop at UCL",
+        "url": "https://www.archer2.ac.uk/training/courses/250702-green-computing/",
+        "location": "G15 Chandler House, UCL, London, UK",
+        "startDate": "2025-07-02"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "LearningResource",
+    "@id": "https://learn.greensoftware.foundation/",
+    "url": "https://learn.greensoftware.foundation/",
+    "dct:conformsTo": {
+      "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
+      "@type": "CreativeWork"
     },
-    {
-      "path": "../training_materials/Metrics_tools/green-computing_SCIFundamental.yaml",
-      "group": "Metrics_tools",
-      "item": {
-        "@context": "https://schema.org",
-        "@type": "LearningResource",
-        "@id": "https://learn.greensoftware.foundation/",
-        "url": "https://movement.greensoftware.foundation/spaces/23280752?utm_source=manual",
+    "name": "Green Software Practitioner",
+    "description": "A free, open-source training course on how to build, maintain, and run greener software applications",
+    "abstract": "This training teaches how to build, maintain, and run greener applications regardless of domain, industry, organisation size or type, programming language, or framework. It covers the core drivers of carbon emissions in software, three actions to reduce emissions, measuring software emissions using the GHG protocol and the Software Carbon Intensity (SCI) specification, and types of corporate climate targets.",
+    "educationalLevel": "Intermediate",
+    "creativeWorkStatus": "active",
+    "inLanguage": [
+      "en-US"
+    ],
+    "learningResourceType": [
+      "online course"
+    ],
+    "keywords": [
+      "green software",
+      "carbon efficiency",
+      "energy efficiency",
+      "carbon awareness",
+      "hardware efficiency",
+      "SCI",
+      "GHG protocol",
+      "sustainable software engineering"
+    ],
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "Software practitioners involved in building, deploying, or managing software applications — developers, DevOps, testers, architects, SREs, product managers, UX designers. At least one year of industry experience recommended."
+    },
+    "competencyRequired": [
+      "At least one year of industry experience building, deploying, or managing software applications"
+    ],
+    "teaches": [
+      "Identify the core drivers of carbon emissions for software applications",
+      "Understand three actions to reduce the carbon emissions of software",
+      "Measure software emissions using the GHG protocol or the Software Carbon Intensity (SCI) specification",
+      "Understand corporate climate targets and align green software proposals with organisational commitments"
+    ],
+    "license": [
+      "https://creativecommons.org/licenses/by/4.0/"
+    ],
+    "author": [
+      {
+        "@type": "Organization",
+        "name": "Green Software Foundation — Principles & Patterns team, Community Working Group",
+        "url": "https://greensoftware.foundation/"
+      }
+    ],
+    "mentions": [
+      {
+        "@type": "CreativeWork",
+        "name": "Green Software Foundation training source",
+        "url": "https://github.com/Green-Software-Foundation/training"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "LearningResource",
+    "@id": "https://learn.microsoft.com/en-us/training/modules/sustainable-software-engineering-overview/",
+    "url": "https://learn.microsoft.com/en-us/training/modules/sustainable-software-engineering-overview/",
+    "dct:conformsTo": {
+      "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
+      "@type": "CreativeWork"
+    },
+    "name": "The Principles of Sustainable Software Engineering",
+    "description": "A Microsoft Learn module covering the core competencies needed to define, build, and run sustainable software applications",
+    "abstract": "Sustainable Software Engineering is an emerging discipline at the intersection of climate science, software, hardware, electricity markets, and data centre design. This module covers the six principles of Sustainable Software Engineering and the two philosophies that underpin the discipline.",
+    "educationalLevel": "Beginner",
+    "creativeWorkStatus": "active",
+    "inLanguage": [
+      "en-US"
+    ],
+    "learningResourceType": [
+      "online module"
+    ],
+    "keywords": [
+      "sustainable software engineering",
+      "green software",
+      "carbon efficiency",
+      "energy efficiency",
+      "carbon awareness",
+      "hardware efficiency",
+      "climate commitments",
+      "Azure"
+    ],
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "Developers, administrators, solution architects, DevOps engineers, data scientists, data engineers, AI engineers, technology managers, and students"
+    },
+    "competencyRequired": [
+      "Familiarity with general computing concepts"
+    ],
+    "teaches": [
+      "Identify the six principles of Sustainable Software Engineering",
+      "Understand the two philosophies of Sustainable Software Engineering"
+    ],
+    "author": [
+      {
+        "@type": "Organization",
+        "name": "Microsoft",
+        "url": "https://learn.microsoft.com"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "LearningResource",
+    "@id": "https://www.pok.polimi.it/course/view.php?id=218",
+    "url": "https://www.pok.polimi.it/course/view.php?id=218",
+    "dct:conformsTo": {
+      "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
+      "@type": "CreativeWork"
+    },
+    "name": "Introduction to Green Information Systems and Technologies",
+    "description": "A MOOC from Politecnico di Milano covering green IT, eco-friendly information systems, and sustainability in engineering and computer science",
+    "educationalLevel": "Beginner",
+    "timeRequired": "P3W",
+    "creativeWorkStatus": "active",
+    "inLanguage": [
+      "en"
+    ],
+    "learningResourceType": [
+      "online course"
+    ],
+    "keywords": [
+      "green IT",
+      "information systems",
+      "sustainability",
+      "engineering",
+      "computer science",
+      "MOOC"
+    ],
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "Bachelor of Science students and professionals in engineering and computer science interested in green IT and sustainability"
+    },
+    "license": [
+      "https://creativecommons.org/licenses/by-nc/4.0/"
+    ],
+    "author": [
+      {
+        "@type": "Organization",
+        "name": "Politecnico di Milano — POK",
+        "url": "https://www.pok.polimi.it"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "LearningResource",
+    "@id": "https://www.softwareimprovementgroup.com/publications/complete-guide-to-green-computing/",
+    "url": "https://www.softwareimprovementgroup.com/publications/complete-guide-to-green-computing/",
+    "dct:conformsTo": {
+      "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
+      "@type": "CreativeWork"
+    },
+    "name": "The complete guide to green computing",
+    "description": "A comprehensive guide to green computing covering smarter and greener approaches to managing IT operations and reducing the environmental impact of software and data centres",
+    "abstract": "As the digital world expands, so does the environmental impact of IT. This guide introduces green computing — finding smarter, greener ways to manage IT operations — covering the environmental imperative as well as the business benefits of efficient software development, including reduced energy consumption and compliance with CSRD.",
+    "creativeWorkStatus": "active",
+    "learningResourceType": [
+      "guide"
+    ],
+    "keywords": [
+      "green computing",
+      "green IT",
+      "sustainable software",
+      "CSRD",
+      "carbon emissions",
+      "data centres",
+      "energy efficiency"
+    ],
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "IT professionals, software developers, business leaders, and sustainability professionals interested in reducing the environmental impact of IT"
+    },
+    "teaches": [
+      "Understand the environmental impact of IT and data centres",
+      "Identify green computing approaches and their business benefits",
+      "Understand CSRD and related sustainability reporting requirements for IT organisations"
+    ],
+    "author": [
+      {
+        "@type": "Organization",
+        "name": "Software Improvement Group (SIG)",
+        "url": "https://www.softwareimprovementgroup.com"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "LearningResource",
+    "@id": "https://www.ebi.ac.uk/training/online/courses/sustainable-computing-in-science/",
+    "url": "https://www.ebi.ac.uk/training/online/courses/sustainable-computing-in-science/",
+    "identifier": "DOI:10.6019/TOL.sustainable-computing-intro-t.2026.00001.1",
+    "dct:conformsTo": {
+      "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
+      "@type": "CreativeWork"
+    },
+    "name": "Sustainable computing in science",
+    "description": "An introduction to the environmental impacts of computational research",
+    "abstract": "An introduction to the different ways in which computing infrastructure and activities impact the environment, how to quantify these impacts, tools available to measure them, and how researchers can reduce the footprint of their work",
+    "educationalLevel": "Beginner",
+    "timeRequired": "PT3H",
+    "creativeWorkStatus": "active",
+    "accessibilitySummary": "Course includes activities, quizzes, and videos",
+    "version": "1.0",
+    "inLanguage": [
+      "en-US"
+    ],
+    "learningResourceType": [
+      "online tutorial"
+    ],
+    "keywords": [
+      "sustainable computing",
+      "green computing",
+      "carbon footprint",
+      "environmental impact",
+      "computational research",
+      "bioinformatics"
+    ],
+    "dateModified": "2026-01-01",
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "Students and researchers in academic and industry settings involved in computational work; anyone interested in the environmental impact of computing"
+    },
+    "competencyRequired": [
+      "No prior knowledge of computing infrastructure required"
+    ],
+    "teaches": [
+      "Recall the different types of impacts research can have",
+      "Discuss the environmental impacts associated with computing",
+      "Describe the principles behind estimating the carbon footprint of an analysis",
+      "Identify suitable, available tools for estimating the footprint of an analysis",
+      "Describe the limits of calculators and unintended negative impacts of optimisation such as rebound effects",
+      "Discuss initiatives in the field of green computing and the challenges it faces"
+    ],
+    "license": [
+      "https://creativecommons.org/licenses/by/4.0/"
+    ],
+    "author": [
+      {
+        "@type": "Person",
+        "name": "Loic Lannelongue",
+        "url": "https://www.ebi.ac.uk/people/person/lannelongue-loic"
+      },
+      {
+        "@type": "Person",
+        "name": "Flaminia Zane",
+        "url": "https://www.ebi.ac.uk/people/person/flaminia-zane"
+      }
+    ],
+    "contributor": [
+      {
+        "@type": "Organization",
+        "name": "Cambridge Sustainable Computing Lab",
+        "url": "https://cam-sustainablecomputing.org"
+      },
+      {
+        "@type": "Organization",
+        "name": "Wellcome Trust Foundation",
+        "url": "https://wellcome.org/"
+      },
+      {
+        "@type": "Organization",
+        "name": "University of Cambridge",
+        "url": "https://www.cam.ac.uk/"
+      },
+      {
+        "@type": "Organization",
+        "name": "EMBL-EBI Training",
+        "url": "https://www.ebi.ac.uk/training/"
+      }
+    ],
+    "about": [
+      {
+        "@type": "DefinedTerm",
+        "name": "Sustainable computing",
+        "url": "https://www.ebi.ac.uk/training/online/courses/sustainable-computing-in-science/"
+      }
+    ],
+    "mentions": [
+      {
+        "@type": "CreativeWork",
+        "name": "Sustainable computing in science",
+        "identifier": "DOI:10.6019/TOL.sustainable-computing-intro-t.2026.00001.1",
+        "url": "https://www.ebi.ac.uk/training/online/courses/sustainable-computing-in-science/"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "LearningResource",
+    "@id": "https://www.coursera.org/learn/eco-tech-exploring-its-impact-on-a-sustainable-future",
+    "url": "https://www.coursera.org/learn/eco-tech-exploring-its-impact-on-a-sustainable-future",
+    "dct:conformsTo": {
+      "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
+      "@type": "CreativeWork"
+    },
+    "name": "Eco-Tech: Exploring IT's Impact on a Sustainable Future",
+    "description": "A free Coursera MOOC from TUM combining scientific precision and accessible insight into the nexus of information technology and environmental sustainability",
+    "abstract": "From the basics of climate science to the advanced applications of green computing and artificial intelligence, this course explores the wide range of challenges and opportunities that IT offers in the fight against climate change. Nine invited experts share diverse perspectives through English-language scientific presentations and German interviews, all fully subtitled. Participants explore practical examples of companies integrating sustainability and collaborate on a shared mission.",
+    "educationalLevel": "Beginner",
+    "timeRequired": "PT3H45M",
+    "creativeWorkStatus": "active",
+    "inLanguage": [
+      "en"
+    ],
+    "learningResourceType": [
+      "online course"
+    ],
+    "keywords": [
+      "eco-tech",
+      "green computing",
+      "AI",
+      "sustainability",
+      "climate change",
+      "information technology",
+      "TUM",
+      "MOOC"
+    ],
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "General enthusiasts, IT PhD students, and anyone curious about the role of technology in sustainability. No prior knowledge required."
+    },
+    "competencyRequired": [
+      "No prerequisites required"
+    ],
+    "teaches": [
+      "Understand the fundamental relationship between IT and environmental sustainability",
+      "Gain insights into green computing, sustainable design, and the role of AI in environmental solutions",
+      "Analyse practical examples of companies integrating sustainability into their business models",
+      "Outline a personal roadmap for contributing to a sustainable digital future"
+    ],
+    "author": [
+      {
+        "@type": "Organization",
+        "name": "Technical University of Munich (TUM)",
+        "url": "https://www.tum.de"
+      },
+      {
+        "@type": "Organization",
+        "name": "Software Campus",
+        "url": "https://softwarecampus.de"
+      }
+    ],
+    "contributor": [
+      {
+        "@type": "Organization",
+        "name": "Coursera",
+        "url": "https://www.coursera.org"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "LearningResource",
+    "@id": "https://academy.ecochain.com/course/lca-beginner-course",
+    "url": "https://academy.ecochain.com/course/lca-beginner-course",
+    "identifier": "https://academy.ecochain.com/course/lca-beginner-course",
+    "dct:conformsTo": {
+      "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
+      "@type": "CreativeWork"
+    },
+    "name": "LCA Beginner Course",
+    "description": "Getting Started with Product Footprinting — learn the fundamentals of Life Cycle Assessment (LCA), what it can be used for, and what tools and resources are needed.",
+    "abstract": "A free, self-paced, 7-module course (5 videos, 18 e-books, 5 quizzes) introducing LCA methodology basics for beginners, ending with a certificate of completion.",
+    "educationalLevel": "Beginner",
+    "timeRequired": "PT3H",
+    "creativeWorkStatus": "active",
+    "inLanguage": [
+      "en"
+    ],
+    "learningResourceType": [
+      "online course"
+    ],
+    "keywords": [
+      "Life Cycle Assessment",
+      "LCA",
+      "product footprinting",
+      "sustainability",
+      "beginner"
+    ],
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "Anyone wanting to learn LCA basics and understand how it could yield value for their company"
+    },
+    "competencyRequired": [
+      "No prior knowledge required"
+    ],
+    "license": [
+      "Not stated on the page (Free; 24/7 accessible, self-paced)"
+    ],
+    "contributor": [
+      {
+        "@type": "Organization",
+        "name": "Ecochain Academy"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "LearningResource",
+    "@id": "https://www.udemy.com/course/environmental-impacts-of-data-centers/",
+    "url": "https://www.udemy.com/course/environmental-impacts-of-data-centers/",
+    "dct:conformsTo": {
+      "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
+      "@type": "CreativeWork"
+    },
+    "name": "Environmental Impacts of Data Centers",
+    "description": "A free Udemy course exploring the environmental impacts of data centres and strategies for decarbonisation in the digital infrastructure sector",
+    "abstract": "This course covers the full range of environmental impacts of data centres beyond energy and water consumption, including land use, global supply chain issues of rare earth minerals, AI policy, and environmental justice concerns for communities. It uses a life cycle assessment (LCA) perspective to help sustainability professionals, IT leaders, developers, and policymakers understand and reduce the carbon footprint of digital infrastructure.",
+    "educationalLevel": "Beginner",
+    "creativeWorkStatus": "active",
+    "inLanguage": [
+      "en-US"
+    ],
+    "learningResourceType": [
+      "online course"
+    ],
+    "keywords": [
+      "data centres",
+      "environmental impact",
+      "decarbonisation",
+      "life cycle assessment",
+      "rare earth minerals",
+      "AI",
+      "energy consumption",
+      "green IT"
+    ],
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "Sustainability professionals, IT leaders, developers and engineers, policymakers, and business leaders interested in the environmental impact of digital infrastructure"
+    },
+    "competencyRequired": [
+      "No prior knowledge required"
+    ],
+    "teaches": [
+      "Understand the environmental impacts of data centres including energy, water, land use, and supply chain",
+      "Apply a life cycle assessment (LCA) perspective to digital infrastructure",
+      "Identify strategies for data centre decarbonisation",
+      "Understand the role of AI policy and environmental justice in data centre development"
+    ],
+    "author": [
+      {
+        "@type": "Person",
+        "name": "Nathaniel Burola"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "LearningResource",
+    "@id": "https://learn.greensoftware.foundation/",
+    "url": "https://movement.greensoftware.foundation/spaces/23280752?utm_source=manual",
+    "identifier": "n/a",
+    "dct:conformsTo": {
+      "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
+      "@type": "CreativeWork"
+    },
+    "name": "Green Software Practitioner",
+    "description": "Learn the concepts needed to build, maintain and run greener applications",
+    "educationalLevel": "Beginner",
+    "timeRequired": "PT4H",
+    "creativeWorkStatus": "active",
+    "accessibilitySummary": "20 minutes of video content across 4 modules",
+    "version": "n/a",
+    "inLanguage": [
+      "en-US"
+    ],
+    "learningResourceType": [
+      "online tutorial"
+    ],
+    "keywords": [
+      "sustainable computing",
+      "green computing",
+      "carbon footprint",
+      "environmental impact",
+      "computational research",
+      "Metrics",
+      "efficiency",
+      "metrics definition",
+      "Software Carbon Intensity (SCI)"
+    ],
+    "dateModified": "n/a",
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "Anyone involved in the process of building, deploying, or managing software, anyone who wants to make their software applications more sustainable and build a career in green software"
+    },
+    "competencyRequired": [
+      "No prior knowledge of computing infrastructure required, ideally have at least one year of industry experience building, deploying, or managing software applications."
+    ],
+    "teaches": [
+      "Explaining why traditional carbon metrics fail to drive action in software teams",
+      "Describing the two boundaries that every metric must align to drive the right actions",
+      "Calculating operational and embodied emissions using the SCI equation",
+      "Explaining why the SCI excludes market-based measures like offsets and RECs",
+      "Selecting appropriate quantification methods based on available data",
+      "Applying the SCI equation to real software systems"
+    ],
+    "license": [
+      "https://creativecommons.org/licenses/by/4.0/"
+    ],
+    "author": [
+      {
+        "@type": "Person",
+        "name": "Asim Hussain",
+        "url": "n/a"
+      },
+      {
+        "@type": "Person",
+        "name": "Kirsty Du Plessis",
+        "url": "https://www.linkedin.com/in/leilalhardy/"
+      },
+      {
+        "@type": "Person",
+        "name": "Gosia Fricze",
+        "url": "n/a"
+      },
+      {
+        "@type": "Person",
+        "name": "Russell Trow",
+        "url": "https://www.linkedin.com/in/russelltrow/"
+      }
+    ],
+    "contributor": [
+      {
+        "@type": "Organization",
+        "name": "The Greensoftware Foundation",
+        "url": "https://greensoftware.foundation/"
+      },
+      {
+        "@type": "Organization",
+        "name": "The Linux Foundation",
+        "url": "https://www.linuxfoundation.org/"
+      }
+    ],
+    "about": [
+      {
+        "@type": "DefinedTerm",
+        "name": "SCI Fundamentals (Basics of Software Carbon Intensity)",
+        "url": "https://learn.greensoftware.foundation/,https://github.com/Green-Software-Foundation/learn/wiki/Green-Guides,https://movement.greensoftware.foundation/spaces/19525645?utm_source=manual"
+      }
+    ],
+    "mentions": [
+      {
+        "@type": "CreativeWork",
+        "name": "SCI Fundamentals (Basics of Software Carbon Intensity)",
         "identifier": "n/a",
-        "dct:conformsTo": {
-          "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
-          "@type": "CreativeWork"
-        },
-        "name": "Green Software Practitioner",
-        "description": "Learn the concepts needed to build, maintain and run greener applications",
-        "educationalLevel": "Beginner",
-        "timeRequired": "PT4H",
-        "creativeWorkStatus": "active",
-        "accessibilitySummary": "20 minutes of video content across 4 modules",
-        "version": "n/a",
-        "inLanguage": [
-          "en-US"
-        ],
-        "learningResourceType": [
-          "online tutorial"
-        ],
-        "keywords": [
-          "sustainable computing",
-          "green computing",
-          "carbon footprint",
-          "environmental impact",
-          "computational research",
-          "Metrics",
-          "efficiency",
-          "metrics definition",
-          "Software Carbon Intensity (SCI)"
-        ],
-        "dateModified": "n/a",
-        "audience": {
-          "@type": "Audience",
-          "audienceType": "Anyone involved in the process of building, deploying, or managing software, anyone who wants to make their software applications more sustainable and build a career in green software"
-        },
-        "competencyRequired": [
-          "No prior knowledge of computing infrastructure required, ideally have at least one year of industry experience building, deploying, or managing software applications."
-        ],
-        "teaches": [
-          "Explaining why traditional carbon metrics fail to drive action in software teams",
-          "Describing the two boundaries that every metric must align to drive the right actions",
-          "Calculating operational and embodied emissions using the SCI equation",
-          "Explaining why the SCI excludes market-based measures like offsets and RECs",
-          "Selecting appropriate quantification methods based on available data",
-          "Applying the SCI equation to real software systems"
-        ],
-        "license": [
-          "https://creativecommons.org/licenses/by/4.0/"
-        ],
-        "author": [
-          {
-            "@type": "Person",
-            "name": "Asim Hussain",
-            "url": "n/a"
-          },
-          {
-            "@type": "Person",
-            "name": "Kirsty Du Plessis",
-            "url": "https://www.linkedin.com/in/leilalhardy/"
-          },
-          {
-            "@type": "Person",
-            "name": "Gosia Fricze",
-            "url": "n/a"
-          },
-          {
-            "@type": "Person",
-            "name": "Russell Trow",
-            "url": "https://www.linkedin.com/in/russelltrow/"
-          }
-        ],
-        "contributor": [
-          {
-            "@type": "Organization",
-            "name": "The Greensoftware Foundation",
-            "url": "https://greensoftware.foundation/"
-          },
-          {
-            "@type": "Organization",
-            "name": "The Linux Foundation",
-            "url": "https://www.linuxfoundation.org/"
-          }
-        ],
-        "about": [
-          {
-            "@type": "DefinedTerm",
-            "name": "SCI Fundamentals (Basics of Software Carbon Intensity)",
-            "url": "https://learn.greensoftware.foundation/,https://github.com/Green-Software-Foundation/learn/wiki/Green-Guides,https://movement.greensoftware.foundation/spaces/19525645?utm_source=manual"
-          }
-        ],
-        "mentions": [
-          {
-            "@type": "CreativeWork",
-            "name": "SCI Fundamentals (Basics of Software Carbon Intensity)",
-            "identifier": "n/a",
-            "url": "https://learn.greensoftware.foundation/,https://github.com/Green-Software-Foundation/learn/wiki/Green-Guides,https://movement.greensoftware.foundation/spaces/19525645?utm_source=manual"
-          }
-        ]
+        "url": "https://learn.greensoftware.foundation/,https://github.com/Green-Software-Foundation/learn/wiki/Green-Guides,https://movement.greensoftware.foundation/spaces/19525645?utm_source=manual"
       }
-    }
-  ]
-}
+    ]
+  }
+]

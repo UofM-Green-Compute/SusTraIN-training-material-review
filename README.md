@@ -16,7 +16,7 @@ JSON: See the dedicated ReadMe in the repository folder, for a detailed descript
 - Vendored browser dependencies in `page_rendering_code/assets/vendor/` (for GitHub Pages)
 - A manifest file at `training_materials/content-manifest.yml`
 - A manifest generator script at `page_rendering_code/scripts/generate-manifest.mjs`
-- A frontmatter file at `training_materials/content-frontmatter.yml`
+- A frontmatter file at `training_materials/content-frontmatter.json`
 - A frontmatter generator script at `page_rendering_code/scripts/generate-frontmatter.mjs`
 
 
@@ -59,12 +59,12 @@ This is done by a workflow at:
 	- .github/workflows/update-manifest.yml
 
 This means newly added YAML files are picked up automatically after you push changes.
-The workflow regenerates `training_materials/content-manifest.yml` and `training_materials/content-frontmatter.yml` and commits them automatically if needed.
+The workflow regenerates `training_materials/content-manifest.yml` and `training_materials/content-frontmatter.json` and commits them automatically if needed.
 
 ## Local development fallback
 
 When running locally (not on `*.github.io`), the app falls back to `training_materials/content-manifest.yml` and
-`training_materials/content-frontmatter.yml`.
+`training_materials/content-frontmatter.json`.
 
 To refresh those 2 files manually, run:
 

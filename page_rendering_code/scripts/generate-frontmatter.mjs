@@ -42,7 +42,7 @@ function toJson(frontmatter) {
   return JSON.stringify(frontmatter, null, 2) + "\n";
 }
 
-async function getJson(yamlPath) {
+async function getYaml(yamlPath) {
   try {
     // yamlPath is relative like ../training_materials/AI_impact/file.yaml
     // Need to resolve from workspaceRoot, stripping the ../ part
@@ -52,8 +52,8 @@ async function getJson(yamlPath) {
     const yamlData = yaml.load(yamlContent);
     return yamlData;
   } catch (error) {
-    console.error(`Error reading/parsing ${yamlPath}:`, error.message);
-    return null;
+      console.error(`Error reading/parsing ${yamlPath}:`, error.message);
+      return null;
   }
 }
 
@@ -64,8 +64,13 @@ export async function buildFrontmatter() {
   for (const source of sourceDirs) {
     const yamlPaths = await listYamlFiles(source.dir);
     for (const yamlPath of yamlPaths) {
-      const item = await getJson(yamlPath);
-      files.push({ path: yamlPath, group: source.group, item });
+      const item = await getYaml(yamlPath);
+      try{
+        files.push(item);
+      } catch (error) {
+          console.error(`Error adding ${yamlPath}:`, error.message);
+          return null;
+      }
     }
   }
 
@@ -75,7 +80,7 @@ export async function buildFrontmatter() {
 export async function writeFrontmatter() {
   const frontmatter = await buildFrontmatter();
   const outPath = path.join(workspaceRoot, TRAINING_ROOT, "content-frontmatter.json");
-  const payload = toJson(frontmatter);
+  const payload = toJson(frontmatter.files);
 
   await writeFile(outPath, payload, "utf8");
   console.log(`Wrote ${frontmatter.files.length} entries to ${TRAINING_ROOT}/content-frontmatter.json`);
