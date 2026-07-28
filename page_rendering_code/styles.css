@@ -90,6 +90,10 @@ h1 {
   line-height: 1.05;
 }
 
+p {
+  text-align: justify;
+}
+
 .subtitle {
   margin: 0.8rem 0 0;
   max-width: 60ch;
