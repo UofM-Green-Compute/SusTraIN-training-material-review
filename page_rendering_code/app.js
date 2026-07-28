@@ -68,10 +68,80 @@ const TABLE_BASE_COLUMNS = [
 const searchInput = document.getElementById("searchInput");
 const categorySelect = document.getElementById("categorySelect");
 const viewButtons = Array.from(document.querySelectorAll(".view-option"));
+const topNavLinks = Array.from(document.querySelectorAll(".topnav-link[data-target]"));
 const resultsMeta = document.getElementById("resultsMeta");
 const resultsEl = document.getElementById("results");
 const template = document.getElementById("resultTemplate");
 let activeDataTable = null;
+
+function setActiveTopNavLink(targetId) {
+  for (const link of topNavLinks) {
+    const isActive = link.dataset.target === targetId;
+    link.classList.toggle("is-active", isActive);
+    if (isActive) {
+      link.setAttribute("aria-current", "page");
+    } else {
+      link.removeAttribute("aria-current");
+    }
+  }
+}
+
+function wireTopNav() {
+  if (!topNavLinks.length) {
+    return;
+  }
+
+  const sections = topNavLinks
+    .map((link) => ({
+      id: link.dataset.target,
+      element: document.getElementById(link.dataset.target),
+    }))
+    .filter((entry) => entry.id && entry.element);
+
+  if (!sections.length) {
+    return;
+  }
+
+  for (const link of topNavLinks) {
+    link.addEventListener("click", () => {
+      if (link.dataset.target) {
+        setActiveTopNavLink(link.dataset.target);
+      }
+    });
+  }
+
+  if (typeof window.IntersectionObserver !== "function") {
+    const onScroll = () => {
+      const activeSection = sections.find((section) => section.element.getBoundingClientRect().top >= 0);
+      setActiveTopNavLink(activeSection ? activeSection.id : sections[sections.length - 1].id);
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      const visible = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+      if (visible.length) {
+        setActiveTopNavLink(visible[0].target.id);
+      }
+    },
+    {
+      root: null,
+      rootMargin: "-35% 0px -45% 0px",
+      threshold: [0.15, 0.4, 0.7],
+    },
+  );
+
+  for (const section of sections) {
+    observer.observe(section.element);
+  }
+}
 
 function syncViewToggleUI() {
   for (const button of viewButtons) {
@@ -867,6 +937,7 @@ function wireEvents() {
 }
 
 async function init() {
+  wireTopNav();
   wireEvents();
 
   try {
