@@ -19,6 +19,8 @@ files:
     group: "Energy_efficiency"
   - path: "../training_materials/Intro/carpentries-incubator-green-hpc.yaml"
     group: "Intro"
+  - path: "../training_materials/Intro/digital-research-sustainability-training.yaml"
+    group: "Intro"
   - path: "../training_materials/Intro/green-computing_Basics.yaml"
     group: "Intro"
   - path: "../training_materials/Intro/green-hpc-ucl-workshop.yaml"
