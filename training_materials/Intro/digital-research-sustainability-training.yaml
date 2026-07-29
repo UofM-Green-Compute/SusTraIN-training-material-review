@@ -12,7 +12,6 @@ description: "This lesson provides an introduction to digital research sustainab
 abstract: "We will use case studies to explore the carbon impact of digital research activities in four different contexts. Each case study will include some action items that can be implemented to reduce the associated emissions.
 
 After completing this lesson, you should be able to:
-
 Explain the big picture for reducing carbon emissions and how that applies to digital research
 Understand the difference between energy and power, how energy is produced, what are low-carbon energy sources and how they operate
 Explain what embodied carbon is
@@ -45,7 +44,7 @@ keywords:
   - "sustainability"
 audience:
   "@type": "Audience"
-  audienceType: "Researchers who write code, Research Software Engineers who support researchers, Lab scientists who do computational work, Researchers who use HPC, Researchers who use GPUs"
+  audienceType: "Researchers who write code, Research Software Engineers, Lab scientists who do computational work, Researchers who use HPC, Researchers who use GPUs"
 teaches:
   - "Explain the big picture for reducing carbon emissions and how that applies to digital research"
   - "Understand the difference between energy and power, how energy is produced, what are low-carbon energy sources and how they operate"
