@@ -593,6 +593,67 @@
   {
     "@context": "https://schema.org",
     "@type": "LearningResource",
+    "@id": "https://github.com/GeertvanGeest/addbioschemas/",
+    "url": "https://github.com/GeertvanGeest/addbioschemas/",
+    "identifier": "https://github.com/GeertvanGeest/addbioschemas/",
+    "dct:conformsTo": {
+      "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
+      "@type": "CreativeWork"
+    },
+    "name": "Digital Research Sustainability",
+    "description": "This lesson provides an introduction to digital research sustainability. Digital research practices involve a number of activities that can lead to carbon emissions. This lesson is designed to identify such activities and provide practical ways to reduce the emissions.",
+    "abstract": "We will use case studies to explore the carbon impact of digital research activities in four different contexts. Each case study will include some action items that can be implemented to reduce the associated emissions.\nAfter completing this lesson, you should be able to:\nExplain the big picture for reducing carbon emissions and how that applies to digital research Understand the difference between energy and power, how energy is produced, what are low-carbon energy sources and how they operate Explain what embodied carbon is Use the greenhouse gas (GHG) protocol to estimate carbon emissions Identify which aspects of a research workflow are most carbon‑intensive and why Explore ways to measure and estimate carbon emissions from research software development Identify tools and resources to help estimate emissions associated with daily computational research tasks Explore ways to measure and estimate carbon emissions from High Performance Computing clusters",
+    "educationalLevel": "Beginner",
+    "timeRequired": "P1D",
+    "creativeWorkStatus": "active",
+    "inLanguage": [
+      "en"
+    ],
+    "learningResourceType": [
+      "lesson"
+    ],
+    "keywords": [
+      "carbon emissions",
+      "Green IT",
+      "Energy",
+      "Power",
+      "embodied carbon",
+      "greenhouse gas protocol",
+      "GHG",
+      "environmental impact",
+      "research",
+      "hardware",
+      "software",
+      "HPC",
+      "sustainability"
+    ],
+    "audience": {
+      "@type": "Audience",
+      "audienceType": "Researchers who write code, Research Software Engineers who support researchers, Lab scientists who do computational work, Researchers who use HPC, Researchers who use GPUs"
+    },
+    "teaches": [
+      "Explain the big picture for reducing carbon emissions and how that applies to digital research",
+      "Understand the difference between energy and power, how energy is produced, what are low-carbon energy sources and how they operate",
+      "Explain what embodied carbon is",
+      "Use the greenhouse gas (GHG) protocol to estimate carbon emissions",
+      "Identify which aspects of a research workflow are most carbon‑intensive and why",
+      "Explore ways to measure and estimate carbon emissions from research software development",
+      "Identify tools and resources to help estimate emissions associated with daily computational research tasks",
+      "Explore ways to measure and estimate carbon emissions from High Performance Computing clusters"
+    ],
+    "license": [
+      "https://creativecommons.org/licenses/by/4.0/"
+    ],
+    "contributor": [
+      {
+        "@type": "Organization",
+        "name": " Imperial College London"
+      }
+    ]
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "LearningResource",
     "@id": "https://learn.greensoftware.foundation/",
     "url": "https://learn.greensoftware.foundation/,https://github.com/Green-Software-Foundation/learn/wiki/Green-Guides,https://movement.greensoftware.foundation/spaces/19525645?utm_source=manual",
     "identifier": "n/a",
