@@ -1,4 +1,6 @@
 files:
+  - path: "../training_materials/AI_impact/ai-and-environmental-sustainability.yaml"
+    group: "AI_impact"
   - path: "../training_materials/AI_impact/frugal-ai-psl-week-course-materials.yaml"
     group: "AI_impact"
   - path: "../training_materials/AI_impact/frugal-artificial-intelligence-ai-training-course.yaml"
