@@ -1,0 +1,52 @@
+---
+"@context": "https://schema.org"
+"@type": "LearningResource"
+"@id": "https://www.coursera.org/learn/ai-and-environmental-sustainability"
+url: "https://www.coursera.org/learn/ai-and-environmental-sustainability"
+identifier: "https://www.coursera.org/learn/ai-and-environmental-sustainability
+"dct:conformsTo":
+  "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE"
+  "@type": "CreativeWork"
+name: "AI and Environmental Sustainability"
+description: "This course is for students, early-career professionals, and lifelong learners with an interest in how AI can shape—and be shaped by—environmental sustainability goals. It is particularly valuable for individuals working or aspiring to work in environmental policy, sustainable development, or related fields, who want to understand AI’s potentials and pitfalls in the context of environmental and societal well-being. This course will enhance knowledge about the ethical and political implications of AI in environmental contexts, by connecting the dots of knowledge and information. We welcome a diverse community of learners who value interdisciplinary approaches to complex global challenges. With insights from the social sciences and humanities, this course explore AI-based solutions' broader context and implications."
+educationalLevel: "Beginner"
+timeRequired: "P1D"
+creativeWorkStatus: "active"
+inLanguage:
+  - "en"
+learningResourceType:
+  - "Course"
+keywords:
+  - "responsible AI"
+  - "AI literacy"
+  - "liberal arts"
+  - "sustainable development"
+  - "energy and utilities"
+  - "sustainable technologies"
+  - "artificial intelligence"
+  - "climate change mitigation"
+  - "environmental policy"
+  - "sustainable systems"
+  - "environment and resource management"
+  - "environmental issue"
+  - "environmental social and corporate governance"
+  - "digital transformation"
+  - "social justice"
+  - "environment"
+  - "political sciences"
+  - "water sustainability"
+  - "generative AI"
+audience:
+  "@type": "Audience"
+  audienceType: "students, early-career professionals, and lifelong learners with an interest in how AI can shape—and be shaped by—environmental sustainability goals"
+teaches:
+  - "Making sense of modern AI"
+  - "AI from a lifecycle perspective"
+  - "AI from an environmental justice perspective"
+  - "governing AI's environmental impact"
+license:
+  - "Not stated on the page"
+contributor:
+  -
+    "@type": "Organization"
+    name: "coursera.org"
