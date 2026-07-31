@@ -716,46 +716,6 @@
   {
     "@context": "https://schema.org",
     "@type": "LearningResource",
-    "@id": "www.fake-url",
-    "url": "www.fake-url",
-    "identifier": "www.fake-url",
-    "dct:conformsTo": {
-      "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE",
-      "@type": "CreativeWork"
-    },
-    "name": "Fake test doc",
-    "description": "Test doc",
-    "educationalLevel": "Beginner",
-    "creativeWorkStatus": "active",
-    "inLanguage": [
-      "en"
-    ],
-    "learningResourceType": [
-      "workshop"
-    ],
-    "keywords": [
-      "test doc only"
-    ],
-    "audience": {
-      "@type": "Audience",
-      "audienceType": "fake"
-    },
-    "teaches": [
-      "Nothing"
-    ],
-    "license": [
-      "None"
-    ],
-    "contributor": [
-      {
-        "@type": "Organization",
-        "name": "fake"
-      }
-    ]
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "LearningResource",
     "@id": "https://learn.greensoftware.foundation/",
     "url": "https://learn.greensoftware.foundation/,https://github.com/Green-Software-Foundation/learn/wiki/Green-Guides,https://movement.greensoftware.foundation/spaces/19525645?utm_source=manual",
     "identifier": "n/a",
