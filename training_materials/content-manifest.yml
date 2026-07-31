@@ -23,6 +23,8 @@ files:
     group: "Intro"
   - path: "../training_materials/Intro/digital-research-sustainability-training.yaml"
     group: "Intro"
+  - path: "../training_materials/Intro/dummy-test-doc.yaml"
+    group: "Intro"
   - path: "../training_materials/Intro/green-computing_Basics.yaml"
     group: "Intro"
   - path: "../training_materials/Intro/green-hpc-ucl-workshop.yaml"
