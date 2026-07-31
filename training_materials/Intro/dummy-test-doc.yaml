@@ -1,0 +1,30 @@
+---
+"@context": "https://schema.org"
+"@type": "LearningResource"
+"@id": "www.fake-url"
+url: "www.fake-url"
+identifier: "www.fake-url"
+"dct:conformsTo":
+  "@id": "https://bioschemas.org/profiles/TrainingMaterial/1.0-RELEASE"
+  "@type": "CreativeWork"
+name: "Fake test doc"
+description: "Test doc"
+educationalLevel: "Beginner"
+creativeWorkStatus: "active"
+inLanguage:
+  - "en"
+learningResourceType:
+  - "workshop"
+keywords:
+  - "test doc only"
+audience:
+  "@type": "Audience"
+  audienceType: "fake"
+teaches:
+  - "Nothing"
+license:
+  - "None"
+contributor:
+  -
+    "@type": "Organization"
+    name: "fake"
