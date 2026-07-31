@@ -2,9 +2,10 @@
 name: Deploy Jekyll with GitHub Pages dependencies preinstalled
 
 on:
-  # Runs on pushes targeting the default branch
-  push:
-    branches: ["main"]
+  # Runs once the update content manifest workflow has run
+  workflow_run:
+    workflows: ["Update Content Manifest"]
+    types: [completed]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -15,19 +16,21 @@ permissions:
   pages: write
   id-token: write
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+# Special set-up to ensure that this GH Pages runs after the update content manifest.description: 
 concurrency:
-  group: "pages"
-  cancel-in-progress: false
+  group: pages-${{ github.event.workflow_run.head_branch }}
+  cancel-in-progress: true
 
 jobs:
   # Build job
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout latest branch head
         uses: actions/checkout@v4
+        with:
+          # IMPORTANT: branch head, not the old SHA from triggering push
+          ref: ${{ github.event.workflow_run.head_branch }}
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Build with Jekyll
