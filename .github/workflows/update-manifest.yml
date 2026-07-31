@@ -13,6 +13,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: update-manifest-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   regenerate-metadata:
     runs-on: ubuntu-latest
