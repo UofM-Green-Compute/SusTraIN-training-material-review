@@ -39,7 +39,7 @@ identifier: "Unique identifier, e.g. URI or DOI link"
 name: "REQUIRED. The name/title of the training resource"
 description: "A description of the training resource"
 abstract: "Abstract summarising the training resource."
-educationalLevel: "Beginner"
+Level: "Beginner"
 timeRequired: "The time required to complete the training"
 creativeWorkStatus: "The status of the training resource, e.g. 'draft', 'active', 'archived'"
 inLanguage: "Language code that the training materials are written in, e.g. 'en'"
@@ -50,6 +50,12 @@ audience:
   audienceType: "A sentence about the target audience of this training"
 teaches: "A list of sentences, each describing a main learning outcomes of this training"
 license: "The license for sharing / re-using the training resource. E.g. 'https://creativecommons.org/licenses/by/4.0/'"
+author: "A list of the types ('Person' or 'Organisation') and names of the author(s). If an organisation is provided, this will be considered the 'training resource provider'."
+E.g.
+  -
+    "@type": "Organization"
+    name: "Carpentries Incubator"
+    url: "https://carpentries-incubator.github.io"
 contributor: "A list of contributors (individuals or organisations)"
 E.g.   
 -
@@ -72,7 +78,7 @@ identifier: "https://www.greenit.fr/frugal-artificial-intelligence-ai-training-c
 name: "Frugal Artificial Intelligence (AI) training course"
 description: "A one-day training course on frugal artificial intelligence, teaching participants to understand and reduce the environmental and social impacts of AI."
 abstract: "Covers the fundamentals of responsible digital practices, key AI impact areas via the three pillars of Green IT (data centers, hardware, software), and current best-practice solutions for lowering AI's footprint, ending with a concrete organizational action plan."
-educationalLevel: "Beginner"
+Level: "Beginner"
 timeRequired: "P1D"
 creativeWorkStatus: "active"
 inLanguage:
@@ -100,6 +106,11 @@ teaches:
   - "Implement a first frugal AI strategy and monitoring tools"
 license:
   - "Not stated on the page (Paid, instructor-led; also offered in French)"
+author:
+  -
+    "@type": "Organization"
+    name: "Carpentries Incubator"
+    url: "https://carpentries-incubator.github.io"
 contributor:
   -
     "@type": "Organization"
