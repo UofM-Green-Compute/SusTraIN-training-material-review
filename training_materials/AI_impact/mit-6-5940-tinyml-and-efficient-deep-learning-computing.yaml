@@ -33,7 +33,7 @@ competencyRequired:
   - "MIT 6.191 Computation Structures and 6.390 Intro to Machine Learning (or equivalent prior experience)"
 license:
   - "Not stated on the page (Lecture videos publicly posted on YouTube; slides on course site; not offered Fall 2025 (instructor sabbatical))"
-contributor:
+author:
   -
     "@type": "Organization"
     name: "MIT (Prof. Song Han, HAN Lab)"
