@@ -50,6 +50,12 @@ audience:
   audienceType: "A sentence about the target audience of this training"
 teaches: "A list of sentences, each describing a main learning outcomes of this training"
 license: "The license for sharing / re-using the training resource. E.g. 'https://creativecommons.org/licenses/by/4.0/'"
+author: "A list of the types ('Person' or 'Organisation') and names of the author(s). If an organisation is provided, this will be considered the 'training resource provider'."
+E.g.
+  -
+    "@type": "Organization"
+    name: "Carpentries Incubator"
+    url: "https://carpentries-incubator.github.io"
 contributor: "A list of contributors (individuals or organisations)"
 E.g.   
 -
@@ -100,6 +106,11 @@ teaches:
   - "Implement a first frugal AI strategy and monitoring tools"
 license:
   - "Not stated on the page (Paid, instructor-led; also offered in French)"
+author:
+  -
+    "@type": "Organization"
+    name: "Carpentries Incubator"
+    url: "https://carpentries-incubator.github.io"
 contributor:
   -
     "@type": "Organization"
