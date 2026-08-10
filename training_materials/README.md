@@ -78,7 +78,7 @@ identifier: "https://www.greenit.fr/frugal-artificial-intelligence-ai-training-c
 name: "Frugal Artificial Intelligence (AI) training course"
 description: "A one-day training course on frugal artificial intelligence, teaching participants to understand and reduce the environmental and social impacts of AI."
 abstract: "Covers the fundamentals of responsible digital practices, key AI impact areas via the three pillars of Green IT (data centers, hardware, software), and current best-practice solutions for lowering AI's footprint, ending with a concrete organizational action plan."
-Level: "Beginner"
+educationalLevel: "Beginner"
 timeRequired: "P1D"
 creativeWorkStatus: "active"
 inLanguage:
