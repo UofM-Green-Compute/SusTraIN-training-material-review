@@ -50,14 +50,16 @@ audience:
   audienceType: "A sentence about the target audience of this training"
 teaches: "A list of sentences, each describing a main learning outcomes of this training"
 license: "The license for sharing / re-using the training resource. E.g. 'https://creativecommons.org/licenses/by/4.0/'"
-author: "A list of the types ('Person' or 'Organisation') and names of the author(s).
+
+author: "A list of authors (each item can be an individual or organisation)."
          If an organisation is provided, this will be considered the 'training resource provider'."
 # E.g.
 #   -
 #     "@type": "Organization"
 #     name: "Carpentries Incubator"
 #     url: "https://carpentries-incubator.github.io"
-contributor: "A list of contributors (individuals or organisations)"
+
+contributor: "A list of contributors (each item can be an individual or organisation)."
 # E.g.   
 # -
 #     "@type": "Organization"
