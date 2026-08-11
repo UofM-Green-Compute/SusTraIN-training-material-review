@@ -51,7 +51,7 @@ audience:
 teaches: "A list of sentences, each describing a main learning outcomes of this training"
 license: "The license for sharing / re-using the training resource. E.g. 'https://creativecommons.org/licenses/by/4.0/'"
 
-author: "A list of authors (each item can be an individual or organisation)."
+author: "A list of authors (each item can be an individual or organisation).
          If an organisation is provided, this will be considered the 'training resource provider'."
 # E.g.
 #   -
