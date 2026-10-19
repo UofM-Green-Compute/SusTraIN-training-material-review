@@ -3,6 +3,63 @@
   margin: 0 auto;
 }
 
+.home-subnav {
+  position: sticky;
+  top: 4.7rem;
+  z-index: 20;
+  max-width: 1240px;
+  margin: 0 auto;
+  overflow-x: auto;
+  border-bottom: 1px solid var(--line);
+  background: rgba(255, 254, 246, 0.92);
+  backdrop-filter: blur(8px);
+}
+
+.home-subnav-list {
+  display: flex;
+  width: max-content;
+  min-width: 100%;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0.25rem 0.4rem 0;
+  list-style: none;
+}
+
+.home-subnav-link {
+  display: block;
+  padding: 0.65rem 0.8rem 0.55rem;
+  border-bottom: 3px solid transparent;
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.home-subnav-link:hover,
+.home-subnav-link:focus-visible,
+.home-subnav-link[aria-current="location"] {
+  color: var(--ink);
+  outline: none;
+}
+
+.home-subnav-link[aria-current="location"] {
+  border-bottom-color: var(--accent-2);
+}
+
+.home-section {
+  scroll-margin-top: 8rem;
+}
+
+.home-section:target {
+  scroll-margin-top: 8rem;
+}
+
+.home-section:target > .eyebrow,
+.home-section:target .eyebrow {
+  color: var(--accent-2);
+}
+
 .home-hero {
   max-width: 980px;
   padding: clamp(2rem, 7vw, 6rem) 0 4rem;
@@ -59,7 +116,16 @@
   border-top: 1px solid var(--line);
 }
 
+.home-focus {
+  display: grid;
+  grid-template-columns: minmax(220px, 0.8fr) minmax(0, 1.2fr);
+  gap: clamp(2rem, 8vw, 7rem);
+  padding: 2rem 0 3.5rem;
+  border-top: 1px solid var(--line);
+}
+
 .home-overview h2,
+.home-focus h2,
 .home-next h2 {
   max-width: 18ch;
   margin: 0.55rem 0 0;
@@ -68,6 +134,7 @@
 }
 
 .home-copy p,
+.home-focus > p,
 .home-next > p:not(.eyebrow) {
   max-width: 68ch;
   color: var(--muted);
@@ -97,5 +164,14 @@
   .home-overview {
     grid-template-columns: 1fr;
     gap: 1rem;
+  }
+
+  .home-focus {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .home-subnav {
+    top: 4.2rem;
   }
 }

@@ -22,8 +22,17 @@
       </ul>
     </nav>
 
+    <nav class="home-subnav" aria-label="Home page sections">
+      <ul class="home-subnav-list">
+        <li><a class="home-subnav-link" href="#home-overview">Overview</a></li>
+        <li><a class="home-subnav-link" href="#about-project">About</a></li>
+        <li><a class="home-subnav-link" href="#project-focus">Our focus</a></li>
+        <li><a class="home-subnav-link" href="#explore">Explore</a></li>
+      </ul>
+    </nav>
+
     <main class="home-main">
-      <header class="home-hero">
+      <header class="home-hero home-section" id="home-overview">
         <p class="eyebrow">The SusTraIN Project</p>
         <h1>Sustainable computing starts with shared knowledge.</h1>
         <p class="home-lede">
@@ -33,7 +42,7 @@
         <a class="home-cta" href="./page_rendering_code/index.html">Browse the training catalogue <span aria-hidden="true">&rarr;</span></a>
       </header>
 
-      <section class="home-overview" aria-labelledby="overview-title">
+      <section class="home-overview home-section" id="about-project" aria-labelledby="overview-title">
         <div>
           <p class="eyebrow">About the project</p>
           <h2 id="overview-title">Better practice, across the research lifecycle.</h2>
@@ -51,12 +60,25 @@
         </div>
       </section>
 
-      <section class="home-next" aria-labelledby="next-title">
+      <section class="home-focus home-section" id="project-focus" aria-labelledby="focus-title">
+        <div>
+          <p class="eyebrow">What we do</p>
+          <h2 id="focus-title">Turn sustainable computing principles into everyday practice.</h2>
+        </div>
+        <p>
+          The project brings together learning materials and practical examples that help people understand the impact
+          of digital research, evaluate their workflows, and identify opportunities to use computing resources more
+          efficiently. This section is sample copy for the new homepage.
+        </p>
+      </section>
+
+      <section class="home-next home-section" id="explore" aria-labelledby="next-title">
         <p class="eyebrow">Start exploring</p>
         <h2 id="next-title">Find a resource for your next step.</h2>
         <p>Search and filter learning materials covering energy efficiency, lifecycle assessment, AI impact, and more.</p>
         <a class="home-text-link" href="./page_rendering_code/index.html">Go to Catalogue <span aria-hidden="true">&rarr;</span></a>
       </section>
     </main>
+    <script src="./page_rendering_code/home-nav.js"></script>
   </body>
 </html>
