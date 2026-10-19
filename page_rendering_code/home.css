@@ -5,7 +5,7 @@
 
 .home-subnav {
   position: sticky;
-  top: 4.7rem;
+  top: 7rem;
   z-index: 20;
   max-width: 1240px;
   margin: 0 auto;
@@ -44,7 +44,10 @@
 }
 
 .home-subnav-link[aria-current="location"] {
-  border-bottom-color: var(--accent-2);
+  text-decoration-line: underline;
+  text-decoration-color: var(--accent-2);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.3em;
 }
 
 .home-section {
@@ -172,6 +175,6 @@
   }
 
   .home-subnav {
-    top: 4.2rem;
+    top: 6rem;
   }
 }

@@ -492,9 +492,33 @@ select:focus {
 .topnav-list {
   list-style: none;
   display: flex;
+  align-items: center;
+  width: 100%;
   gap: 0.35rem;
   margin: 0;
   padding: 0.35rem;
+}
+
+.topnav-logo-item {
+  flex: 0 0 auto;
+  margin-left: auto;
+}
+
+.topnav-logo {
+  display: block;
+  width: 136px;
+  height: 86px;
+  overflow: hidden;
+  border-radius: 5px;
+  background: #fff;
+}
+
+.topnav-logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .topnav-link {
@@ -533,8 +557,13 @@ select:focus {
     width: 100%;
   }
 
-  .topnav-list li {
-    flex: 1 1 50%;
+  .topnav-list li:not(.topnav-logo-item) {
+    flex: 1 1 0;
+  }
+
+  .topnav-logo {
+    width: 84px;
+    height: 72px;
   }
 
   .topnav-link {
