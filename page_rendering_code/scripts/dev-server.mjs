@@ -28,7 +28,7 @@ const MIME_TYPES = {
 
 function sanitizePath(urlPath) {
   const pathname = decodeURIComponent(urlPath.split("?")[0]);
-  const requested = pathname === "/" ? "/page_rendering_code/index.html" : pathname;
+  const requested = pathname === "/" ? "/index.html" : pathname;
   const resolved = path.resolve(workspaceRoot, `.${requested}`);
 
   if (!resolved.startsWith(workspaceRoot)) {
@@ -46,12 +46,6 @@ function getMimeType(filePath) {
 async function requestHandler(req, res) {
   try {
     const pathname = decodeURIComponent((req.url || "/").split("?")[0]);
-    if (pathname === "/" || pathname === "/index.html") {
-      res.writeHead(302, { Location: "/page_rendering_code/index.html" });
-      res.end();
-      return;
-    }
-
     if (pathname === "/page_rendering_code" || pathname === "/page_rendering_code/") {
       res.writeHead(302, { Location: "/page_rendering_code/index.html" });
       res.end();
