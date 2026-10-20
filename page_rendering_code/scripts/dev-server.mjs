@@ -4,6 +4,7 @@ import { watch } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { writeManifest, getSourceDirs } from "./generate-manifest.mjs";
+import { writeBiosManifest } from "./generate-bios-manifest.mjs";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -109,10 +110,23 @@ async function startWatchers() {
       queueManifestRebuild(`${source.dir}/${filename} ${eventType}`);
     });
   }
+
+  const biosPath = path.join(workspaceRoot, "page_rendering_code", "assets", "bios");
+  watch(biosPath, { persistent: true, recursive: true }, (eventType, filename) => {
+    const changedFile = String(filename || "");
+    if (!changedFile || /bios-manifest\.json$/i.test(changedFile)) {
+      return;
+    }
+
+    if (/(-info\.json|\.(avif|gif|jpe?g|png|webp))$/i.test(changedFile)) {
+      writeBiosManifest().catch((error) => console.error("Failed to update bios manifest:", error));
+    }
+  });
 }
 
 async function main() {
   await queueManifestRebuild("startup");
+  await writeBiosManifest();
 
   const server = createServer(requestHandler);
   server.listen(PORT, () => {
