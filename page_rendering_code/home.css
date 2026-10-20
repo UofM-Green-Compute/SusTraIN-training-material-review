@@ -127,6 +127,60 @@
   border-top: 1px solid var(--line);
 }
 
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  grid-column: 1 / -1;
+}
+
+.team-member {
+  display: grid;
+  grid-template-columns: 128px minmax(0, 1fr);
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: rgba(255, 254, 246, 0.88);
+}
+
+.team-member-photo {
+  display: block;
+  width: 128px;
+  height: 100%;
+  min-height: 176px;
+  object-fit: cover;
+  object-position: center 35%;
+}
+
+.team-member-details {
+  align-self: center;
+  padding: 1rem;
+}
+
+.team-member-details h3 {
+  margin: 0;
+  font-size: 1.15rem;
+  line-height: 1.2;
+}
+
+.team-member-role,
+.team-member-institution {
+  margin: 0.45rem 0 0;
+  color: var(--muted);
+  text-align: left;
+}
+
+.team-member-link {
+  display: inline-block;
+  margin-top: 0.8rem;
+  color: var(--ink);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-decoration-color: var(--accent-2);
+  text-underline-offset: 0.2em;
+}
+
 .home-overview h2,
 .home-focus h2,
 .home-next h2 {
@@ -172,6 +226,23 @@
   .home-focus {
     grid-template-columns: 1fr;
     gap: 1rem;
+  }
+
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .team-member {
+    grid-template-columns: 104px minmax(0, 1fr);
+  }
+
+  .team-member-photo {
+    width: 104px;
+    min-height: 156px;
+  }
+
+  .team-member-details {
+    padding: 0.8rem;
   }
 
   .home-subnav {
