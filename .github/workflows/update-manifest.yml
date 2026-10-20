@@ -5,8 +5,11 @@ on:
     paths:
       - "training_materials/*/*.yml"
       - "training_materials/*/*.yaml"
+      - "page_rendering_code/assets/bios/**/*"
+      - "!page_rendering_code/assets/bios/bios-manifest.json"
       - "page_rendering_code/scripts/generate-manifest.mjs"
       - "page_rendering_code/scripts/generate-frontmatter.mjs"
+      - "page_rendering_code/scripts/generate-bios-manifest.mjs"
       - ".github/workflows/update-manifest.yml"
   workflow_dispatch:
 
@@ -42,12 +45,16 @@ jobs:
       - name: Regenerate content frontmatter
         run: node page_rendering_code/scripts/generate-frontmatter.mjs
 
+      - name: Regenerate team bios manifest
+        run: node page_rendering_code/scripts/generate-bios-manifest.mjs
+
       - name: Commit and push metadata if changed
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add training_materials/content-manifest.yml
           git add training_materials/content-frontmatter.json
+          git add page_rendering_code/assets/bios/bios-manifest.json
 
           if git diff --cached --quiet; then
             echo "No metadata changes to commit."
