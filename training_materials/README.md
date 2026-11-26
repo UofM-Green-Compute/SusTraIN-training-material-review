@@ -31,7 +31,7 @@ The web app uses a **custom YAML parser** that has limitations with multi-line b
 1. **Schema fields first** (`@context`, `@type`, `@id`, `url`, `identifier`, `dct:conformsTo`)
 2. **Simple metadata fields** (`name`, `description`, `educationalLevel`, `creativeWorkStatus`, `timeRequired`, `inLanguage`)
 3. **Array fields** (`learningResourceType`, `keywords`, `audience`, `teaches`, `author`, `contributor`, `license`, `mentions`, `competencyRequired`)
-4. **Multi-line/complex fields last** (`abstract` - if using block scalars)
+4. **Multi-line/complex fields last** (e.g. fields like `abstract` if using block scalars to allow for things like bullet points and paragraphs.)
 
 **Example:**
 ```yaml
