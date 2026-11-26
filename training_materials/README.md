@@ -23,6 +23,35 @@ Repository of description files, for green compute training.
 - Your changes will be submitted as a Pull-Request (PR) and reviewed by one of the SuTraIN repository owners and either published if OK, or a response will be sent with feedback and/or edit suggestions. 
 
 
+## ⚠️ YAML Field Ordering (Important for Parser Compatibility)
+
+The web app uses a **custom YAML parser** that has limitations with multi-line block scalars (`|`, `|-`, `>`, `>-`). To ensure your YAML files render correctly, follow this field ordering pattern:
+
+**Recommended field order:**
+1. **Schema fields first** (`@context`, `@type`, `@id`, `url`, `identifier`, `dct:conformsTo`)
+2. **Simple metadata fields** (`name`, `description`, `educationalLevel`, `creativeWorkStatus`, `timeRequired`, `inLanguage`)
+3. **Array fields** (`learningResourceType`, `keywords`, `audience`, `teaches`, `author`, `contributor`, `license`, `mentions`, `competencyRequired`)
+4. **Multi-line/complex fields last** (`abstract` - if using block scalars)
+
+**Example:**
+```yaml
+---
+"@context": "https://schema.org"
+"@type": "LearningResource"
+name: "My Course"
+description: "Short description"
+educationalLevel: "Beginner"
+keywords:
+  - "keyword1"
+  - "keyword2"
+abstract: |-  # Put multi-line fields at the END
+  This is a longer description...
+  with multiple lines.
+```
+
+**Why?** The custom YAML parser doesn't properly handle multi-line block scalars (`|`, `|-`) when they appear in the middle of a document. Fields after such scalars may fail to parse. By placing them at the end, subsequent fields are not affected.
+
+
 ## YAML file format for each training materials item
 
 
