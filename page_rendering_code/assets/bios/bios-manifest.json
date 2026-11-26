@@ -19,7 +19,7 @@
     "name": "Kirsty Pringle",
     "position": "Researcher",
     "institution": "Institute for Research Software",
-    "orcid": "0000-0003-2190-5258",
+    "orcid": "https://orcid.org/0000-0003-2190-5258",
     "bio": "",
     "image": "./page_rendering_code/assets/bios/kirsty/KirstyPringle_Photo-1.png"
   }
