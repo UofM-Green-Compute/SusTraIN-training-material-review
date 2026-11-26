@@ -664,7 +664,6 @@
     },
     "name": "Digital Research Sustainability",
     "description": "This lesson provides an introduction to digital research sustainability. Digital research practices involve a number of activities that can lead to carbon emissions. This lesson is designed to identify such activities and provide practical ways to reduce the emissions.",
-    "abstract": "We will use case studies to explore the carbon impact of digital research activities in four different contexts. Each case study will include some action items that can be implemented to reduce the associated emissions. After completing this lesson, you should be able to:\n* Explain the big picture for reducing carbon emissions and how that applies to digital research\n* Understand the difference between energy and power, how energy is produced, what are low-carbon energy sources and how they operate\n*  Explain what embodied carbon is\n* Use the greenhouse gas (GHG) protocol to estimate carbon emissions\n* Identify which aspects of a research workflow are most carbon‑intensive and why\n* Explore ways to measure and estimate carbon emissions from research software development\n* Identify tools and resources to help estimate emissions associated with daily computational research tasks\n* Explore ways to measure and estimate carbon emissions from High Performance Computing clusters\"\n",
     "educationalLevel": "Beginner",
     "timeRequired": "P1D",
     "creativeWorkStatus": "active",
@@ -711,7 +710,8 @@
         "@type": "Organization",
         "name": " Imperial College London"
       }
-    ]
+    ],
+    "abstract": "We will use case studies to explore the carbon impact of digital research activities in four different contexts. Each case study will include some action items that can be implemented to reduce the associated emissions. After completing this lesson, you should be able to:\n* Explain the big picture for reducing carbon emissions and how that applies to digital research\n* Understand the difference between energy and power, how energy is produced, what are low-carbon energy sources and how they operate\n* Explain what embodied carbon is\n* Use the greenhouse gas (GHG) protocol to estimate carbon emissions\n* Identify which aspects of a research workflow are most carbon‑intensive and why\n* Explore ways to measure and estimate carbon emissions from research software development\n* Identify tools and resources to help estimate emissions associated with daily computational research tasks\n* Explore ways to measure and estimate carbon emissions from High Performance Computing clusters\""
   },
   {
     "@context": "https://schema.org",
