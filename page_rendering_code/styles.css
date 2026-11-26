@@ -519,6 +519,15 @@ select:focus {
   height: 100%;
   object-fit: cover;
   object-position: center;
+  image-rendering: crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .topnav-logo {
+    width: 136px;
+    height: 86px;
+  }
 }
 
 .topnav-link {
