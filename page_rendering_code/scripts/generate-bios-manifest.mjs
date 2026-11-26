@@ -35,7 +35,7 @@ export async function buildBiosManifest() {
       profiles.push({
         name: String(profile.name || "").trim(),
         position: String(profile.position || "").trim(),
-        institution: String(profile.institution || profile.Institution || "").trim(),
+        institution: String(profile.institution || "").trim(),
         orcid: String(profile.orcid || "").trim(),
         bio: String(profile.bio || profile.biography || "").trim(),
         image: imageFile ? assetPath(folder.name, imageFile) : "",
